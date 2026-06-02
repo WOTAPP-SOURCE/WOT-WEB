@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "glossary": "Glossary",
+    "faq": "FAQ",
+    "about": "About",
+    "downloadApp": "Download App"
+  },
+  "hero": {
+    "badge": "AI-Powered Trading Education",
+    "headline": "Master Trading with Your AI Coach",
+    "subheadline": "Rudy guides you through every concept, strategy, and market move — at your own pace.",
+    "ctaPrimary": "Download on the App Store",
+    "ctaSecondary": "Get it on Google Play"
+  },
+  "footer": {
+    "tagline": "The smarter way to learn trading.",
+    "legal": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "glossary": {
+    "title": "Trading Glossary",
+    "subtitle": "288 essential trading terms explained clearly.",
+    "searchPlaceholder": "Search a term...",
+    "allCategories": "All categories",
+    "relatedTerms": "Related terms",
+    "learnWithRudy": "Learn this in practice with Rudy, your AI coach"
+  },
+  "metadata": {
+    "siteName": "Way of Trading",
+    "homeTitle": "Way of Trading — Learn Trading with AI",
+    "homeDescription": "Master trading with Rudy, your AI coach. Download the Way of Trading app on iOS and Android."
+  }
+}

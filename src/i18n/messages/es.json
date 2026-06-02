@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "features": "Características",
+    "pricing": "Precios",
+    "glossary": "Glosario",
+    "faq": "Preguntas frecuentes",
+    "about": "Acerca de",
+    "downloadApp": "Descargar app"
+  },
+  "hero": {
+    "badge": "Educación en trading con IA",
+    "headline": "Domina el trading con tu coach de IA",
+    "subheadline": "Rudy te guía a través de cada concepto, estrategia y movimiento del mercado — a tu propio ritmo.",
+    "ctaPrimary": "Descargar en el App Store",
+    "ctaSecondary": "Disponible en Google Play"
+  },
+  "footer": {
+    "tagline": "La forma más inteligente de aprender trading.",
+    "legal": "Todos los derechos reservados.",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio"
+  },
+  "glossary": {
+    "title": "Glosario de trading",
+    "subtitle": "288 términos esenciales de trading explicados claramente.",
+    "searchPlaceholder": "Buscar un término...",
+    "allCategories": "Todas las categorías",
+    "relatedTerms": "Términos relacionados",
+    "learnWithRudy": "Aprende esto en la práctica con Rudy, tu coach de IA"
+  },
+  "metadata": {
+    "siteName": "Way of Trading",
+    "homeTitle": "Way of Trading — Aprende trading con IA",
+    "homeDescription": "Domina el trading con Rudy, tu coach de IA. Descarga la app Way of Trading en iOS y Android."
+  }
+}
