@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { Poppins } from "next/font/google";
+import { Poppins, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import type { Locale } from "@/types";
 
 /*
@@ -19,6 +20,18 @@ const poppins = Poppins({
   variable: "--font-poppins",
   display: "swap",
   preload: true,
+});
+
+/*
+ * JetBrains Mono powers every technical/mono label — badges, stat labels,
+ * section numbers, category tags, footer column headers. next/font/google
+ * self-hosts it at build time (no runtime Google CDN request), matching Poppins.
+ */
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
 });
 
 interface LocaleLayoutProps {
@@ -72,10 +85,11 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={poppins.variable}>
+    <html lang={locale} className={`${poppins.variable} ${jetbrainsMono.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <SmoothScroll>{children}</SmoothScroll>
+          <ScrollToTop />
         </NextIntlClientProvider>
       </body>
     </html>

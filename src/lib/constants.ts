@@ -38,3 +38,87 @@ export const STATS = [
   { key: "toolsLabel", value: 6, suffix: "" },
   { key: "languagesLabel", value: 3, suffix: "" },
 ] as const;
+
+/* Hero stats strip — number is brand-fixed, label translated in `hero`. */
+export const HERO_STATS = [
+  { value: "8", labelKey: "statTools" },
+  { value: "3", labelKey: "statModels" },
+  { value: "288", labelKey: "statTerms" },
+  { value: "18", labelKey: "statCategories" },
+] as const;
+
+/* Hero orbiting glassmorphism info cards. Labels translated in `hero`. */
+export const HERO_ORBIT_CARDS = [
+  { titleKey: "orbitCoachTitle", meta1Key: "orbitCoachMeta1", meta2Key: "orbitCoachMeta2", live: true, className: "left-[-6%] top-[10%]", delay: "0s" },
+  { titleKey: "orbitChartTitle", meta1Key: "orbitChartMeta1", meta2Key: "orbitChartMeta2", live: false, className: "right-[-8%] top-[6%]", delay: "1.4s" },
+  { titleKey: "orbitHistoryTitle", meta1Key: "orbitHistoryMeta1", meta2Key: "orbitHistoryMeta2", live: false, className: "left-[-4%] bottom-[14%]", delay: "2.6s" },
+  { titleKey: "orbitGlossaryTitle", meta1Key: "orbitGlossaryMeta1", meta2Key: "orbitGlossaryMeta2", live: false, className: "right-[-6%] bottom-[10%]", delay: "3.8s" },
+] as const;
+
+/* 6 sample glossary terms for the homepage preview. Term names are proper nouns
+   (kept across locales); category label + definition come from `glossaryPreview`
+   arrays aligned by index. `dot` is the category color swatch. */
+export const GLOSSARY_SAMPLE = [
+  { term: "Pip", slug: "pip", dot: "#2dd4bf" },
+  { term: "RSI", slug: "rsi", dot: "#ec4899" },
+  { term: "Stop Loss", slug: "stop-loss", dot: "#22c55e" },
+  { term: "Leverage", slug: "leverage", dot: "#f59e0b" },
+  { term: "Smart Money", slug: "smart-money", dot: "#b366ff" },
+  { term: "Lot Size", slug: "lot-size", dot: "#3b82f6" },
+] as const;
+
+/* Lessons tag-cloud sizing/emphasis, aligned by index with `lessons.items`. */
+export const LESSON_TOPICS = [
+  { size: "lg", highlight: true },
+  { size: "lg", highlight: true },
+  { size: "lg", highlight: true },
+  { size: "md", highlight: false },
+  { size: "md", highlight: true },
+  { size: "md", highlight: false },
+  { size: "md", highlight: false },
+  { size: "reg", highlight: false },
+  { size: "reg", highlight: false },
+  { size: "reg", highlight: true },
+  { size: "reg", highlight: false },
+  { size: "reg", highlight: false },
+  { size: "reg", highlight: false },
+  { size: "reg", highlight: false },
+  { size: "reg", highlight: false },
+] as const;
+
+/* Pricing plans. Prices are brand-fixed; names/periods/savings translated in
+   the `pricing` namespace. The annual plan is visually highlighted. */
+export const PRICING_PLANS = [
+  {
+    nameKey: "monthlyName",
+    price: "19.99",
+    periodKey: "periodMonth",
+    saveKey: null,
+    badgeKey: null,
+    highlighted: false,
+  },
+  {
+    nameKey: "annualName",
+    price: "139.99",
+    periodKey: "periodYear",
+    saveKey: "annualSave",
+    badgeKey: "annualBadge",
+    highlighted: true,
+  },
+  {
+    nameKey: "quarterlyName",
+    price: "49.99",
+    periodKey: "periodQuarter",
+    saveKey: "quarterlySave",
+    badgeKey: null,
+    highlighted: false,
+  },
+] as const;
+
+/* Footer social links — proper-noun labels, header translated in `footer`. */
+export const FOOTER_SOCIAL = [
+  { label: "X", href: "#" },
+  { label: "Instagram", href: "#" },
+  { label: "LinkedIn", href: "#" },
+  { label: "YouTube", href: "#" },
+] as const;

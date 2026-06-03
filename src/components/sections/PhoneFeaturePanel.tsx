@@ -8,10 +8,11 @@ import { PhoneFrame } from "@/components/ui/PhoneFrame";
 import { cn } from "@/lib/utils";
 
 interface PhoneFeaturePanelProps {
-  badgeKey: string;
+  labelKey: string;
   titleKey: string;
   descKey: string;
   image: string;
+  video?: string;
   index: number;
   reversed?: boolean;
   priority?: boolean;
@@ -26,10 +27,11 @@ interface PhoneFeaturePanelProps {
  * Everything is gated behind prefers-reduced-motion via gsap.matchMedia.
  */
 export const PhoneFeaturePanel = ({
-  badgeKey,
+  labelKey,
   titleKey,
   descKey,
   image,
+  video,
   index,
   reversed = false,
   priority = false,
@@ -47,7 +49,7 @@ export const PhoneFeaturePanel = ({
       const mm = gsap.matchMedia();
 
       // Enter from the phone's own side, bank out toward the opposite side.
-      const enterRotateY = reversed ? -30 : 30;
+      const enterRotateY = reversed ? -25 : 25;
       const exitRotateY = reversed ? 24 : -24;
       const exitX = reversed ? 200 : -200;
 
@@ -58,9 +60,9 @@ export const PhoneFeaturePanel = ({
           scrollTrigger: {
             trigger: pinRef.current,
             start: "top top",
-            end: "+=120%",
+            end: "+=60%",
             pin: true,
-            scrub: 1,
+            scrub: 0.5,
           },
         });
 
@@ -68,7 +70,7 @@ export const PhoneFeaturePanel = ({
           // 1. Rotate/scale in from off-screen depth.
           .fromTo(
             phoneRef.current,
-            { rotateY: enterRotateY, rotateX: 10, z: -120, scale: 0.85, autoAlpha: 0 },
+            { rotateY: enterRotateY, rotateX: 5, z: -120, scale: 0.85, autoAlpha: 0 },
             { rotateY: 0, rotateX: 0, z: 0, scale: 1, autoAlpha: 1, ease: "power2.out", duration: 1 }
           )
           .fromTo(
@@ -132,7 +134,7 @@ export const PhoneFeaturePanel = ({
             style={{ perspective: 1200 }}
           >
             <div ref={phoneRef} className="relative" style={{ transformStyle: "preserve-3d" }}>
-              <PhoneFrame src={image} alt={t(titleKey)} priority={priority} />
+              <PhoneFrame src={image} alt={t(titleKey)} video={video} priority={priority} />
             </div>
 
             {/* Ground shadow that grows/shrinks with the phone */}
@@ -145,12 +147,13 @@ export const PhoneFeaturePanel = ({
 
           {/* Text — sequenced entrance */}
           <div ref={textRef} className={cn("text-center lg:text-left", reversed && "lg:order-1")}>
-            <span className="panel-badge border-primary/30 bg-primary/10 text-accent inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-medium tracking-wider uppercase">
-              <span className="text-primary text-[0.65rem] font-bold">0{index + 1}</span>
-              {t(badgeKey)}
+            <span className="panel-badge text-text-muted inline-flex items-center gap-2 font-mono text-xs tracking-[0.18em] uppercase">
+              <span className="text-primary font-semibold">0{index + 1}</span>
+              <span className="text-primary/40">/</span>
+              {t(labelKey)}
             </span>
 
-            <h3 className="panel-title text-text mt-5 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+            <h3 className="panel-title text-gradient-accent mt-5 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
               {t(titleKey)}
             </h3>
 

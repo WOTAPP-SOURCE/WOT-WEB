@@ -15,9 +15,13 @@
 
   /* Font family */
   --font-poppins: var(--font-poppins);
+  --font-jetbrains: var(--font-jetbrains-mono);
 
   /* Font sans override */
   --font-family-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  /* Mono utility (font-mono) — technical labels, badges, section numbers */
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Animations */
   --animate-float: float 6s ease-in-out infinite;
@@ -28,6 +32,9 @@
   --animate-drift-b: drift-b 30s ease-in-out infinite;
   --animate-drift-c: drift-c 38s ease-in-out infinite;
   --animate-chevron: chevron 1.8s ease-in-out infinite;
+  --animate-twinkle: twinkle 4s ease-in-out infinite alternate;
+  --animate-beam: rotate360 24s linear infinite;
+  --animate-marquee: marquee 32s linear infinite;
 }
 
 @keyframes float {
@@ -122,6 +129,57 @@
   100% {
     transform: translateY(-110vh) translateX(var(--drift, 0px));
     opacity: 0;
+  }
+}
+
+/* Twinkling starfield — pulses the whole star layer's opacity */
+@keyframes twinkle {
+  0% {
+    opacity: 0.18;
+  }
+  100% {
+    opacity: 0.42;
+  }
+}
+
+/* Full rotation — conic beam + concentric rings */
+@keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Seamless horizontal marquee — track is duplicated, slides exactly one copy */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Orbiting hero info cards — gentle independent bob */
+@keyframes orbit-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+/* Live indicator dot pulse */
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
   }
 }
 
@@ -286,5 +344,48 @@
      with mix-blend-overlay to add filmic texture over the dark gradients. */
   .bg-noise {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Purple grid overlay, faded out toward the edges with a radial mask */
+  .bg-grid-overlay {
+    background-image:
+      linear-gradient(rgba(184, 107, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184, 107, 255, 0.02) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000, transparent);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000, transparent);
+  }
+
+  /* Twinkling starfield dot pattern */
+  .bg-stars {
+    background-image: radial-gradient(circle, #fff 0, #fff 0.5px, transparent 1px);
+    background-size: 200px 200px;
+  }
+
+  /* Animated gradient text shimmer — sweeps a light band across the glyphs.
+     Pair with bg-clip-text + transparent text color. */
+  .text-shimmer {
+    background-image: linear-gradient(90deg, #b86bff, #fff, #b86bff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  /* Title gradient that fades from the accent purple into white (left → right) */
+  .text-gradient-accent {
+    background: linear-gradient(90deg, #b366ff 0%, #f5f5f7 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Frosted glass card used for hero orbit cards and premium surfaces */
+  .glass-card {
+    background-color: rgba(20, 12, 40, 0.78);
+    border: 1px solid rgba(184, 107, 255, 0.4);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
   }
 }

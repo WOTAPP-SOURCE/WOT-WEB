@@ -85,7 +85,7 @@ export const HowItWorksSection = () => {
   );
 
   return (
-    <section ref={sectionRef} className="relative py-24 sm:py-32">
+    <section ref={sectionRef} className="relative py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="how-heading mx-auto max-w-2xl text-center">
           <span className="text-accent text-xs font-semibold tracking-[0.3em] uppercase">

@@ -18,7 +18,7 @@ const baseStyles =
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-primary text-white shadow-glow hover:bg-accent hover:shadow-glow-lg",
+    "bg-[linear-gradient(135deg,#941EFE,#5B0FA8)] text-white shadow-[0_0_30px_rgba(148,30,254,0.5)] hover:shadow-[0_0_44px_rgba(148,30,254,0.7)] hover:brightness-110",
   secondary:
     "border border-border bg-surface/60 text-text hover:border-primary/60 hover:bg-surface",
   ghost: "text-text-muted hover:text-text",

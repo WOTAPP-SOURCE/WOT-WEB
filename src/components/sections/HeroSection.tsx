@@ -7,15 +7,14 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { StoreButtons } from "@/components/ui/StoreButtons";
 import { ChevronDownIcon, SparklesIcon } from "@/components/ui/Icons";
+import { HERO_ORBIT_CARDS, HERO_STATS } from "@/lib/constants";
 
-// Split a translated string into per-character spans for the stagger reveal.
-// inline-block + whitespace-pre lets each glyph transform while keeping spaces.
-const splitChars = (text: string, keyPrefix: string) =>
-  text.split("").map((char, i) => (
-    <span key={`${keyPrefix}-${i}`} className="hero-char inline-block whitespace-pre">
-      {char}
-    </span>
-  ));
+// Concentric rings: diameter, spin duration, reverse direction.
+const RINGS = [
+  { size: 480, duration: "26s", reverse: false },
+  { size: 620, duration: "34s", reverse: true },
+  { size: 760, duration: "44s", reverse: false },
+];
 
 export const HeroSection = () => {
   const t = useTranslations("hero");
@@ -33,14 +32,15 @@ export const HeroSection = () => {
         // 1. Intro timeline — runs once on load.
         const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
         intro
-          .from(".hero-char", { yPercent: 120, opacity: 0, stagger: 0.03, duration: 0.6 })
           .from(".hero-badge", { y: 20, opacity: 0, duration: 0.6 }, 0.1)
           .from(".hero-sub", { y: 24, opacity: 0, duration: 0.7 }, "-=0.4")
           .from(
             ".hero-cta",
-            { scale: 0.8, opacity: 0, duration: 0.9, ease: "elastic.out(1, 0.6)" },
+            { scale: 0.85, opacity: 0, duration: 0.8, ease: "elastic.out(1, 0.65)" },
             "-=0.4"
           )
+          .from(".hero-stat", { y: 20, opacity: 0, duration: 0.5, stagger: 0.08 }, "-=0.3")
+          .from(".hero-orbit", { scale: 0.7, autoAlpha: 0, duration: 0.7, stagger: 0.12 }, "-=0.8")
           .from(".hero-scroll-cue", { opacity: 0, duration: 0.8 }, "-=0.2");
 
         // 2. Idle float on the mascot.
@@ -62,19 +62,19 @@ export const HeroSection = () => {
           repeat: -1,
         });
 
-        // 4. Pin the hero for an extra 50vh, drifting content out as it releases.
+        // 4. Pin the hero for only 30vh so the user scrolls through quickly.
+        //    A light parallax drift on the mascot as the section leaves — the
+        //    headline/content stay fully visible throughout.
         const pinTl = gsap.timeline({
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top top",
-            end: "+=50%",
+            end: "+=30%",
             pin: true,
             scrub: 1,
           },
         });
-        pinTl
-          .to(contentRef.current, { yPercent: -14, opacity: 0.25, ease: "none" }, 0)
-          .to(mascotTiltRef.current, { yPercent: -10, ease: "none" }, 0);
+        pinTl.to(mascotTiltRef.current, { yPercent: -8, duration: 1, ease: "none" });
       });
     },
     { scope: sectionRef }
@@ -117,21 +117,22 @@ export const HeroSection = () => {
     >
       <div
         ref={contentRef}
-        className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[55fr_45fr] lg:gap-6"
+        className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[52fr_48fr] lg:gap-6"
       >
         {/* Left — content */}
         <div className="text-center lg:text-left">
-          <div className="hero-badge border-primary/40 bg-primary/10 text-accent inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-medium shadow-[0_0_24px_-6px_rgba(148,30,254,0.6)]">
+          <div className="hero-badge border-primary/40 bg-primary/10 text-accent inline-flex items-center gap-2 rounded-full border px-4 py-1.5 font-mono text-[0.7rem] tracking-[0.14em] uppercase shadow-[0_0_24px_-6px_rgba(148,30,254,0.6)]">
             <SparklesIcon className="h-3.5 w-3.5" />
             {t("badge")}
           </div>
 
-          <h1 className="text-text mt-7 text-5xl leading-[1.05] font-bold tracking-tight sm:text-6xl lg:text-7xl">
-            {splitChars(t("headlineLine1"), "l1")}
-            <br />
-            <span className="text-gradient-purple text-glow-lg">
-              {splitChars(t("headlineLine2"), "l2")}
-            </span>
+          <h1
+            className="mt-7 font-extrabold tracking-tight text-[clamp(42px,5.5vw,80px)] leading-[1.05]"
+            style={{ opacity: 1, filter: "none" }}
+          >
+            <span className="text-gradient block">{t("line1")}</span>
+            <span className="text-gradient-purple block">{t("line2")}</span>
+            <span className="text-gradient block">{t("line3")}</span>
           </h1>
 
           <p className="hero-sub text-text-muted mx-auto mt-7 max-w-lg text-base leading-relaxed sm:text-lg lg:mx-0">
@@ -144,38 +145,108 @@ export const HeroSection = () => {
           >
             <StoreButtons />
           </div>
+
+          {/* Hero stats strip */}
+          <dl className="mx-auto mt-10 grid max-w-lg grid-cols-2 gap-3 sm:grid-cols-4 lg:mx-0">
+            {HERO_STATS.map((stat) => (
+              <div
+                key={stat.labelKey}
+                className="hero-stat rounded-xl border border-[#B86BFF]/[0.18] bg-[#941EFE]/[0.06] px-3 py-3 text-center"
+              >
+                <dd className="text-gradient-purple text-2xl font-bold tracking-tight">
+                  {stat.value}
+                </dd>
+                <dt className="text-text-muted mt-1 font-mono text-[0.6rem] tracking-[0.12em] uppercase">
+                  {t(stat.labelKey)}
+                </dt>
+              </div>
+            ))}
+          </dl>
         </div>
 
-        {/* Right — mascot (perspective parent for 3D tilt) */}
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none" style={{ perspective: 800 }}>
-          <div className="relative mx-auto aspect-square w-full max-w-[520px]">
-            {/* Pulsing purple aura behind the mascot */}
-            <div className="hero-aura glow-radial pointer-events-none absolute inset-[8%] -z-10 rounded-full opacity-[0.15] blur-3xl" />
+        {/* Right — mascot stage (beam + rings + orbiting cards) */}
+        <div
+          className="relative mx-auto flex aspect-square w-full max-w-[340px] items-center justify-center sm:max-w-md lg:max-w-none"
+          style={{ perspective: 800 }}
+        >
+          {/* Spinning conic-gradient beam */}
+          <div
+            aria-hidden="true"
+            className="animate-beam pointer-events-none absolute h-[900px] w-[900px] rounded-full opacity-55 blur-[50px]"
+            style={{
+              background:
+                "conic-gradient(from 0deg, transparent 0deg, rgba(148,30,254,0.55) 60deg, transparent 140deg, transparent 220deg, rgba(179,102,255,0.4) 290deg, transparent 360deg)",
+            }}
+          />
 
-            {/* Tilt wrapper (cursor) wraps float wrapper (idle) */}
+          {/* Concentric rotating rings, each with a glowing dot */}
+          {RINGS.map((ring) => (
             <div
-              ref={mascotTiltRef}
-              className="relative h-full w-full"
-              style={{ transformStyle: "preserve-3d" }}
+              key={ring.size}
+              aria-hidden="true"
+              className="pointer-events-none absolute rounded-full border border-[#B86BFF]/20"
+              style={{
+                width: ring.size,
+                height: ring.size,
+                animation: `rotate360 ${ring.duration} linear infinite${ring.reverse ? " reverse" : ""}`,
+              }}
             >
-              <div ref={mascotFloatRef} className="relative h-full w-full">
-                <Image
-                  src="/images/mascot/mascot-original.png"
-                  alt="Rudy, the WOT AI trading coach robot"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 80vw, 45vw"
-                  className="object-contain drop-shadow-[0_20px_60px_rgba(148,30,254,0.35)]"
-                />
-              </div>
+              <span
+                className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent"
+                style={{ boxShadow: "0 0 14px 3px rgba(179,102,255,0.8)" }}
+              />
+            </div>
+          ))}
+
+          {/* Pulsing purple aura behind the mascot */}
+          <div className="hero-aura glow-radial pointer-events-none absolute inset-[12%] rounded-full opacity-[0.18] blur-3xl" />
+
+          {/* Mascot — tilt wrapper (cursor) wraps float wrapper (idle) */}
+          <div
+            ref={mascotTiltRef}
+            className="relative z-10 aspect-square w-[78%]"
+            style={{ transformStyle: "preserve-3d" }}
+          >
+            <div ref={mascotFloatRef} className="relative h-full w-full">
+              <Image
+                src="/images/mascot/mascot-original.png"
+                alt="Rudy, the WOT AI trading coach robot"
+                fill
+                priority
+                sizes="(max-width: 768px) 70vw, 38vw"
+                className="object-contain drop-shadow-[0_20px_60px_rgba(148,30,254,0.35)]"
+              />
             </div>
           </div>
+
+          {/* Orbiting glassmorphism info cards */}
+          {HERO_ORBIT_CARDS.map((card) => (
+            <div
+              key={card.titleKey}
+              className={`hero-orbit glass-card absolute z-20 w-[150px] rounded-2xl p-3 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.7)] ${card.className}`}
+              style={{ animation: `orbit-bob 8s ease-in-out infinite`, animationDelay: card.delay }}
+            >
+              <div className="flex items-center gap-1.5">
+                {card.live && (
+                  <span
+                    className="h-1.5 w-1.5 rounded-full bg-success"
+                    style={{ animation: "live-pulse 2s ease-in-out infinite" }}
+                  />
+                )}
+                <span className="text-text font-mono text-[0.62rem] tracking-[0.14em] uppercase">
+                  {t(card.titleKey)}
+                </span>
+              </div>
+              <p className="text-accent mt-1.5 text-sm font-semibold">{t(card.meta1Key)}</p>
+              <p className="text-text-muted text-[0.7rem]">{t(card.meta2Key)}</p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Scroll-to-explore cue */}
       <div className="hero-scroll-cue absolute inset-x-0 bottom-7 hidden flex-col items-center gap-2 lg:flex">
-        <span className="text-text-muted text-[0.7rem] tracking-[0.3em] uppercase">
+        <span className="text-text-muted font-mono text-[0.62rem] tracking-[0.3em] uppercase">
           {t("scrollHint")}
         </span>
         <ChevronDownIcon className="animate-chevron text-accent h-5 w-5" />

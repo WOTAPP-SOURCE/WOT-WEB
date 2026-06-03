@@ -37,7 +37,7 @@ export const StatsSection = () => {
   );
 
   return (
-    <section ref={sectionRef} className="relative py-24 sm:py-28">
+    <section ref={sectionRef} className="relative py-20 sm:py-24">
       {/* Full-width glowing gradient hairlines top and bottom */}
       <div className="via-primary/50 absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent shadow-[0_0_15px_rgba(148,30,254,0.6)]" />
       <div className="via-primary/50 absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent to-transparent shadow-[0_0_15px_rgba(148,30,254,0.6)]" />

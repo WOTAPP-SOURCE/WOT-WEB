@@ -32,7 +32,7 @@ export const Header = () => {
         className={cn(
           "fixed inset-x-0 top-0 z-50 border-b transition-all duration-300",
           scrolled
-            ? "bg-background/60 border-white/5 backdrop-blur-xl backdrop-saturate-150"
+            ? "border-[#B86BFF]/[0.18] bg-[#06030D]/70 backdrop-blur-[22px] backdrop-saturate-[1.8]"
             : "border-transparent bg-transparent"
         )}
       >
@@ -58,8 +58,8 @@ export const Header = () => {
                       href={link.href}
                       data-active={isActive}
                       className={cn(
-                        "nav-underline text-sm font-medium transition-colors duration-200",
-                        isActive ? "text-text" : "text-text-muted hover:text-text"
+                        "nav-underline text-sm font-medium transition-colors duration-200 hover:text-accent hover:[text-shadow:0_0_14px_rgba(184,107,255,0.5)]",
+                        isActive ? "text-text" : "text-text-muted"
                       )}
                     >
                       {t(link.key)}

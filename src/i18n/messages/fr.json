@@ -8,14 +8,44 @@
     "downloadApp": "Télécharger l'app",
     "menu": "Menu",
     "closeMenu": "Fermer le menu",
-    "language": "Langue"
+    "language": "Langue",
+    "scrollToTop": "Haut de page"
   },
   "hero": {
     "badge": "Éducation au trading propulsée par l'IA",
-    "headlineLine1": "Maîtrisez le trading",
-    "headlineLine2": "avec l'IA à vos côtés",
+    "line1": "Tradez plus malin.",
+    "line2": "Apprenez plus vite.",
+    "line3": "Gagnez pour de vrai.",
     "subheadline": "WOT est l'application tout-en-un d'éducation au trading par l'IA. Apprenez les marchés, décryptez vos graphiques et affinez chaque décision avec Rudy — votre coach IA personnel, toujours dans votre poche.",
-    "scrollHint": "Faites défiler pour explorer"
+    "scrollHint": "Faites défiler pour explorer",
+    "orbitCoachTitle": "Coach IA",
+    "orbitCoachMeta1": "En ligne",
+    "orbitCoachMeta2": "100 msg/mois",
+    "orbitChartTitle": "Graphique IA",
+    "orbitChartMeta1": "20/mois",
+    "orbitChartMeta2": "Toutes UT",
+    "orbitHistoryTitle": "Historique IA",
+    "orbitHistoryMeta1": "MT4/MT5",
+    "orbitHistoryMeta2": "Analyse biais",
+    "orbitGlossaryTitle": "Glossaire",
+    "orbitGlossaryMeta1": "288 termes",
+    "orbitGlossaryMeta2": "FR·EN·ES",
+    "statTools": "Outils pro",
+    "statModels": "Modèles IA",
+    "statTerms": "Termes du glossaire",
+    "statCategories": "Catégories"
+  },
+  "marquee": {
+    "items": [
+      "COACHING IA",
+      "ANALYSE GRAPHIQUE",
+      "ANALYSE DE TRADES",
+      "CALCULATEUR DE POSITION",
+      "288 TERMES DE GLOSSAIRE",
+      "QUIZ & CLASSEMENT",
+      "CALENDRIER ÉCONOMIQUE",
+      "3 LANGUES"
+    ]
   },
   "store": {
     "appStoreLine1": "Télécharger sur l'",
@@ -27,18 +57,143 @@
     "eyebrow": "Au cœur de l'app",
     "title": "Une app. Tous les avantages.",
     "subtitle": "De votre première leçon à votre centième trade, WOT réunit des outils de niveau professionnel et l'accompagnement de l'IA dans une expérience unique, claire et élégante.",
+    "coachLabel": "COACH IA",
     "coachBadge": "Coaching IA",
     "coachTitle": "Votre coach de trading IA",
     "coachDesc": "Posez à Rudy toutes vos questions sur le trading — des concepts de base aux stratégies avancées. Obtenez des conseils personnalisés et sans jugement, disponibles 24h/24 et 7j/7. Comme un mentor professionnel dans votre poche.",
+    "chartLabel": "ANALYSE GRAPHIQUE",
     "chartBadge": "Analyse intelligente",
     "chartTitle": "Analyse de graphiques par l'IA",
     "chartDesc": "Importez la capture d'un graphique et recevez une analyse instantanée par l'IA. Identifiez les niveaux clés de support et de résistance, les configurations de tendance et les points d'entrée et de sortie potentiels — en quelques secondes.",
+    "tradeLabel": "HISTORIQUE DE TRADES",
     "tradeBadge": "Suivi de performance",
     "tradeTitle": "Analysez votre historique de trades",
     "tradeDesc": "Importez votre historique de trades MT4 ou MT5 et laissez l'IA déceler les schémas de votre trading. Découvrez vos points forts, identifiez vos erreurs récurrentes et obtenez des recommandations concrètes pour progresser.",
+    "toolsLabel": "BOÎTE À OUTILS PRO",
     "toolsBadge": "Boîte à outils complète",
     "toolsTitle": "6 outils de trading professionnels",
     "toolsDesc": "Calculateur de taille de position, calendrier économique, glossaire multilingue de 288 termes, quiz interactifs avec classement — tout ce dont un trader sérieux a besoin, dans une seule app."
+  },
+  "aiSuite": {
+    "eyebrow": "Suite IA",
+    "titleLead": "Vos trades méritent",
+    "titleHighlight": "une vraie intelligence.",
+    "card1Title": "Coach Rudy",
+    "card1Desc": "Votre mentor de trading 24h/24. Demandez-lui tout — obtenez des réponses fondées sur les données de marché, pas des conseils génériques.",
+    "card2Title": "Analyseur de graphiques",
+    "card2Desc": "Importez une capture. Recevez une analyse instantanée : structure, niveaux clés, entrées, sorties.",
+    "card3Title": "Historique de trades",
+    "card3Desc": "Importez MT4/MT5. L'IA détecte schémas, biais et erreurs récurrentes."
+  },
+  "glossaryPreview": {
+    "eyebrow": "Le glossaire",
+    "title": "288 termes. 18 catégories.",
+    "titleAccent": "3 langues.",
+    "subtitle": "Le plus grand glossaire de trading multilingue — des définitions claires, du contexte réel, pensé pour le SEO et pour vous.",
+    "statTermsLabel": "Termes",
+    "statCategoriesLabel": "Catégories",
+    "statLanguagesLabel": "Langues",
+    "categories": [
+      "Bases du forex",
+      "Analyse technique",
+      "Gestion du risque",
+      "Produits dérivés",
+      "ICT / SMC",
+      "Ordres"
+    ],
+    "definitions": [
+      "Le plus petit mouvement de prix standard sur une paire forex — votre unité pour mesurer gains et pertes.",
+      "Un oscillateur de momentum de 0 à 100 qui signale les conditions de surachat et de survente.",
+      "Un ordre en attente qui clôture un trade à un prix défini pour limiter votre risque de baisse.",
+      "Utiliser un capital emprunté pour contrôler une position plus grande que le solde de votre compte.",
+      "Le flux d'ordres institutionnels qui pousse le prix vers la liquidité — le cœur des concepts ICT.",
+      "Le nombre d'unités d'un trade, qui définit la valeur de chaque pip."
+    ],
+    "exploreCta": "Explorer les 288 termes"
+  },
+  "lessons": {
+    "eyebrow": "Leçons",
+    "title": "Apprenez ce qui fait vraiment bouger votre P&L.",
+    "subtitle": "Des leçons structurées sur chaque concept qui compte — de la psychologie à la structure de marché.",
+    "items": [
+      "Price Action",
+      "Gestion du risque",
+      "Psychologie du trading",
+      "Concepts ICT",
+      "Figures chartistes",
+      "Chandeliers",
+      "Support & Résistance",
+      "Fibonacci",
+      "Vagues d'Elliott",
+      "Order Flow",
+      "Structure de marché",
+      "Offre & Demande",
+      "Divergences",
+      "Volume Profile",
+      "Multi-unités de temps"
+    ]
+  },
+  "rewards": {
+    "eyebrow": "Apprentissage gamifié",
+    "title": "Tradez. Apprenez. Gagnez.",
+    "description": "Chaque leçon, quiz et palier vous fait progresser. WOT transforme l'apprentissage en un jeu aux véritables enjeux — pour que bâtir vos connaissances soit réellement gratifiant.",
+    "point1": "Gagnez des WOT Coins à chaque quiz",
+    "point2": "Grimpez dans le classement mondial",
+    "point3": "De vraies récompenses pour de vrais savoirs",
+    "visualTitle": "WOT Coins",
+    "visualSubtitle": "Votre savoir, récompensé"
+  },
+  "pricing": {
+    "eyebrow": "Tarifs",
+    "title": "Une app. Un prix. Tous les outils.",
+    "subtitle": "Accès complet aux 8 outils et 3 modèles IA. Choisissez la formule qui vous convient — résiliable à tout moment.",
+    "monthlyName": "Mensuel",
+    "annualName": "Annuel",
+    "quarterlyName": "Trimestriel",
+    "annualBadge": "Meilleure offre",
+    "annualSave": "Économisez 42 % — 2 mois offerts",
+    "quarterlySave": "Économisez 17 %",
+    "periodMonth": "/mois",
+    "periodYear": "/an",
+    "periodQuarter": "/3 mois",
+    "features": [
+      "Les 8 outils pro",
+      "Quota IA complet — Coach, Graphique & Historique",
+      "Glossaire multilingue de 288 termes",
+      "Résiliable à tout moment"
+    ],
+    "ctaLabel": "Obtenir l'app",
+    "footnote": "Résiliable à tout moment depuis votre compte Apple ID / Google Play."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Réponses rapides.",
+    "items": [
+      {
+        "q": "Est-ce juste un énième wrapper de ChatGPT ?",
+        "a": "Non. WOT utilise des modèles de trading sur mesure, entraînés sur la structure de marché, l'analyse technique et de vraies données graphiques — puis ancre chaque réponse dans le contexte de marché réel. Les chatbots génériques devinent ; Rudy raisonne sur votre configuration réelle."
+      },
+      {
+        "q": "Ai-je besoin d'un compte courtier pour utiliser l'app ?",
+        "a": "Pas du tout. WOT est une app d'éducation et d'analyse — vous pouvez apprendre, étudier le glossaire et analyser des graphiques sans jamais connecter de courtier. Quand vous serez prêt à revoir vos vrais trades, vous pourrez importer votre historique MT4/MT5."
+      },
+      {
+        "q": "Comment fonctionne la facturation Apple / Google ?",
+        "a": "Votre abonnement est entièrement géré via votre compte Apple ID ou Google Play. Le paiement passe par le store, vous gérez tout depuis les réglages de votre appareil et vous pouvez résilier en quelques touches — aucune donnée de carte ne touche nos serveurs."
+      },
+      {
+        "q": "Les quotas IA sont-ils partagés entre les appareils ?",
+        "a": "Votre quota est lié à votre compte WOT, pas à un appareil. Connectez-vous où vous voulez et vos allocations Coach, Graphique et Historique vous suivent — elles ne se multiplient pas par appareil et ne se réinitialisent pas quand vous changez de téléphone."
+      },
+      {
+        "q": "Quelles langues sont prises en charge ?",
+        "a": "L'app complète, le glossaire et le coach IA sont disponibles en français, anglais et espagnol. Le glossaire de 288 termes est traduit professionnellement dans les trois langues, et Rudy répond dans la langue que vous choisissez."
+      },
+      {
+        "q": "Mon historique de trades est-il stocké sur vos serveurs ?",
+        "a": "Votre historique importé est traité pour générer votre analyse et reste privé à votre compte. Nous ne le vendons jamais, ne le partageons jamais, et vous pouvez le supprimer à tout moment directement depuis l'app."
+      }
+    ]
   },
   "stats": {
     "eyebrow": "En chiffres",
@@ -61,7 +216,9 @@
     "step3Desc": "Mettez vos connaissances en pratique avec des outils pro, analysez chaque trade et progressez à chaque décision."
   },
   "cta": {
-    "headline": "Commencez votre parcours de trading aujourd'hui",
+    "badge": "Prêt quand vous l'êtes",
+    "line1": "Ouvrez l'app.",
+    "line2": "La séance commence.",
     "subheadline": "Rejoignez des milliers de traders qui apprennent plus intelligemment avec Rudy. Téléchargez WOT et transformez la confusion des marchés en décisions confiantes.",
     "trustNote": "Téléchargement gratuit · Disponible sur iOS et Android"
   },
@@ -70,6 +227,7 @@
     "productTitle": "Produit",
     "companyTitle": "Entreprise",
     "legalTitle": "Légal",
+    "socialTitle": "Réseaux",
     "features": "Fonctionnalités",
     "pricing": "Tarifs",
     "glossary": "Glossaire",
@@ -81,7 +239,8 @@
     "termsOfService": "Conditions d'utilisation",
     "cookies": "Politique des cookies",
     "followUs": "Suivez-nous",
-    "copyright": "© 2025 Way of Trading. Tous droits réservés."
+    "copyright": "© 2026 Way of Trading · Tous droits réservés",
+    "disclaimer": "Le trading comporte des risques · les performances passées ≠ résultats futurs"
   },
   "glossary": {
     "title": "Glossaire du trading",

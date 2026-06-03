@@ -85,7 +85,7 @@ export const LanguageSwitcher = () => {
                   className={cn(
                     "flex w-full cursor-pointer items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors duration-200",
                     loc === locale
-                      ? "bg-primary/15 text-text"
+                      ? "bg-[linear-gradient(135deg,#941EFE,#5B0FA8)] text-white shadow-[0_0_20px_rgba(148,30,254,0.5)]"
                       : "text-text-muted hover:bg-surface hover:text-text"
                   )}
                 >

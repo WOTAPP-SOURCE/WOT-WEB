@@ -82,6 +82,12 @@ export const BackgroundEffects = () => {
         />
       ))}
 
+      {/* Purple grid overlay, masked to fade at the edges */}
+      <div className="bg-grid-overlay absolute inset-0" />
+
+      {/* Twinkling starfield */}
+      <div className="bg-stars animate-twinkle absolute inset-0" />
+
       {/* Floating particles */}
       {PARTICLES.map((p, i) => (
         <span

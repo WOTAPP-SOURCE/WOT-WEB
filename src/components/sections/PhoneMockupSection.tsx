@@ -7,33 +7,35 @@ import { gsap } from "@/lib/gsap";
 import { PhoneFeaturePanel } from "@/components/sections/PhoneFeaturePanel";
 
 interface FeatureConfig {
-  badgeKey: string;
+  labelKey: string;
   titleKey: string;
   descKey: string;
   image: string;
+  video?: string;
 }
 
 const FEATURES: FeatureConfig[] = [
   {
-    badgeKey: "coachBadge",
+    labelKey: "coachLabel",
     titleKey: "coachTitle",
     descKey: "coachDesc",
     image: "/images/screenshots/coach-rudy.png",
   },
   {
-    badgeKey: "chartBadge",
+    labelKey: "chartLabel",
     titleKey: "chartTitle",
     descKey: "chartDesc",
     image: "/images/screenshots/graph-analyzer.png",
+    video: "/videos/fr/chart-analyzer.mp4",
   },
   {
-    badgeKey: "tradeBadge",
+    labelKey: "tradeLabel",
     titleKey: "tradeTitle",
     descKey: "tradeDesc",
     image: "/images/screenshots/trade-analyzer.png",
   },
   {
-    badgeKey: "toolsBadge",
+    labelKey: "toolsLabel",
     titleKey: "toolsTitle",
     descKey: "toolsDesc",
     image: "/images/screenshots/tools.png",
@@ -62,7 +64,7 @@ export const PhoneMockupSection = () => {
   return (
     <section className="relative">
       {/* Section intro */}
-      <div className="mx-auto max-w-7xl px-5 pt-24 pb-4 sm:px-8 sm:pt-32">
+      <div className="mx-auto max-w-7xl px-5 pt-20 pb-4 sm:px-8 sm:pt-24">
         <div ref={introRef} className="mx-auto max-w-3xl text-center">
           <span className="text-accent text-xs font-semibold tracking-[0.3em] uppercase">
             {t("eyebrow")}
@@ -80,10 +82,11 @@ export const PhoneMockupSection = () => {
       {FEATURES.map((feature, index) => (
         <PhoneFeaturePanel
           key={feature.titleKey}
-          badgeKey={feature.badgeKey}
+          labelKey={feature.labelKey}
           titleKey={feature.titleKey}
           descKey={feature.descKey}
           image={feature.image}
+          video={feature.video}
           index={index}
           reversed={index % 2 === 1}
           priority={index === 0}
