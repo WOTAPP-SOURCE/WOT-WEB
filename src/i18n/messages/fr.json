@@ -5,20 +5,83 @@
     "glossary": "Glossaire",
     "faq": "FAQ",
     "about": "À propos",
-    "downloadApp": "Télécharger l'app"
+    "downloadApp": "Télécharger l'app",
+    "menu": "Menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue"
   },
   "hero": {
-    "badge": "Formation au trading propulsée par l'IA",
-    "headline": "Maîtrisez le trading avec votre coach IA",
-    "subheadline": "Rudy vous guide à travers chaque concept, stratégie et mouvement de marché — à votre rythme.",
-    "ctaPrimary": "Télécharger sur l'App Store",
-    "ctaSecondary": "Disponible sur Google Play"
+    "badge": "Éducation au trading propulsée par l'IA",
+    "headlineLine1": "Maîtrisez le trading",
+    "headlineLine2": "avec l'IA à vos côtés",
+    "subheadline": "WOT est l'application tout-en-un d'éducation au trading par l'IA. Apprenez les marchés, décryptez vos graphiques et affinez chaque décision avec Rudy — votre coach IA personnel, toujours dans votre poche.",
+    "scrollHint": "Faites défiler pour explorer"
+  },
+  "store": {
+    "appStoreLine1": "Télécharger sur l'",
+    "appStoreLine2": "App Store",
+    "googlePlayLine1": "Disponible sur",
+    "googlePlayLine2": "Google Play"
+  },
+  "phone": {
+    "eyebrow": "Au cœur de l'app",
+    "title": "Une app. Tous les avantages.",
+    "subtitle": "De votre première leçon à votre centième trade, WOT réunit des outils de niveau professionnel et l'accompagnement de l'IA dans une expérience unique, claire et élégante.",
+    "coachBadge": "Coaching IA",
+    "coachTitle": "Votre coach de trading IA",
+    "coachDesc": "Posez à Rudy toutes vos questions sur le trading — des concepts de base aux stratégies avancées. Obtenez des conseils personnalisés et sans jugement, disponibles 24h/24 et 7j/7. Comme un mentor professionnel dans votre poche.",
+    "chartBadge": "Analyse intelligente",
+    "chartTitle": "Analyse de graphiques par l'IA",
+    "chartDesc": "Importez la capture d'un graphique et recevez une analyse instantanée par l'IA. Identifiez les niveaux clés de support et de résistance, les configurations de tendance et les points d'entrée et de sortie potentiels — en quelques secondes.",
+    "tradeBadge": "Suivi de performance",
+    "tradeTitle": "Analysez votre historique de trades",
+    "tradeDesc": "Importez votre historique de trades MT4 ou MT5 et laissez l'IA déceler les schémas de votre trading. Découvrez vos points forts, identifiez vos erreurs récurrentes et obtenez des recommandations concrètes pour progresser.",
+    "toolsBadge": "Boîte à outils complète",
+    "toolsTitle": "6 outils de trading professionnels",
+    "toolsDesc": "Calculateur de taille de position, calendrier économique, glossaire multilingue de 288 termes, quiz interactifs avec classement — tout ce dont un trader sérieux a besoin, dans une seule app."
+  },
+  "stats": {
+    "eyebrow": "En chiffres",
+    "title": "La confiance d'une communauté grandissante",
+    "subtitle": "Des milliers de traders apprennent déjà à la manière WOT.",
+    "tradersLabel": "Traders",
+    "termsLabel": "Termes du glossaire",
+    "toolsLabel": "Outils IA",
+    "languagesLabel": "Langues"
+  },
+  "howItWorks": {
+    "eyebrow": "Premiers pas",
+    "title": "Comment ça marche",
+    "subtitle": "Trois étapes pour passer de débutant curieux à trader confiant.",
+    "step1Title": "Téléchargez l'app",
+    "step1Desc": "Obtenez WOT gratuitement sur iOS ou Android et créez votre profil en quelques secondes — sans carte, sans friction.",
+    "step2Title": "Apprenez avec Rudy",
+    "step2Desc": "Suivez des leçons guidées, posez toutes vos questions à Rudy et bâtissez une vraie compréhension à votre rythme.",
+    "step3Title": "Tradez en confiance",
+    "step3Desc": "Mettez vos connaissances en pratique avec des outils pro, analysez chaque trade et progressez à chaque décision."
+  },
+  "cta": {
+    "headline": "Commencez votre parcours de trading aujourd'hui",
+    "subheadline": "Rejoignez des milliers de traders qui apprennent plus intelligemment avec Rudy. Téléchargez WOT et transformez la confusion des marchés en décisions confiantes.",
+    "trustNote": "Téléchargement gratuit · Disponible sur iOS et Android"
   },
   "footer": {
-    "tagline": "La façon intelligente d'apprendre le trading.",
-    "legal": "Tous droits réservés.",
+    "tagline": "La façon plus intelligente d'apprendre le trading — coaching IA, outils pro et glossaire multilingue dans une seule app.",
+    "productTitle": "Produit",
+    "companyTitle": "Entreprise",
+    "legalTitle": "Légal",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "glossary": "Glossaire",
+    "faq": "FAQ",
+    "about": "À propos",
+    "contact": "Contact",
+    "blog": "Blog",
     "privacyPolicy": "Politique de confidentialité",
-    "termsOfService": "Conditions d'utilisation"
+    "termsOfService": "Conditions d'utilisation",
+    "cookies": "Politique des cookies",
+    "followUs": "Suivez-nous",
+    "copyright": "© 2025 Way of Trading. Tous droits réservés."
   },
   "glossary": {
     "title": "Glossaire du trading",
@@ -27,6 +90,12 @@
     "allCategories": "Toutes les catégories",
     "relatedTerms": "Termes associés",
     "learnWithRudy": "Apprenez cela en pratique avec Rudy, votre coach IA"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page introuvable",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée. Reprenons le bon chemin.",
+    "backHome": "Retour à l'accueil"
   },
   "metadata": {
     "siteName": "Way of Trading",

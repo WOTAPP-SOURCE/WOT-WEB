@@ -29,12 +29,15 @@ If a prompt requests auth, checkout, Stripe, RevenueCat, or user dashboards → 
 | Language       | TypeScript                        | 5.x       |
 | Styling        | Tailwind CSS                      | 4.x       |
 | Animations     | Framer Motion                     | 11.x      |
+| Scroll/Motion   | GSAP + ScrollTrigger + Lenis      | 3.x / —   |
 | i18n           | next-intl                         | 4.x       |
 | Linting        | ESLint + Prettier                 | latest    |
 | Package Mgr    | npm                               | —         |
 | Deployment     | Vercel (auto-deploy on push)      | —         |
 
-**Do NOT introduce additional frameworks, CSS libraries (no Bootstrap, Chakra, MUI), or state management (no Redux, Zustand). Tailwind + Framer Motion + next-intl is the complete stack.**
+**Do NOT introduce additional frameworks, CSS libraries (no Bootstrap, Chakra, MUI), or state management (no Redux, Zustand). Tailwind + Framer Motion + GSAP/ScrollTrigger + Lenis + next-intl is the complete stack.**
+
+> **Animation layer split (approved 2026-06-03):** GSAP + ScrollTrigger + Lenis (`@gsap/react`, `gsap`, `lenis`) drive the immersive homepage scroll choreography — pinning, scrubbed timelines, smooth scroll, SVG path draws, and counters. Framer Motion remains available for simple component-level enter/hover transitions. Do not add any further animation library (no Three.js, no Locomotive, no AOS).
 
 ---
 

@@ -5,20 +5,83 @@
     "glossary": "Glossary",
     "faq": "FAQ",
     "about": "About",
-    "downloadApp": "Download App"
+    "downloadApp": "Download App",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
   },
   "hero": {
     "badge": "AI-Powered Trading Education",
-    "headline": "Master Trading with Your AI Coach",
-    "subheadline": "Rudy guides you through every concept, strategy, and market move — at your own pace.",
-    "ctaPrimary": "Download on the App Store",
-    "ctaSecondary": "Get it on Google Play"
+    "headlineLine1": "Master Trading with",
+    "headlineLine2": "AI by Your Side",
+    "subheadline": "WOT is the all-in-one AI trading education app. Learn the markets, decode your charts, and sharpen every decision with Rudy — your personal AI coach, always in your pocket.",
+    "scrollHint": "Scroll to explore"
+  },
+  "store": {
+    "appStoreLine1": "Download on the",
+    "appStoreLine2": "App Store",
+    "googlePlayLine1": "Get it on",
+    "googlePlayLine2": "Google Play"
+  },
+  "phone": {
+    "eyebrow": "Inside the app",
+    "title": "One app. Every edge.",
+    "subtitle": "From your first lesson to your hundredth trade, WOT brings professional-grade tools and AI guidance into a single, beautifully simple experience.",
+    "coachBadge": "AI Coaching",
+    "coachTitle": "Your AI Trading Coach",
+    "coachDesc": "Ask Rudy anything about trading — from basic concepts to advanced strategies. Get personalized, judgement-free guidance available 24/7. Like having a professional mentor in your pocket.",
+    "chartBadge": "Smart Analysis",
+    "chartTitle": "AI-Powered Chart Analysis",
+    "chartDesc": "Upload any chart screenshot and receive instant AI analysis. Identify key support and resistance levels, trend patterns, and potential entry and exit points — all in seconds.",
+    "tradeBadge": "Performance Tracking",
+    "tradeTitle": "Analyze Your Trading History",
+    "tradeDesc": "Import your MT4 or MT5 trade history and let AI find patterns in your trading. Discover your strengths, identify recurring mistakes, and get actionable insights to improve.",
+    "toolsBadge": "Complete Toolkit",
+    "toolsTitle": "6 Professional Trading Tools",
+    "toolsDesc": "Position size calculator, economic calendar, multilingual glossary with 288 terms, interactive quizzes with leaderboard — everything a serious trader needs, in one app."
+  },
+  "stats": {
+    "eyebrow": "By the numbers",
+    "title": "Trusted by a growing community",
+    "subtitle": "Thousands of traders are already learning the WOT way.",
+    "tradersLabel": "Traders",
+    "termsLabel": "Glossary Terms",
+    "toolsLabel": "AI Tools",
+    "languagesLabel": "Languages"
+  },
+  "howItWorks": {
+    "eyebrow": "Get started",
+    "title": "How it works",
+    "subtitle": "Three steps from curious beginner to confident trader.",
+    "step1Title": "Download the App",
+    "step1Desc": "Get WOT free on iOS or Android and create your profile in seconds — no card, no friction.",
+    "step2Title": "Learn with Rudy",
+    "step2Desc": "Follow guided lessons, ask Rudy anything, and build real understanding at your own pace.",
+    "step3Title": "Trade with Confidence",
+    "step3Desc": "Apply your knowledge with pro tools, analyze every trade, and grow with each decision."
+  },
+  "cta": {
+    "headline": "Start Your Trading Journey Today",
+    "subheadline": "Join thousands of traders learning smarter with Rudy. Download WOT and turn market confusion into confident decisions.",
+    "trustNote": "Free to download · Available on iOS and Android"
   },
   "footer": {
-    "tagline": "The smarter way to learn trading.",
-    "legal": "All rights reserved.",
+    "tagline": "The smarter way to learn trading — AI coaching, pro tools, and a multilingual glossary in one app.",
+    "productTitle": "Product",
+    "companyTitle": "Company",
+    "legalTitle": "Legal",
+    "features": "Features",
+    "pricing": "Pricing",
+    "glossary": "Glossary",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+    "termsOfService": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "followUs": "Follow us",
+    "copyright": "© 2025 Way of Trading. All rights reserved."
   },
   "glossary": {
     "title": "Trading Glossary",
@@ -27,6 +90,12 @@
     "allCategories": "All categories",
     "relatedTerms": "Related terms",
     "learnWithRudy": "Learn this in practice with Rudy, your AI coach"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist or has been moved. Let's get you back on track.",
+    "backHome": "Back to home"
   },
   "metadata": {
     "siteName": "Way of Trading",

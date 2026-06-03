@@ -18,11 +18,136 @@
 
   /* Font sans override */
   --font-family-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-shimmer: shimmer 8s linear infinite;
+  --animate-drift-a: drift-a 24s ease-in-out infinite;
+  --animate-drift-b: drift-b 30s ease-in-out infinite;
+  --animate-drift-c: drift-c 38s ease-in-out infinite;
+  --animate-chevron: chevron 1.8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Slow, organic drift for the background gradient-mesh blobs.
+   Transform-only (translate + scale) so they stay on the compositor. */
+@keyframes drift-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(8%, 6%, 0) scale(1.12);
+  }
+}
+
+@keyframes drift-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(-10%, 8%, 0) scale(0.92);
+  }
+}
+
+@keyframes drift-c {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, -8%, 0) scale(1.15);
+  }
+}
+
+/* Bouncing scroll chevron */
+@keyframes chevron {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+/* Floating ambient particle: drifts upward and fades, looped per-particle with
+   randomized duration/delay/offset set inline. Transform + opacity only. */
+@keyframes particle-rise {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(var(--drift, 0px));
+    opacity: 0;
+  }
 }
 
 @layer base {
   html {
     color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  /* Lenis smooth-scroll required styles. When Lenis is active it manages the
+     scroll position itself, so native smooth-scroll must be turned off. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: clip;
+  }
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
   }
 
   body {
@@ -31,11 +156,135 @@
     font-family: var(--font-family-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* clip (not hidden) prevents horizontal scroll without creating a scroll
+       container — which would otherwise break position: sticky on the phone
+       showcase panels. */
+    overflow-x: clip;
   }
 
   *,
   *::before,
   *::after {
     border-color: var(--color-border);
+  }
+
+  /* Respect reduced-motion: disable decorative looping animations */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Radial purple glow used behind hero / mascot / CTA */
+  .glow-radial {
+    background: radial-gradient(
+      circle at center,
+      rgba(148, 30, 254, 0.28) 0%,
+      rgba(148, 30, 254, 0.12) 35%,
+      transparent 70%
+    );
+  }
+
+  /* Soft purple drop shadow for text and key numbers */
+  .text-glow {
+    text-shadow:
+      0 0 24px rgba(148, 30, 254, 0.55),
+      0 0 60px rgba(148, 30, 254, 0.25);
+  }
+
+  /* Box glow for buttons / accents */
+  .shadow-glow {
+    box-shadow:
+      0 0 24px rgba(148, 30, 254, 0.45),
+      0 0 48px rgba(148, 30, 254, 0.18);
+  }
+
+  .shadow-glow-lg {
+    box-shadow:
+      0 0 40px rgba(148, 30, 254, 0.55),
+      0 0 90px rgba(148, 30, 254, 0.25);
+  }
+
+  /* Gradient text using brand purple → accent */
+  .text-gradient {
+    background: linear-gradient(135deg, #f5f5f7 0%, #b366ff 55%, #941efe 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Pure brand gradient (primary → accent) for hero headline + key numbers */
+  .text-gradient-purple {
+    background: linear-gradient(120deg, #941efe 0%, #b366ff 60%, #d7b3ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Stronger headline glow */
+  .text-glow-lg {
+    text-shadow:
+      0 0 30px rgba(148, 30, 254, 0.45),
+      0 0 80px rgba(148, 30, 254, 0.25);
+  }
+
+  /* Hairline grid texture for hero / dark panels */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Animated nav underline that wipes in from the left */
+  .nav-underline {
+    position: relative;
+  }
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1.5px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(90deg, #941efe, #b366ff);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav-underline:hover::after,
+  .nav-underline[data-active="true"]::after {
+    transform: scaleX(1);
+  }
+
+  /* Frosted glass surface for navbar / cards */
+  .glass {
+    background-color: rgba(20, 20, 32, 0.6);
+    backdrop-filter: blur(16px) saturate(150%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+  }
+
+  /* Hide scrollbar but keep scroll (mobile menu) */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Fractal-noise film grain (inline SVG turbulence). Layered at low opacity
+     with mix-blend-overlay to add filmic texture over the dark gradients. */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 }
