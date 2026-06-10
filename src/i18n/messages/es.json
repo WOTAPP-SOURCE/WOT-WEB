@@ -28,7 +28,7 @@
     "orbitHistoryMeta1": "MT4/MT5",
     "orbitHistoryMeta2": "Análisis de sesgos",
     "orbitGlossaryTitle": "Glosario",
-    "orbitGlossaryMeta1": "288 términos",
+    "orbitGlossaryMeta1": "{count} términos",
     "orbitGlossaryMeta2": "FR·EN·ES",
     "statTools": "Herramientas pro",
     "statModels": "Modelos IA",
@@ -41,7 +41,7 @@
       "ANÁLISIS DE GRÁFICOS",
       "ANALIZADOR DE TRADES",
       "CALCULADORA DE POSICIÓN",
-      "288 TÉRMINOS DE GLOSARIO",
+      "{count} TÉRMINOS DE GLOSARIO",
       "CUESTIONARIOS Y CLASIFICACIÓN",
       "CALENDARIO ECONÓMICO",
       "3 IDIOMAS"
@@ -72,7 +72,7 @@
     "toolsLabel": "KIT PRO",
     "toolsBadge": "Kit completo",
     "toolsTitle": "6 herramientas de trading profesionales",
-    "toolsDesc": "Calculadora de tamaño de posición, calendario económico, glosario multilingüe con 288 términos, cuestionarios interactivos con clasificación — todo lo que un trader serio necesita, en una sola app."
+    "toolsDesc": "Calculadora de tamaño de posición, calendario económico, glosario multilingüe con {count} términos, cuestionarios interactivos con clasificación — todo lo que un trader serio necesita, en una sola app."
   },
   "aiSuite": {
     "eyebrow": "Suite de IA",
@@ -87,7 +87,7 @@
   },
   "glossaryPreview": {
     "eyebrow": "El glosario",
-    "title": "288 términos. 18 categorías.",
+    "title": "{count} términos. 18 categorías.",
     "titleAccent": "3 idiomas.",
     "subtitle": "El mayor glosario de trading multilingüe — definiciones claras, contexto real, pensado para el SEO y para ti.",
     "statTermsLabel": "Términos",
@@ -109,7 +109,7 @@
       "El flujo de órdenes institucional que empuja el precio hacia la liquidez — el núcleo de los conceptos ICT.",
       "El número de unidades de un trade, que define cuánto vale cada pip."
     ],
-    "exploreCta": "Explora los 288 términos"
+    "exploreCta": "Explora los {count} términos"
   },
   "lessons": {
     "eyebrow": "Lecciones",
@@ -159,7 +159,7 @@
     "features": [
       "Las 8 herramientas pro",
       "Cuota de IA completa — Coach, Gráfico e Historial",
-      "Glosario multilingüe de 288 términos",
+      "Glosario multilingüe de {count} términos",
       "Cancela cuando quieras"
     ],
     "ctaLabel": "Obtener la app",
@@ -168,32 +168,7 @@
   "faq": {
     "eyebrow": "Preguntas frecuentes",
     "title": "Respuestas rápidas.",
-    "items": [
-      {
-        "q": "¿Es solo otro envoltorio de ChatGPT?",
-        "a": "No. WOT usa modelos de trading hechos a medida, entrenados en estructura de mercado, análisis técnico y datos reales de gráficos — y luego fundamenta cada respuesta en el contexto de mercado real. Los chatbots genéricos adivinan; Rudy razona sobre tu configuración real."
-      },
-      {
-        "q": "¿Necesito una cuenta de bróker para usar la app?",
-        "a": "Para nada. WOT es una app de educación y análisis — puedes aprender, estudiar el glosario y analizar gráficos sin conectar nunca un bróker. Cuando quieras revisar tus trades reales, podrás importar tu historial de MT4/MT5."
-      },
-      {
-        "q": "¿Cómo funciona la facturación de Apple / Google?",
-        "a": "Tu suscripción se gestiona por completo a través de tu cuenta de Apple ID o Google Play. El cobro pasa por la tienda, lo gestionas todo desde los ajustes de tu dispositivo y puedes cancelar en un par de toques — ningún dato de tarjeta toca nuestros servidores."
-      },
-      {
-        "q": "¿Las cuotas de IA se comparten entre dispositivos?",
-        "a": "Tu cuota está vinculada a tu cuenta de WOT, no a un dispositivo. Inicia sesión donde quieras y tus asignaciones de Coach, Gráfico e Historial te acompañan — no se multiplican por dispositivo ni se reinician al cambiar de teléfono."
-      },
-      {
-        "q": "¿Qué idiomas son compatibles?",
-        "a": "La app completa, el glosario y el coach de IA están disponibles en francés, inglés y español. El glosario de 288 términos está traducido profesionalmente en los tres idiomas, y Rudy responde en el idioma que elijas."
-      },
-      {
-        "q": "¿Mi historial de trades se almacena en sus servidores?",
-        "a": "Tu historial importado se procesa para generar tu análisis y se mantiene privado en tu cuenta. Nunca lo vendemos, nunca lo compartimos, y puedes eliminarlo en cualquier momento directamente desde la app."
-      }
-    ]
+    "learnMore": "Saber más"
   },
   "stats": {
     "eyebrow": "En cifras",
@@ -244,11 +219,16 @@
   },
   "glossary": {
     "title": "Glosario de trading",
-    "subtitle": "288 términos esenciales de trading explicados claramente.",
+    "subtitle": "{count} términos esenciales de trading explicados claramente.",
     "searchPlaceholder": "Buscar un término...",
     "allCategories": "Todas las categorías",
     "relatedTerms": "Términos relacionados",
-    "learnWithRudy": "Aprende esto en la práctica con Rudy, tu coach de IA"
+    "learnWithRudy": "Aprende esto en la práctica con Rudy, tu coach de IA",
+    "metaTitle": "Glosario de trading",
+    "metaDescription": "Los términos de trading explicados claramente, en tres idiomas — el mayor glosario de trading multilingüe.",
+    "seoSuffix": "Glosario de trading | WOT",
+    "exploreAllCta": "Explorar los +{count} términos",
+    "noResults": "Ningún término coincide con tu búsqueda."
   },
   "notFound": {
     "code": "404",
@@ -260,5 +240,17 @@
     "siteName": "Way of Trading",
     "homeTitle": "Way of Trading — Aprende trading con IA",
     "homeDescription": "Domina el trading con Rudy, tu coach de IA. Descarga la app Way of Trading en iOS y Android."
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "title": "FAQ",
+    "subtitle": "Todo lo que necesitas saber sobre WOT — respondido.",
+    "allCategories": "Todo",
+    "metaTitle": "FAQ",
+    "metaDescription": "Respuestas a las preguntas frecuentes sobre WOT: funciones, suscripciones, herramientas de IA, privacidad y más."
+  },
+  "aboutPage": {
+    "metaTitle": "Acerca de",
+    "metaDescription": "La historia detrás de WOT: creado por traders y profesionales del brokerage para reinventar la educación en trading."
   }
 }

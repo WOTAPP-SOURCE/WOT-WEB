@@ -28,7 +28,7 @@
     "orbitHistoryMeta1": "MT4/MT5",
     "orbitHistoryMeta2": "Bias scan",
     "orbitGlossaryTitle": "Glossary",
-    "orbitGlossaryMeta1": "288 terms",
+    "orbitGlossaryMeta1": "{count} terms",
     "orbitGlossaryMeta2": "FR·EN·ES",
     "statTools": "Pro tools",
     "statModels": "AI models",
@@ -41,7 +41,7 @@
       "CHART ANALYSIS",
       "TRADE ANALYZER",
       "POSITION CALCULATOR",
-      "288 GLOSSARY TERMS",
+      "{count} GLOSSARY TERMS",
       "QUIZZES & LEADERBOARD",
       "ECONOMIC CALENDAR",
       "3 LANGUAGES"
@@ -72,7 +72,7 @@
     "toolsLabel": "PRO TOOLKIT",
     "toolsBadge": "Complete Toolkit",
     "toolsTitle": "6 Professional Trading Tools",
-    "toolsDesc": "Position size calculator, economic calendar, multilingual glossary with 288 terms, interactive quizzes with leaderboard — everything a serious trader needs, in one app."
+    "toolsDesc": "Position size calculator, economic calendar, multilingual glossary with {count} terms, interactive quizzes with leaderboard — everything a serious trader needs, in one app."
   },
   "aiSuite": {
     "eyebrow": "AI Suite",
@@ -87,7 +87,7 @@
   },
   "glossaryPreview": {
     "eyebrow": "The glossary",
-    "title": "288 terms. 18 categories.",
+    "title": "{count} terms. 18 categories.",
     "titleAccent": "3 languages.",
     "subtitle": "The largest multilingual trading glossary — clear definitions, real context, built for SEO and for you.",
     "statTermsLabel": "Terms",
@@ -109,7 +109,7 @@
       "Institutional order flow that drives price toward liquidity — the core of ICT concepts.",
       "The number of units in a single trade, defining how much each pip is worth."
     ],
-    "exploreCta": "Explore all 288 terms"
+    "exploreCta": "Explore all {count} terms"
   },
   "lessons": {
     "eyebrow": "Lessons",
@@ -159,7 +159,7 @@
     "features": [
       "All 8 pro tools",
       "Full AI quota — Coach, Chart & History",
-      "288-term multilingual glossary",
+      "{count}-term multilingual glossary",
       "Cancel anytime"
     ],
     "ctaLabel": "Get the app",
@@ -168,32 +168,7 @@
   "faq": {
     "eyebrow": "FAQ",
     "title": "Quick answers.",
-    "items": [
-      {
-        "q": "Is this just another ChatGPT wrapper?",
-        "a": "No. WOT runs purpose-built trading models trained on market structure, technical analysis, and real chart data — then grounds every answer in live market context. Generic chatbots guess; Rudy reasons about your actual setup."
-      },
-      {
-        "q": "Do I need a broker account to use the app?",
-        "a": "Not at all. WOT is an education and analysis app — you can learn, study the glossary, and analyze charts without ever connecting a broker. When you're ready to review your real trades, you can import your MT4/MT5 history."
-      },
-      {
-        "q": "How does Apple / Google billing work?",
-        "a": "Your subscription is handled entirely through your Apple ID or Google Play account. You're charged through the store, manage everything from your device settings, and can cancel in a couple of taps — no card details ever touch our servers."
-      },
-      {
-        "q": "Are AI quotas shared across devices?",
-        "a": "Your quota is tied to your WOT account, not a device. Sign in anywhere and your Coach, Chart, and History allowances follow you — they don't multiply per device, and they don't reset when you switch phones."
-      },
-      {
-        "q": "What languages are supported?",
-        "a": "The full app, glossary, and AI coach are available in French, English, and Spanish. The 288-term glossary is professionally translated in all three, and Rudy replies in the language you choose."
-      },
-      {
-        "q": "Is my trade history stored on your servers?",
-        "a": "Your imported history is processed to generate your analysis and kept private to your account. We never sell it, never share it, and you can delete it at any time straight from the app."
-      }
-    ]
+    "learnMore": "Learn more"
   },
   "stats": {
     "eyebrow": "By the numbers",
@@ -244,11 +219,16 @@
   },
   "glossary": {
     "title": "Trading Glossary",
-    "subtitle": "288 essential trading terms explained clearly.",
+    "subtitle": "{count} essential trading terms explained clearly.",
     "searchPlaceholder": "Search a term...",
     "allCategories": "All categories",
     "relatedTerms": "Related terms",
-    "learnWithRudy": "Learn this in practice with Rudy, your AI coach"
+    "learnWithRudy": "Learn this in practice with Rudy, your AI coach",
+    "metaTitle": "Trading Glossary",
+    "metaDescription": "Trading terms explained clearly, in three languages — the largest multilingual trading glossary.",
+    "seoSuffix": "Trading Glossary | WOT",
+    "exploreAllCta": "Explore all +{count} terms",
+    "noResults": "No terms match your search."
   },
   "notFound": {
     "code": "404",
@@ -260,5 +240,17 @@
     "siteName": "Way of Trading",
     "homeTitle": "Way of Trading — Learn Trading with AI",
     "homeDescription": "Master trading with Rudy, your AI coach. Download the Way of Trading app on iOS and Android."
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "title": "FAQ",
+    "subtitle": "Everything you need to know about WOT — answered.",
+    "allCategories": "All",
+    "metaTitle": "FAQ",
+    "metaDescription": "Answers to common questions about WOT: features, subscriptions, AI tools, privacy and more."
+  },
+  "aboutPage": {
+    "metaTitle": "About",
+    "metaDescription": "The story behind WOT: built by traders and brokerage professionals to rebuild trading education from scratch."
   }
 }

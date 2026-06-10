@@ -8,7 +8,12 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { STATS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-export const StatsSection = () => {
+interface StatsSectionProps {
+  /** Live glossary term count — replaces the hardcoded terms figure. */
+  count: number;
+}
+
+export const StatsSection = ({ count }: StatsSectionProps) => {
   const t = useTranslations("stats");
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -54,7 +59,10 @@ export const StatsSection = () => {
         </div>
 
         <dl className="stats-grid mt-14 grid grid-cols-2 gap-y-12 lg:grid-cols-4 lg:gap-y-0">
-          {STATS.map((stat, index) => (
+          {STATS.map((stat, index) => {
+            // The glossary terms figure is driven by the live count, shown as +{count}.
+            const isTerms = stat.key === "termsLabel";
+            return (
             <div
               key={stat.key}
               className={cn(
@@ -64,13 +72,18 @@ export const StatsSection = () => {
               )}
             >
               <dd className="text-gradient-purple text-5xl font-bold tracking-tight sm:text-6xl">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                <AnimatedCounter
+                  value={isTerms ? count : stat.value}
+                  prefix={isTerms ? "+" : ""}
+                  suffix={isTerms ? "" : stat.suffix}
+                />
               </dd>
               <dt className="text-text-muted mt-3 text-sm font-medium sm:text-base">
                 {t(stat.key)}
               </dt>
             </div>
-          ))}
+            );
+          })}
         </dl>
       </div>
     </section>

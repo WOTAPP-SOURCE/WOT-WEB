@@ -9,9 +9,16 @@ import { CheckIcon } from "@/components/ui/Icons";
 import { PRICING_PLANS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-export const PricingSection = () => {
+interface PricingSectionProps {
+  /** Live glossary term count — substituted into the "{count}-term glossary" feature. */
+  count: number;
+}
+
+export const PricingSection = ({ count }: PricingSectionProps) => {
   const t = useTranslations("pricing");
-  const features = t.raw("features") as string[];
+  const features = (t.raw("features") as string[]).map((feature) =>
+    feature.replace("{count}", String(count))
+  );
   const sectionRef = useRef<HTMLElement>(null);
 
   useGSAP(

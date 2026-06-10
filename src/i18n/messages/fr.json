@@ -28,7 +28,7 @@
     "orbitHistoryMeta1": "MT4/MT5",
     "orbitHistoryMeta2": "Analyse biais",
     "orbitGlossaryTitle": "Glossaire",
-    "orbitGlossaryMeta1": "288 termes",
+    "orbitGlossaryMeta1": "{count} termes",
     "orbitGlossaryMeta2": "FR·EN·ES",
     "statTools": "Outils pro",
     "statModels": "Modèles IA",
@@ -41,7 +41,7 @@
       "ANALYSE GRAPHIQUE",
       "ANALYSE DE TRADES",
       "CALCULATEUR DE POSITION",
-      "288 TERMES DE GLOSSAIRE",
+      "{count} TERMES DE GLOSSAIRE",
       "QUIZ & CLASSEMENT",
       "CALENDRIER ÉCONOMIQUE",
       "3 LANGUES"
@@ -72,7 +72,7 @@
     "toolsLabel": "BOÎTE À OUTILS PRO",
     "toolsBadge": "Boîte à outils complète",
     "toolsTitle": "6 outils de trading professionnels",
-    "toolsDesc": "Calculateur de taille de position, calendrier économique, glossaire multilingue de 288 termes, quiz interactifs avec classement — tout ce dont un trader sérieux a besoin, dans une seule app."
+    "toolsDesc": "Calculateur de taille de position, calendrier économique, glossaire multilingue de {count} termes, quiz interactifs avec classement — tout ce dont un trader sérieux a besoin, dans une seule app."
   },
   "aiSuite": {
     "eyebrow": "Suite IA",
@@ -87,7 +87,7 @@
   },
   "glossaryPreview": {
     "eyebrow": "Le glossaire",
-    "title": "288 termes. 18 catégories.",
+    "title": "{count} termes. 18 catégories.",
     "titleAccent": "3 langues.",
     "subtitle": "Le plus grand glossaire de trading multilingue — des définitions claires, du contexte réel, pensé pour le SEO et pour vous.",
     "statTermsLabel": "Termes",
@@ -109,7 +109,7 @@
       "Le flux d'ordres institutionnels qui pousse le prix vers la liquidité — le cœur des concepts ICT.",
       "Le nombre d'unités d'un trade, qui définit la valeur de chaque pip."
     ],
-    "exploreCta": "Explorer les 288 termes"
+    "exploreCta": "Explorer les {count} termes"
   },
   "lessons": {
     "eyebrow": "Leçons",
@@ -159,7 +159,7 @@
     "features": [
       "Les 8 outils pro",
       "Quota IA complet — Coach, Graphique & Historique",
-      "Glossaire multilingue de 288 termes",
+      "Glossaire multilingue de {count} termes",
       "Résiliable à tout moment"
     ],
     "ctaLabel": "Obtenir l'app",
@@ -168,32 +168,7 @@
   "faq": {
     "eyebrow": "FAQ",
     "title": "Réponses rapides.",
-    "items": [
-      {
-        "q": "Est-ce juste un énième wrapper de ChatGPT ?",
-        "a": "Non. WOT utilise des modèles de trading sur mesure, entraînés sur la structure de marché, l'analyse technique et de vraies données graphiques — puis ancre chaque réponse dans le contexte de marché réel. Les chatbots génériques devinent ; Rudy raisonne sur votre configuration réelle."
-      },
-      {
-        "q": "Ai-je besoin d'un compte courtier pour utiliser l'app ?",
-        "a": "Pas du tout. WOT est une app d'éducation et d'analyse — vous pouvez apprendre, étudier le glossaire et analyser des graphiques sans jamais connecter de courtier. Quand vous serez prêt à revoir vos vrais trades, vous pourrez importer votre historique MT4/MT5."
-      },
-      {
-        "q": "Comment fonctionne la facturation Apple / Google ?",
-        "a": "Votre abonnement est entièrement géré via votre compte Apple ID ou Google Play. Le paiement passe par le store, vous gérez tout depuis les réglages de votre appareil et vous pouvez résilier en quelques touches — aucune donnée de carte ne touche nos serveurs."
-      },
-      {
-        "q": "Les quotas IA sont-ils partagés entre les appareils ?",
-        "a": "Votre quota est lié à votre compte WOT, pas à un appareil. Connectez-vous où vous voulez et vos allocations Coach, Graphique et Historique vous suivent — elles ne se multiplient pas par appareil et ne se réinitialisent pas quand vous changez de téléphone."
-      },
-      {
-        "q": "Quelles langues sont prises en charge ?",
-        "a": "L'app complète, le glossaire et le coach IA sont disponibles en français, anglais et espagnol. Le glossaire de 288 termes est traduit professionnellement dans les trois langues, et Rudy répond dans la langue que vous choisissez."
-      },
-      {
-        "q": "Mon historique de trades est-il stocké sur vos serveurs ?",
-        "a": "Votre historique importé est traité pour générer votre analyse et reste privé à votre compte. Nous ne le vendons jamais, ne le partageons jamais, et vous pouvez le supprimer à tout moment directement depuis l'app."
-      }
-    ]
+    "learnMore": "En savoir plus"
   },
   "stats": {
     "eyebrow": "En chiffres",
@@ -244,11 +219,16 @@
   },
   "glossary": {
     "title": "Glossaire du trading",
-    "subtitle": "288 termes essentiels du trading expliqués clairement.",
+    "subtitle": "{count} termes essentiels du trading expliqués clairement.",
     "searchPlaceholder": "Rechercher un terme...",
     "allCategories": "Toutes les catégories",
     "relatedTerms": "Termes associés",
-    "learnWithRudy": "Apprenez cela en pratique avec Rudy, votre coach IA"
+    "learnWithRudy": "Apprenez cela en pratique avec Rudy, votre coach IA",
+    "metaTitle": "Glossaire du trading",
+    "metaDescription": "Les termes du trading expliqués clairement, en trois langues — le plus grand glossaire de trading multilingue.",
+    "seoSuffix": "Glossaire du trading | WOT",
+    "exploreAllCta": "Explorer les +{count} termes",
+    "noResults": "Aucun terme ne correspond à votre recherche."
   },
   "notFound": {
     "code": "404",
@@ -260,5 +240,17 @@
     "siteName": "Way of Trading",
     "homeTitle": "Way of Trading — Apprenez le trading avec l'IA",
     "homeDescription": "Maîtrisez le trading avec Rudy, votre coach IA. Téléchargez l'app Way of Trading sur iOS et Android."
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "title": "FAQ",
+    "subtitle": "Tout ce que vous devez savoir sur WOT — expliqué.",
+    "allCategories": "Tout",
+    "metaTitle": "FAQ",
+    "metaDescription": "Réponses aux questions fréquentes sur WOT : fonctionnalités, abonnements, outils IA, confidentialité et plus."
+  },
+  "aboutPage": {
+    "metaTitle": "À propos",
+    "metaDescription": "L'histoire derrière WOT : conçu par des traders et des professionnels du brokerage pour réinventer l'éducation au trading."
   }
 }

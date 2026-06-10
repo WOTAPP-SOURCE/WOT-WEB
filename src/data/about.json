@@ -1,0 +1,99 @@
+{
+  "tagline": {
+    "fr": "Conçu par des traders. Propulsé par l'IA. C'est la Way of Trading.",
+    "en": "Designed by traders. Powered by AI. That's the Way of Trading.",
+    "es": "Diseñado por traders. Impulsado por IA. Eso es el Way of Trading."
+  },
+  "closing": {
+    "fr": "On n'a pas fini. Et c'est exactement ce qu'on aime.",
+    "en": "We're not done. And that's exactly how we like it.",
+    "es": "No hemos terminado. Y eso es exactamente lo que nos gusta."
+  },
+  "sections": [
+    {
+      "id": "origin",
+      "title": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "paragraphs": {
+        "fr": [
+          "Pas par des développeurs qui ont lu des livres sur le trading. Par des gens qui ont été dans l'industrie : en brokerage, aux côtés des marchés, au contact de traders qui apprennent, qui progressent, qui se plantent, et qui recommencent.",
+          "Ce background a une utilité précise : comprendre ce dont un trader a vraiment besoin. Pas ce qu'on imagine depuis l'extérieur. Ce que vous vivez concrètement quand vous apprenez à lire un graphique à 23h, quand vous bloquez sur un concept depuis trois jours, quand vous ne savez pas pourquoi vous avez encore pris une mauvaise décision. C'est cette connaissance-là qui est au coeur de chaque fonctionnalité de WOT."
+        ],
+        "en": [
+          "Not by developers who read books about trading. By people who were in the industry: in brokerage, alongside the markets, next to traders who were learning, progressing, making mistakes, and coming back for more.",
+          "That background has a specific purpose: understanding what a trader actually needs. Not what you'd imagine from the outside. What you live through when you're trying to read a chart at 11pm, stuck on a concept for three days, or wondering why you made the wrong call again. That's the knowledge that shaped every feature inside WOT."
+        ],
+        "es": [
+          "No por desarrolladores que leyeron libros sobre trading. Por personas que estuvieron en la industria: en brokerage, junto a los mercados, al lado de traders que aprendían, progresaban, cometían errores y volvían a intentarlo.",
+          "Ese background tiene un propósito concreto: entender lo que un trader realmente necesita. No lo que imaginas desde afuera. Lo que vives cuando intentas leer un gráfico a las 11 de la noche, cuando llevas tres días bloqueado en un concepto, o cuando no entiendes por qué volviste a tomar la decisión equivocada. Ese conocimiento es el que está detrás de cada funcionalidad de WOT."
+        ]
+      }
+    },
+    {
+      "id": "reinvented",
+      "title": {
+        "fr": "L'éducation au trading, réinventée.",
+        "en": "Trading education, rebuilt from scratch.",
+        "es": "La educación sobre trading, reconstruida."
+      },
+      "paragraphs": {
+        "fr": [
+          "Avant WOT, progresser sérieusement en trading, ça ressemblait à ça : une plateforme de cours par-ci, un calculateur de position par-là, une app pour le calendrier éco, une autre pour analyser ses trades, et YouTube pour le reste. Des abonnements partout. Aucune cohérence. Et toujours cette impression de se battre avec ses outils plutôt que d'apprendre.",
+          "WOT a été construit pour mettre fin à ça. Une seule application. Une méthode complète. Tout ce qu'il faut pour monter en compétence, des bases jusqu'aux outils de performance, pensé comme un tout cohérent, pas comme une collection de features empilées."
+        ],
+        "en": [
+          "Before WOT, getting serious about trading looked like this: a course platform here, a position calculator there, one app for the economic calendar, another to analyze your trades, and YouTube for everything else. Subscriptions everywhere. No coherence. And always that feeling of fighting your tools instead of actually learning.",
+          "WOT was built to end that. One app. One complete method. Everything you need to level up, from the fundamentals to performance tools, designed as a whole, not a stack of features bolted together."
+        ],
+        "es": [
+          "Antes de WOT, ponerse serio con el trading tenía esta pinta: una plataforma de cursos aquí, una calculadora de posición allá, una app para el calendario económico, otra para analizar tus trades, y YouTube para lo demás. Suscripciones por todas partes. Sin coherencia. Y siempre esa sensación de pelear con tus herramientas en lugar de aprender.",
+          "WOT fue construido para acabar con eso. Una sola app. Un método completo. Todo lo que necesitas para subir de nivel, desde los fundamentos hasta las herramientas de rendimiento, pensado como un todo, no como una pila de features apiladas."
+        ]
+      }
+    },
+    {
+      "id": "educate",
+      "title": {
+        "fr": "Notre rôle : éduquer. Pas promettre.",
+        "en": "Our role: educate. Not promise.",
+        "es": "Nuestro rol: educar. No prometer."
+      },
+      "paragraphs": {
+        "fr": [
+          "WOT est une application d'éducation au trading. Nous ne fournissons pas de conseils en investissement, nous ne gérons pas de capital, et nous ne faisons aucune promesse de résultat. Le trading comporte des risques réels, et aucun outil, aussi bien conçu soit-il, ne change cette réalité.",
+          "Ce que WOT fait, c'est vous donner les bases solides, les outils concrets et la compréhension des marchés pour prendre vos propres décisions de façon plus éclairée. La progression vous appartient. Nous construisons l'environnement pour qu'elle soit possible."
+        ],
+        "en": [
+          "WOT is a trading education application. We don't provide investment advice, we don't manage capital, and we make no promises about performance or outcomes. Trading carries real risk, and no tool, however well designed, changes that reality.",
+          "What WOT does is give you solid foundations, concrete tools, and a deeper understanding of the markets to make your own decisions with greater clarity. Your progress is yours. We build the environment that makes it possible."
+        ],
+        "es": [
+          "WOT es una aplicación de educación sobre trading. No proporcionamos asesoramiento de inversión, no gestionamos capital y no hacemos ninguna promesa de rendimiento o resultado. El trading conlleva riesgos reales, y ninguna herramienta, por bien diseñada que esté, cambia esa realidad.",
+          "Lo que WOT hace es darte bases sólidas, herramientas concretas y una comprensión más profunda de los mercados para tomar tus propias decisiones con mayor claridad. Tu progreso es tuyo. Nosotros construimos el entorno que lo hace posible."
+        ]
+      }
+    },
+    {
+      "id": "evolving",
+      "title": {
+        "fr": "Toujours en construction.",
+        "en": "Always building.",
+        "es": "Siempre construyendo."
+      },
+      "paragraphs": {
+        "fr": [
+          "WOT n'est pas un produit fini. Il évolue en permanence, guidé par les retours de la communauté et les réalités changeantes des marchés. Notre ambition : devenir la référence pour tout trader sérieux qui veut progresser, en français, en anglais ou en espagnol."
+        ],
+        "en": [
+          "WOT is not a finished product. It evolves continuously, guided by community feedback and the ever-changing realities of the markets. Our ambition: to become the reference tool for every serious trader who wants to improve, in French, English, or Spanish."
+        ],
+        "es": [
+          "WOT no es un producto terminado. Evoluciona continuamente, guiado por los comentarios de la comunidad y las realidades cambiantes de los mercados. Nuestra ambición: convertirnos en la herramienta de referencia para todo trader serio que quiera mejorar, en francés, inglés o español."
+        ]
+      }
+    }
+  ]
+}

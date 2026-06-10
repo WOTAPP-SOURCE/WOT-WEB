@@ -8,14 +8,19 @@ import { Link } from "@/i18n/navigation";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 import { GLOSSARY_SAMPLE } from "@/lib/constants";
 
-export const GlossaryPreviewSection = () => {
+interface GlossaryPreviewSectionProps {
+  /** Live glossary term count from glossary.json. */
+  count: number;
+}
+
+export const GlossaryPreviewSection = ({ count }: GlossaryPreviewSectionProps) => {
   const t = useTranslations("glossaryPreview");
   const categories = t.raw("categories") as string[];
   const definitions = t.raw("definitions") as string[];
   const sectionRef = useRef<HTMLElement>(null);
 
   const STAT_CARDS = [
-    { value: "288", labelKey: "statTermsLabel" },
+    { value: `+${count}`, labelKey: "statTermsLabel" },
     { value: "18", labelKey: "statCategoriesLabel" },
     { value: "3", labelKey: "statLanguagesLabel" },
   ];
@@ -59,7 +64,7 @@ export const GlossaryPreviewSection = () => {
             {t("eyebrow")}
           </span>
           <h2 className="text-text mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            {t("title")} <span className="text-gradient-purple">{t("titleAccent")}</span>
+            {t("title", { count })} <span className="text-gradient-purple">{t("titleAccent")}</span>
           </h2>
           <p className="text-text-muted mx-auto mt-5 max-w-2xl text-base leading-relaxed sm:text-lg">
             {t("subtitle")}
@@ -111,7 +116,7 @@ export const GlossaryPreviewSection = () => {
             href="/glossary"
             className="text-accent hover:text-primary inline-flex items-center gap-2 font-medium transition-colors duration-200"
           >
-            {t("exploreCta")}
+            {t("exploreCta", { count })}
             <ArrowRightIcon className="h-4 w-4" />
           </Link>
         </div>

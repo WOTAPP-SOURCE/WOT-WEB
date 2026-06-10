@@ -16,7 +16,12 @@ const RINGS = [
   { size: 760, duration: "44s", reverse: false },
 ];
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+  /** Live glossary term count from glossary.json. */
+  count: number;
+}
+
+export const HeroSection = ({ count }: HeroSectionProps) => {
   const t = useTranslations("hero");
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -154,7 +159,7 @@ export const HeroSection = () => {
                 className="hero-stat rounded-xl border border-[#B86BFF]/[0.18] bg-[#941EFE]/[0.06] px-3 py-3 text-center"
               >
                 <dd className="text-gradient-purple text-2xl font-bold tracking-tight">
-                  {stat.value}
+                  {stat.labelKey === "statTerms" ? `+${count}` : stat.value}
                 </dd>
                 <dt className="text-text-muted mt-1 font-mono text-[0.6rem] tracking-[0.12em] uppercase">
                   {t(stat.labelKey)}
@@ -237,7 +242,9 @@ export const HeroSection = () => {
                   {t(card.titleKey)}
                 </span>
               </div>
-              <p className="text-accent mt-1.5 text-sm font-semibold">{t(card.meta1Key)}</p>
+              <p className="text-accent mt-1.5 text-sm font-semibold">
+                {t(card.meta1Key, { count })}
+              </p>
               <p className="text-text-muted text-[0.7rem]">{t(card.meta2Key)}</p>
             </div>
           ))}

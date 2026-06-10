@@ -1,0 +1,391 @@
+{
+  "categories": [
+    {
+      "id": "getting-started",
+      "label": {
+        "fr": "Démarrage",
+        "en": "Getting started",
+        "es": "Primeros pasos"
+      }
+    },
+    {
+      "id": "subscriptions",
+      "label": {
+        "fr": "Abonnements & paiement",
+        "en": "Subscriptions & billing",
+        "es": "Suscripciones y pagos"
+      }
+    },
+    {
+      "id": "ai-tools",
+      "label": {
+        "fr": "Outils IA & Coach Rudy",
+        "en": "AI tools & Coach Rudy",
+        "es": "Herramientas IA & Coach Rudy"
+      }
+    },
+    {
+      "id": "content-tools",
+      "label": {
+        "fr": "Contenu & outils",
+        "en": "Content & tools",
+        "es": "Contenido y herramientas"
+      }
+    },
+    {
+      "id": "data-privacy",
+      "label": {
+        "fr": "Données & confidentialité",
+        "en": "Data & privacy",
+        "es": "Datos y privacidad"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "what-is-wot",
+      "category": "getting-started",
+      "featured": true,
+      "question": {
+        "fr": "C'est quoi WOT ?",
+        "en": "What is WOT?",
+        "es": "¿Qué es WOT?"
+      },
+      "answer": {
+        "fr": "WOT (Way of Trading) n'est pas une simple app d'apprentissage : c'est une méthode de trading complète, conçue par des traders actifs et des professionnels qui ont passé des années dans l'industrie du brokerage. L'idée : réunir en une seule application tout ce dont tu as besoin pour progresser : cours structurés, coach IA, analyseur de graphiques, analyseur de trades, calculateur de position, glossaire, calendrier économique, quiz et récompenses. Plutôt que de télécharger 5 outils différents et payer pour chacun, WOT regroupe tout. Une appli. Une méthode. Un niveau de compétence à la fois.",
+        "en": "WOT (Way of Trading) is more than a trading education app: it's a complete trading method, built by active traders and professionals who spent years in the brokerage industry. The idea: bring everything you need to improve into a single application. Structured courses, AI coach, chart analyzer, trade analyzer, position size calculator, glossary, economic calendar, quizzes and rewards. Instead of downloading 5 separate tools and paying for each one, WOT bundles everything. One app. One method. One level at a time.",
+        "es": "WOT (Way of Trading) es más que una app de aprendizaje: es un método completo de trading, creado por traders activos y profesionales con años de experiencia en la industria del brokerage. La idea: reunir todo lo que necesitas para progresar en una sola aplicación. Cursos estructurados, coach IA, analizador de gráficos, analizador de trades, calculadora de posición, glosario, calendario económico, quizzes y recompensas. En vez de descargar 5 herramientas distintas y pagar por cada una, WOT lo reúne todo. Una app. Un método. Un nivel a la vez."
+      }
+    },
+    {
+      "id": "need-broker-account",
+      "category": "getting-started",
+      "featured": true,
+      "question": {
+        "fr": "Faut-il un compte chez un broker pour utiliser WOT ?",
+        "en": "Do I need a broker account to use WOT?",
+        "es": "¿Necesito una cuenta en un bróker para usar WOT?"
+      },
+      "answer": {
+        "fr": "Non. WOT est totalement indépendant de tout broker. Tu n'as besoin d'aucun compte de trading pour accéder aux cours, au coach ou aux outils.",
+        "en": "No. WOT is completely independent from any broker. You don't need a trading account to access courses, the coach, or any tool.",
+        "es": "No. WOT es completamente independiente de cualquier bróker. No necesitas ninguna cuenta de trading para acceder a los cursos, al coach o a las herramientas."
+      }
+    },
+    {
+      "id": "devices",
+      "category": "getting-started",
+      "featured": false,
+      "question": {
+        "fr": "Sur quels appareils est disponible WOT ?",
+        "en": "Which devices does WOT support?",
+        "es": "¿En qué dispositivos está disponible WOT?"
+      },
+      "answer": {
+        "fr": "iOS (App Store) et Android (Google Play).",
+        "en": "iOS (App Store) and Android (Google Play).",
+        "es": "iOS (App Store) y Android (Google Play)."
+      }
+    },
+    {
+      "id": "languages",
+      "category": "getting-started",
+      "featured": false,
+      "question": {
+        "fr": "Dans quelles langues l'application est-elle disponible ?",
+        "en": "What languages is the app available in?",
+        "es": "¿En qué idiomas está disponible la app?"
+      },
+      "answer": {
+        "fr": "Français, anglais et espagnol. La langue se sélectionne à l'inscription et se modifie dans les paramètres.",
+        "en": "French, English and Spanish. Language is selected at sign-up and can be changed in settings.",
+        "es": "Francés, inglés y español. El idioma se selecciona al registrarse y se puede cambiar en los ajustes."
+      }
+    },
+    {
+      "id": "prior-knowledge",
+      "category": "getting-started",
+      "featured": false,
+      "question": {
+        "fr": "Faut-il un niveau préalable en trading ?",
+        "en": "Do I need prior trading knowledge?",
+        "es": "¿Necesito conocimientos previos de trading?"
+      },
+      "answer": {
+        "fr": "Non. WOT accompagne tous les profils, du débutant complet jusqu'au trader intermédiaire qui veut consolider ses bases et sa méthode.",
+        "en": "No. WOT is designed for all levels, from complete beginners to intermediate traders who want to build a solid, structured foundation.",
+        "es": "No. WOT está diseñado para todos los niveles, desde principiantes completos hasta traders intermedios que quieren consolidar sus bases y su método."
+      }
+    },
+    {
+      "id": "pricing",
+      "category": "subscriptions",
+      "featured": true,
+      "question": {
+        "fr": "Quels sont les tarifs ?",
+        "en": "What are the prices?",
+        "es": "¿Cuáles son los precios?"
+      },
+      "answer": {
+        "fr": "Mensuel : €19,99 / £17,99 / $21,99. Trimestriel : €49,99 / £44,99 / $54,99. Annuel : €139,99 / £124,99 / $149,99. L'abonnement annuel équivaut à 2 mois offerts. Tous les plans donnent accès à l'intégralité des fonctionnalités.",
+        "en": "Monthly: €19.99 / £17.99 / $21.99. Quarterly: €49.99 / £44.99 / $54.99. Annual: €139.99 / £124.99 / $149.99. The annual plan equals 2 months free. All plans give full access to every feature.",
+        "es": "Mensual: €19,99 / £17,99 / $21,99. Trimestral: €49,99 / £44,99 / $54,99. Anual: €139,99 / £124,99 / $149,99. El plan anual equivale a 2 meses gratis. Todos los planes dan acceso completo a todas las funcionalidades."
+      }
+    },
+    {
+      "id": "billing",
+      "category": "subscriptions",
+      "featured": false,
+      "question": {
+        "fr": "Comment fonctionne le paiement ?",
+        "en": "How does billing work?",
+        "es": "¿Cómo funciona el pago?"
+      },
+      "answer": {
+        "fr": "Les abonnements sont gérés directement via Apple (App Store) ou Google (Google Play). WOT ne stocke aucune donnée bancaire.",
+        "en": "Subscriptions are managed directly through Apple (App Store) or Google (Google Play). WOT never stores your payment information.",
+        "es": "Las suscripciones se gestionan directamente a través de Apple (App Store) o Google (Google Play). WOT no almacena ningún dato bancario."
+      }
+    },
+    {
+      "id": "cancel",
+      "category": "subscriptions",
+      "featured": false,
+      "question": {
+        "fr": "Peut-on annuler à tout moment ?",
+        "en": "Can I cancel anytime?",
+        "es": "¿Puedo cancelar en cualquier momento?"
+      },
+      "answer": {
+        "fr": "Oui. L'annulation se fait depuis ton compte Apple ID ou Google Play. L'accès reste actif jusqu'à la fin de la période payée.",
+        "en": "Yes. Cancel from your Apple ID or Google Play account. Access stays active until the end of the paid period.",
+        "es": "Sí. La cancelación se realiza desde tu cuenta Apple ID o Google Play. El acceso sigue activo hasta el final del período pagado."
+      }
+    },
+    {
+      "id": "free-version",
+      "category": "subscriptions",
+      "featured": false,
+      "question": {
+        "fr": "Y a-t-il une version gratuite ?",
+        "en": "Is there a free version?",
+        "es": "¿Hay una versión gratuita?"
+      },
+      "answer": {
+        "fr": "Non. WOT est une application premium sans tier gratuit.",
+        "en": "No. WOT is a premium app with no free tier.",
+        "es": "No. WOT es una aplicación premium sin nivel gratuito."
+      }
+    },
+    {
+      "id": "broker-access",
+      "category": "subscriptions",
+      "featured": false,
+      "question": {
+        "fr": "Puis-je obtenir un accès gratuit via un broker partenaire ?",
+        "en": "Can I get free access through a partner broker?",
+        "es": "¿Puedo obtener acceso gratuito a través de un bróker asociado?"
+      },
+      "answer": {
+        "fr": "Oui, c'est une voie d'accès alternative disponible dans l'app. Si tu ouvres un compte réel chez un broker partenaire de WOT et effectues un premier dépôt qualifiant, tu obtiens un accès premium offert. Dépôt entre 500 $ et 999 $ : 6 mois d'accès. Dépôt de 1 000 $ ou plus : 12 mois d'accès. Cette option est facultative, sans obligation. Elle est présentée dans l'application après inscription. Jamais imposée.",
+        "en": "Yes, there's an alternative access path available inside the app. If you open a real account with a WOT partner broker and make a qualifying first deposit, you receive free premium access. Deposit between $500 and $999: 6 months of access. Deposit of $1,000 or more: 12 months of access. This is entirely optional. It's presented inside the app after sign-up. Never imposed.",
+        "es": "Sí, hay una vía de acceso alternativa disponible en la app. Si abres una cuenta real con un bróker asociado de WOT y realizas un primer depósito calificado, obtienes acceso premium gratuito. Depósito entre $500 y $999: 6 meses de acceso. Depósito de $1.000 o más: 12 meses de acceso. Esta opción es completamente opcional. Se presenta dentro de la app después del registro. Nunca impuesta."
+      }
+    },
+    {
+      "id": "stack-access",
+      "category": "subscriptions",
+      "featured": false,
+      "question": {
+        "fr": "Peut-on cumuler accès broker et abonnement ?",
+        "en": "Can broker access and a subscription stack?",
+        "es": "¿Se pueden acumular el acceso bróker y la suscripción?"
+      },
+      "answer": {
+        "fr": "Oui. Les deux s'additionnent. Si ton accès broker expire et que tu prends un abonnement (ou inversement), les durées s'enchaînent.",
+        "en": "Yes. Both sources of access stack linearly. If your broker access runs out and you subscribe (or vice versa), the durations chain together.",
+        "es": "Sí. Ambos se acumulan linealmente. Si tu acceso bróker expira y contratas una suscripción (o viceversa), las duraciones se encadenan."
+      }
+    },
+    {
+      "id": "coach-rudy",
+      "category": "ai-tools",
+      "featured": true,
+      "question": {
+        "fr": "C'est quoi le Coach Rudy ?",
+        "en": "What is Coach Rudy?",
+        "es": "¿Qué es el Coach Rudy?"
+      },
+      "answer": {
+        "fr": "Rudy est le coach IA de WOT, conçu par des traders professionnels et des experts du brokerage qui ont voulu créer l'outil qu'ils auraient aimé avoir en apprenant. Il ne valide pas tout ce que tu dis. Il challenge ta compréhension, t'explique les concepts, t'aide à analyser tes erreurs et t'accompagne étape par étape dans ta progression. Rudy est bâti sur une architecture multi-agents (pédagogique, analytique, challenger) entraîné spécifiquement sur le contenu WOT.",
+        "en": "Rudy is WOT's AI coach, designed by professional traders and brokerage industry experts who built the tool they wished existed when they were learning. Rudy doesn't just answer your questions: he challenges your understanding, breaks down concepts, helps you analyze your mistakes, and guides you step by step. He's built on a multi-agent architecture (pedagogical, analytical, challenger) trained specifically on WOT content.",
+        "es": "Rudy es el coach IA de WOT, diseñado por traders profesionales y expertos de la industria del brokerage que construyeron la herramienta que habrían querido tener cuando aprendían. Rudy no solo responde tus preguntas: desafía tu comprensión, desglosa conceptos, te ayuda a analizar tus errores y te guía paso a paso. Está construido sobre una arquitectura multi-agente (pedagógico, analítico, challenger) entrenado específicamente en el contenido de WOT."
+      }
+    },
+    {
+      "id": "chart-analyzer",
+      "category": "ai-tools",
+      "featured": false,
+      "question": {
+        "fr": "C'est quoi l'AI Chart Analyzer ?",
+        "en": "What is the AI Chart Analyzer?",
+        "es": "¿Qué es el AI Chart Analyzer?"
+      },
+      "answer": {
+        "fr": "Tu partages un graphique, Rudy l'analyse : structure de prix, zones clés, biais directionnel, points d'attention. Pas une analyse générique. Une lecture construite par des traders, pour des traders qui veulent comprendre ce qu'ils voient.",
+        "en": "Share a chart, Rudy analyzes it: price structure, key zones, directional bias, points of attention. Not generic output. A reading built by traders, for traders who want to understand what they're seeing.",
+        "es": "Comparte un gráfico, Rudy lo analiza: estructura de precio, zonas clave, sesgo direccional, puntos de atención. No es un análisis genérico. Es una lectura construida por traders, para traders que quieren entender lo que ven."
+      }
+    },
+    {
+      "id": "ai-limits",
+      "category": "ai-tools",
+      "featured": false,
+      "question": {
+        "fr": "Y a-t-il une limite d'utilisation des outils IA ?",
+        "en": "Are there limits on AI tool usage?",
+        "es": "¿Hay límites en el uso de las herramientas IA?"
+      },
+      "answer": {
+        "fr": "Chaque abonnement inclut par mois : 100 messages avec le Coach Rudy, 20 analyses AI Chart Analyzer, 20 analyses Trade Analyzer. Les cours et quiz ne consomment aucun quota. Le quota se réinitialise à chaque renouvellement d'abonnement.",
+        "en": "Each subscription includes per month: 100 messages with Coach Rudy, 20 AI Chart Analyzer analyses, 20 Trade Analyzer analyses. Courses and quizzes consume no quota. Quota resets at each subscription renewal.",
+        "es": "Cada suscripción incluye por mes: 100 mensajes con el Coach Rudy, 20 análisis con el AI Chart Analyzer, 20 análisis con el Trade Analyzer. Los cursos y quizzes no consumen cuota. La cuota se reinicia en cada renovación de suscripción."
+      }
+    },
+    {
+      "id": "quota-reached",
+      "category": "ai-tools",
+      "featured": false,
+      "question": {
+        "fr": "Que se passe-t-il quand j'atteins mon quota ?",
+        "en": "What happens when I reach my quota?",
+        "es": "¿Qué pasa cuando alcanzo mi cuota?"
+      },
+      "answer": {
+        "fr": "L'outil concerné est bloqué jusqu'au prochain renouvellement. Des packs de recharge sont disponibles pour continuer sans changer de plan.",
+        "en": "The tool is locked until your next renewal. Recharge packs are available to unlock additional usage without changing your plan.",
+        "es": "La herramienta se bloquea hasta el próximo período. Hay packs de recarga disponibles para continuar sin cambiar de plan."
+      }
+    },
+    {
+      "id": "recharge-packs",
+      "category": "ai-tools",
+      "featured": false,
+      "question": {
+        "fr": "Quels sont les packs de recharge ?",
+        "en": "What recharge packs are available?",
+        "es": "¿Qué packs de recarga hay disponibles?"
+      },
+      "answer": {
+        "fr": "Small : €6,99. Standard : €11,99. Large : €24,99.",
+        "en": "Small: €6.99. Standard: €11.99. Large: €24.99.",
+        "es": "Small: €6,99. Standard: €11,99. Large: €24,99."
+      }
+    },
+    {
+      "id": "training-modules",
+      "category": "content-tools",
+      "featured": false,
+      "question": {
+        "fr": "Quels sujets couvrent les modules de formation ?",
+        "en": "What do the training modules cover?",
+        "es": "¿Qué temas cubren los módulos de formación?"
+      },
+      "answer": {
+        "fr": "Les cours sont construits par des traders actifs et des anciens professionnels du brokerage. Pas du contenu générique copié d'internet. Ils couvrent : bases du trading, price action, ICT/SMC, indicateurs techniques, gestion du risque, corrélations, et psychologie du trader. Chaque module est progressif, avec quiz intégrés et validation des acquis.",
+        "en": "Courses are built by active traders and former brokerage professionals. Not generic content copied from the internet. They cover: trading basics, price action, ICT/SMC, technical indicators, risk management, correlations, and trading psychology. Each module is progressive, with integrated quizzes and knowledge checks.",
+        "es": "Los cursos están construidos por traders activos y ex-profesionales del brokerage. No contenido genérico copiado de internet. Cubren: bases del trading, price action, ICT/SMC, indicadores técnicos, gestión del riesgo, correlaciones y psicología del trader. Cada módulo es progresivo, con quizzes integrados y validación de conocimientos."
+      }
+    },
+    {
+      "id": "trade-analyzer",
+      "category": "content-tools",
+      "featured": false,
+      "question": {
+        "fr": "Comment fonctionne le Trade Analyzer ?",
+        "en": "How does the Trade Analyzer work?",
+        "es": "¿Cómo funciona el Trade Analyzer?"
+      },
+      "answer": {
+        "fr": "Tu importes ton historique de trading exporté depuis MT5 ou cTrader. WOT l'analyse automatiquement : nombre de trades, P&L, taux de réussite, comportements à risque, score global. Un outil conçu pour que tu comprennes vraiment où tu en es. Pas juste des chiffres.",
+        "en": "Import your trading history exported from MT5 or cTrader. WOT analyzes it automatically: trade count, P&L, win rate, risk behaviors, overall score. Built so you actually understand where you stand. Not just numbers on a screen.",
+        "es": "Importas tu historial de trading exportado desde MT5 o cTrader. WOT lo analiza automáticamente: número de trades, P&L, tasa de aciertos, comportamientos de riesgo, puntuación global. Una herramienta construida para que realmente entiendas dónde estás. No solo números en pantalla."
+      }
+    },
+    {
+      "id": "position-calculator",
+      "category": "content-tools",
+      "featured": false,
+      "question": {
+        "fr": "À quoi sert le calculateur de position ?",
+        "en": "What does the position size calculator do?",
+        "es": "¿Para qué sirve la calculadora de posición?"
+      },
+      "answer": {
+        "fr": "Il calcule la taille de position adaptée à ton capital et ton risque cible, pour tous les types d'instruments : forex, indices, crypto, matières premières. Les contrats et marges sont corrects par classe d'actif (pas un calcul forex appliqué à tout).",
+        "en": "It calculates the right position size for your capital and target risk, across all asset classes: forex, indices, crypto, commodities. Correct contracts and margins per asset class (not a generic forex formula applied everywhere).",
+        "es": "Calcula el tamaño de posición adecuado a tu capital y riesgo objetivo, para todas las clases de activos: forex, índices, cripto, materias primas. Contratos y márgenes correctos por clase de activo (no una fórmula forex aplicada a todo)."
+      }
+    },
+    {
+      "id": "glossary-languages",
+      "category": "content-tools",
+      "featured": false,
+      "question": {
+        "fr": "Le glossaire est-il uniquement en français ?",
+        "en": "Is the glossary only in French?",
+        "es": "¿El glosario está solo en francés?"
+      },
+      "answer": {
+        "fr": "Non. Plus de 300 termes sont disponibles en français, anglais et espagnol, avec définitions précises rédigées par des professionnels du trading.",
+        "en": "No. Over 300 terms are available in French, English and Spanish, with precise definitions written by trading professionals.",
+        "es": "No. Más de 300 términos están disponibles en francés, inglés y español, con definiciones precisas redactadas por profesionales del trading."
+      }
+    },
+    {
+      "id": "offline",
+      "category": "content-tools",
+      "featured": false,
+      "question": {
+        "fr": "L'application fonctionne-t-elle sans connexion ?",
+        "en": "Does the app work offline?",
+        "es": "¿La app funciona sin conexión?"
+      },
+      "answer": {
+        "fr": "Certains cours sont accessibles offline après chargement. Les fonctionnalités IA (Coach, Chart Analyzer, Trade Analyzer) nécessitent une connexion.",
+        "en": "Some course content is available offline after loading. AI features (Coach, Chart Analyzer, Trade Analyzer) require an internet connection.",
+        "es": "Algunos cursos están disponibles offline tras cargarlos. Las funcionalidades IA (Coach, Chart Analyzer, Trade Analyzer) requieren conexión a internet."
+      }
+    },
+    {
+      "id": "trading-data",
+      "category": "data-privacy",
+      "featured": false,
+      "question": {
+        "fr": "WOT collecte-t-il mes données de trading ?",
+        "en": "Does WOT collect my trading data?",
+        "es": "¿WOT recopila mis datos de trading?"
+      },
+      "answer": {
+        "fr": "Les données importées via le Trade Analyzer sont utilisées uniquement pour générer ton analyse. WOT ne transmet aucune donnée à des tiers commerciaux.",
+        "en": "Data imported through the Trade Analyzer is used only to generate your analysis. WOT does not share any data with commercial third parties.",
+        "es": "Los datos importados a través del Trade Analyzer se utilizan únicamente para generar tu análisis. WOT no comparte ningún dato con terceros comerciales."
+      }
+    },
+    {
+      "id": "broker-affiliation",
+      "category": "data-privacy",
+      "featured": true,
+      "question": {
+        "fr": "WOT est-il affilié à un broker ?",
+        "en": "Is WOT affiliated with a broker?",
+        "es": "¿WOT está afiliado a un bróker?"
+      },
+      "answer": {
+        "fr": "Non. WOT est une application d'éducation indépendante. Les partenariats broker sont des accords commerciaux optionnels. Ils n'influencent en rien le contenu pédagogique.",
+        "en": "No. WOT is an independent education application. Broker partnerships are optional commercial arrangements. They have zero influence on the educational content.",
+        "es": "No. WOT es una aplicación de educación independiente. Las asociaciones con brókers son acuerdos comerciales opcionales. No influyen en absoluto en el contenido pedagógico."
+      }
+    }
+  ]
+}

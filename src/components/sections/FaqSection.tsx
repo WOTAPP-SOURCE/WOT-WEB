@@ -4,19 +4,20 @@ import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
-import { PlusIcon } from "@/components/ui/Icons";
-import { cn } from "@/lib/utils";
+import { Link } from "@/i18n/navigation";
+import { AccordionItem } from "@/components/ui/AccordionItem";
+import { ArrowRightIcon } from "@/components/ui/Icons";
+import type { FaqQuestion } from "@/lib/faq";
 
-interface FaqItem {
-  q: string;
-  a: string;
+interface FaqSectionProps {
+  /** Featured questions from faq.json (localized server-side). */
+  questions: FaqQuestion[];
 }
 
-export const FaqSection = () => {
+export const FaqSection = ({ questions }: FaqSectionProps) => {
   const t = useTranslations("faq");
-  const items = t.raw("items") as FaqItem[];
   const sectionRef = useRef<HTMLElement>(null);
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openId, setOpenId] = useState<string | null>(questions[0]?.id ?? null);
 
   useGSAP(
     () => {
@@ -53,45 +54,27 @@ export const FaqSection = () => {
           </h2>
         </div>
 
-        <div className="faq-list mt-12 flex flex-col gap-3">
-          {items.map((item, i) => {
-            const isOpen = openIndex === i;
-            return (
-              <div
-                key={item.q}
-                className={cn(
-                  "faq-item rounded-2xl border bg-surface/50 transition-colors duration-300",
-                  isOpen ? "border-primary/50" : "border-border"
-                )}
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(isOpen ? -1 : i)}
-                  aria-expanded={isOpen}
-                  className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left"
-                >
-                  <span className="text-text text-base font-medium sm:text-lg">{item.q}</span>
-                  <PlusIcon
-                    className={cn(
-                      "text-accent h-5 w-5 shrink-0 transition-transform duration-300",
-                      isOpen && "rotate-45"
-                    )}
-                  />
-                </button>
+        <div className="faq-list mt-12 border-t border-white/[0.06]">
+          {questions.map((q) => (
+            <AccordionItem
+              key={q.id}
+              className="faq-item"
+              title={q.question}
+              body={q.answer}
+              isOpen={openId === q.id}
+              onToggle={() => setOpenId(openId === q.id ? null : q.id)}
+            />
+          ))}
+        </div>
 
-                <div
-                  className={cn(
-                    "grid transition-all duration-300 ease-out",
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                  )}
-                >
-                  <div className="overflow-hidden">
-                    <p className="text-text-muted px-6 pb-6 text-sm leading-relaxed">{item.a}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div className="mt-9 text-center">
+          <Link
+            href="/faq"
+            className="border-primary text-primary hover:bg-primary inline-flex items-center gap-2 rounded-full border px-7 py-3 text-base font-medium transition-all duration-200 hover:text-white"
+          >
+            {t("learnMore")}
+            <ArrowRightIcon className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

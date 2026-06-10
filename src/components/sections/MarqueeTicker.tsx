@@ -6,9 +6,16 @@ import { useTranslations } from "next-intl";
  * loop, so the seam is invisible. A mask fades both edges. Mono, all-caps —
  * a technical "stock ticker" feel between the hero and the feature panels.
  */
-export const MarqueeTicker = () => {
+interface MarqueeTickerProps {
+  /** Live glossary term count — substituted into the "{count} ..." marquee item. */
+  count: number;
+}
+
+export const MarqueeTicker = ({ count }: MarqueeTickerProps) => {
   const t = useTranslations("marquee");
-  const items = t.raw("items") as string[];
+  const items = (t.raw("items") as string[]).map((item) =>
+    item.replace("{count}", String(count))
+  );
 
   return (
     <section

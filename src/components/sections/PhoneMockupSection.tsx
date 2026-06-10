@@ -42,7 +42,12 @@ const FEATURES: FeatureConfig[] = [
   },
 ];
 
-export const PhoneMockupSection = () => {
+interface PhoneMockupSectionProps {
+  /** Live glossary term count from glossary.json. */
+  count: number;
+}
+
+export const PhoneMockupSection = ({ count }: PhoneMockupSectionProps) => {
   const t = useTranslations("phone");
   const introRef = useRef<HTMLDivElement>(null);
 
@@ -90,6 +95,7 @@ export const PhoneMockupSection = () => {
           index={index}
           reversed={index % 2 === 1}
           priority={index === 0}
+          count={count}
         />
       ))}
     </section>

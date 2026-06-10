@@ -5,6 +5,9 @@ import { BackgroundEffects } from "@/components/ui/BackgroundEffects";
 import { Header } from "@/components/layout/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { MarqueeTicker } from "@/components/sections/MarqueeTicker";
+import { getTermCount } from "@/lib/glossary";
+import { getFeaturedFaqQuestions } from "@/lib/faq";
+import type { Locale } from "@/types";
 
 /*
  * Below-the-fold sections are code-split with next/dynamic to keep the initial
@@ -51,23 +54,28 @@ export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  // Single source of truth for the glossary count — derived from glossary.json
+  // and threaded into every section that displays it (no hardcoded "288").
+  const count = getTermCount();
+  const featuredFaq = getFeaturedFaqQuestions(locale as Locale);
+
   return (
     <>
       <Background />
       <BackgroundEffects />
       <Header />
       <main>
-        <HeroSection />
-        <MarqueeTicker />
-        <PhoneMockupSection />
+        <HeroSection count={count} />
+        <MarqueeTicker count={count} />
+        <PhoneMockupSection count={count} />
         <AiSuiteSection />
-        <GlossaryPreviewSection />
+        <GlossaryPreviewSection count={count} />
         <LessonsCloudSection />
-        <StatsSection />
+        <StatsSection count={count} />
         <HowItWorksSection />
         <RewardsSection />
-        <PricingSection />
-        <FaqSection />
+        <PricingSection count={count} />
+        <FaqSection questions={featuredFaq} />
         <CTASection />
       </main>
       <Footer />

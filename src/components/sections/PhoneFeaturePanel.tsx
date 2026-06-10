@@ -16,6 +16,8 @@ interface PhoneFeaturePanelProps {
   index: number;
   reversed?: boolean;
   priority?: boolean;
+  /** Live glossary term count — substituted into descriptions that reference it. */
+  count: number;
 }
 
 /*
@@ -35,6 +37,7 @@ export const PhoneFeaturePanel = ({
   index,
   reversed = false,
   priority = false,
+  count,
 }: PhoneFeaturePanelProps) => {
   const t = useTranslations("phone");
 
@@ -160,7 +163,7 @@ export const PhoneFeaturePanel = ({
             <div className="panel-line from-primary mx-auto mt-5 h-px w-24 origin-left bg-gradient-to-r to-transparent lg:mx-0" />
 
             <p className="panel-desc text-text-muted mx-auto mt-5 max-w-lg text-base leading-relaxed sm:text-lg lg:mx-0">
-              {t(descKey)}
+              {t(descKey, { count })}
             </p>
           </div>
         </div>

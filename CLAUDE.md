@@ -37,7 +37,9 @@ If a prompt requests auth, checkout, Stripe, RevenueCat, or user dashboards → 
 
 **Do NOT introduce additional frameworks, CSS libraries (no Bootstrap, Chakra, MUI), or state management (no Redux, Zustand). Tailwind + Framer Motion + GSAP/ScrollTrigger + Lenis + next-intl is the complete stack.**
 
-> **Animation layer split (approved 2026-06-03):** GSAP + ScrollTrigger + Lenis (`@gsap/react`, `gsap`, `lenis`) drive the immersive homepage scroll choreography — pinning, scrubbed timelines, smooth scroll, SVG path draws, and counters. Framer Motion remains available for simple component-level enter/hover transitions. Do not add any further animation library (no Three.js, no Locomotive, no AOS).
+> **Animation layer split (approved 2026-06-03):** GSAP + ScrollTrigger + Lenis (`@gsap/react`, `gsap`, `lenis`) drive the immersive homepage scroll choreography — pinning, scrubbed timelines, smooth scroll, SVG path draws, and counters. Framer Motion remains available for simple component-level enter/hover transitions. Do not add any further animation library (no Locomotive, no AOS).
+>
+> **3D / WebGL exception (approved 2026-06-04 by project owner):** React Three Fiber + drei + three (`@react-three/fiber`, `@react-three/drei`, `three`) are approved **solely** for discrete 3D set-pieces such as the Rewards-section coin rain. They must be loaded via `dynamic(..., { ssr: false })` so the WebGL bundle never enters the initial/server payload, and used sparingly to protect Core Web Vitals. Do not reach for Three.js as a general-purpose animation tool — GSAP/Framer remain the default for everything 2D.
 
 ---
 

@@ -1,10 +1,17 @@
 "use client";
 
 import { useRef } from "react";
+import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
-import { CheckIcon, CoinsIcon, TrophyIcon } from "@/components/ui/Icons";
+import { CheckIcon } from "@/components/ui/Icons";
+
+/* Heavy WebGL bundle — load client-side only, never on the server. */
+const CoinRain = dynamic(
+  () => import("@/components/sections/CoinRain").then((mod) => mod.CoinRain),
+  { ssr: false }
+);
 
 export const RewardsSection = () => {
   const t = useTranslations("rewards");
@@ -62,30 +69,9 @@ export const RewardsSection = () => {
           </ul>
         </div>
 
-        {/* Right — visual */}
-        <div className="rw-visual relative mx-auto w-full max-w-md">
-          <div className="border-primary/30 relative overflow-hidden rounded-3xl border bg-gradient-to-br from-[#1f1140] to-[#0b0617] p-10">
-            <div className="glow-radial pointer-events-none absolute inset-0 opacity-60" />
-
-            {/* Coin badge */}
-            <div className="relative mx-auto flex h-36 w-36 items-center justify-center">
-              <div className="animate-pulse-glow absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(245,158,11,0.35),transparent_70%)] blur-xl" />
-              <div className="from-warning shadow-glow relative flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br to-[#b45309] ring-4 ring-white/10">
-                <CoinsIcon className="h-14 w-14 text-white" />
-              </div>
-              {/* Floating trophy chip */}
-              <div className="glass-card absolute -right-2 -top-2 flex h-12 w-12 items-center justify-center rounded-2xl">
-                <TrophyIcon className="text-warning h-6 w-6" />
-              </div>
-            </div>
-
-            <p className="text-text relative mt-8 text-center text-2xl font-bold">
-              {t("visualTitle")}
-            </p>
-            <p className="text-text-muted relative mt-1 text-center font-mono text-[0.65rem] tracking-[0.16em] uppercase">
-              {t("visualSubtitle")}
-            </p>
-          </div>
+        {/* Right — 3D coin rain (replaces the static WOT Coins card) */}
+        <div className="rw-visual relative mx-auto aspect-square w-full max-w-md">
+          <CoinRain />
         </div>
       </div>
     </section>

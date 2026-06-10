@@ -8,14 +8,13 @@ export const GOOGLE_PLAY_URL = "https://play.google.com"; // TBD
 export const LOCALES = ["fr", "en", "es"] as const;
 export const DEFAULT_LOCALE = "fr" as const;
 
-export const GLOSSARY_TERM_COUNT = 288;
-
 /* Primary navigation: `key` maps to the `nav` i18n namespace, `href` is locale-relative. */
 export const NAV_LINKS = [
   { key: "features", href: "/features" },
   { key: "glossary", href: "/glossary" },
   { key: "pricing", href: "/pricing" },
   { key: "faq", href: "/faq" },
+  { key: "about", href: "/about" },
 ] as const;
 
 /* Locale display labels for the language switcher. */
@@ -31,19 +30,22 @@ export const LOCALE_SHORT: Record<string, string> = {
   es: "ES",
 };
 
-/* Headline stat figures (labels are translated in the `stats` namespace). */
+/* Headline stat figures (labels are translated in the `stats` namespace).
+   `termsLabel` is rendered from the live glossary count (StatsSection), so its
+   value here is just a typed placeholder. */
 export const STATS = [
   { key: "tradersLabel", value: 10000, suffix: "+" },
-  { key: "termsLabel", value: GLOSSARY_TERM_COUNT, suffix: "" },
+  { key: "termsLabel", value: 0, suffix: "" },
   { key: "toolsLabel", value: 6, suffix: "" },
   { key: "languagesLabel", value: 3, suffix: "" },
 ] as const;
 
-/* Hero stats strip — number is brand-fixed, label translated in `hero`. */
+/* Hero stats strip — number is brand-fixed, label translated in `hero`.
+   `statTerms` is overridden with the live glossary count in HeroSection. */
 export const HERO_STATS = [
   { value: "8", labelKey: "statTools" },
   { value: "3", labelKey: "statModels" },
-  { value: "288", labelKey: "statTerms" },
+  { value: "", labelKey: "statTerms" },
   { value: "18", labelKey: "statCategories" },
 ] as const;
 

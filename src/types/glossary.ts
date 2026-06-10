@@ -1,24 +1,35 @@
-export type GlossaryCategory =
-  | "forex-basics"
-  | "technical-analysis"
-  | "fundamental-analysis"
-  | "risk-management"
-  | "trading-psychology"
-  | "order-types"
-  | "market-structure"
-  | "indicators"
-  | "crypto"
-  | "stocks";
+import type { Locale } from "@/types";
 
-export interface GlossaryTerm {
-  slug: string;
-  term: string;
-  category: GlossaryCategory;
-  definition: string;
-  extended: string;
-  related: string[];
+/** A field translated into every supported locale (fr / en / es). */
+export type LocalizedField = Record<Locale, string>;
+
+/** A single glossary entry exactly as stored in src/data/glossary.json. */
+export interface GlossaryEntry {
+  term: LocalizedField;
+  definition: LocalizedField;
+  category: LocalizedField;
 }
 
-export interface GlossaryData {
-  terms: GlossaryTerm[];
+/** The glossary JSON shape: entries grouped by uppercase first letter (A–Z). */
+export type GlossaryData = Record<string, GlossaryEntry[]>;
+
+/** A glossary entry flattened and localized for one locale, ready to render. */
+export interface PreparedTerm {
+  /** URL slug, derived from the English term name. */
+  slug: string;
+  /** Localized term name. */
+  term: string;
+  /** Localized definition. */
+  definition: string;
+  /** Localized category label (for display). */
+  category: string;
+  /** Stable English category key (for filtering + deterministic coloring). */
+  categoryKey: string;
+}
+
+/** Resolved badge colors for a glossary category. */
+export interface CategoryColor {
+  bg: string;
+  border: string;
+  text: string;
 }

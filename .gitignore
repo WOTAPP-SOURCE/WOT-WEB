@@ -1,3 +1,6 @@
+# Local source assets (uncompressed originals kept out of the deploy bundle)
+.assets-src/
+
 # Logs
 logs
 *.log

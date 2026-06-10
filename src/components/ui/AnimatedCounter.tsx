@@ -6,6 +6,7 @@ import { gsap } from "@/lib/gsap";
 
 interface AnimatedCounterProps {
   value: number;
+  prefix?: string;
   suffix?: string;
   durationSeconds?: number;
 }
@@ -19,6 +20,7 @@ interface AnimatedCounterProps {
  */
 export const AnimatedCounter = ({
   value,
+  prefix = "",
   suffix = "",
   durationSeconds = 2,
 }: AnimatedCounterProps) => {
@@ -29,7 +31,7 @@ export const AnimatedCounter = ({
       const el = ref.current;
       if (!el) return;
 
-      const render = (n: number) => `${Math.floor(n).toLocaleString()}${suffix}`;
+      const render = (n: number) => `${prefix}${Math.floor(n).toLocaleString()}${suffix}`;
       const setGlow = (p: number) => {
         el.style.textShadow = `0 0 ${20 + p * 30}px rgba(148, 30, 254, ${0.2 + p * 0.45})`;
       };
@@ -63,7 +65,7 @@ export const AnimatedCounter = ({
 
   return (
     <span ref={ref}>
-      0{suffix}
+      {prefix}0{suffix}
     </span>
   );
 };
