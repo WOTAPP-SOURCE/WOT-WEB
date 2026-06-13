@@ -34,7 +34,7 @@ export const LOCALE_SHORT: Record<string, string> = {
    `termsLabel` is rendered from the live glossary count (StatsSection), so its
    value here is just a typed placeholder. */
 export const STATS = [
-  { key: "tradersLabel", value: 10000, suffix: "+" },
+  { key: "tradersLabel", value: 30000, suffix: "+" },
   { key: "termsLabel", value: 0, suffix: "" },
   { key: "toolsLabel", value: 6, suffix: "" },
   { key: "languagesLabel", value: 3, suffix: "" },

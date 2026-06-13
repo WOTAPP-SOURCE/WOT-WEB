@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useLocale } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 
@@ -25,13 +26,14 @@ export const AnimatedCounter = ({
   durationSeconds = 2,
 }: AnimatedCounterProps) => {
   const ref = useRef<HTMLSpanElement>(null);
+  const locale = useLocale();
 
   useGSAP(
     () => {
       const el = ref.current;
       if (!el) return;
 
-      const render = (n: number) => `${prefix}${Math.floor(n).toLocaleString()}${suffix}`;
+      const render = (n: number) => `${prefix}${Math.floor(n).toLocaleString(locale)}${suffix}`;
       const setGlow = (p: number) => {
         el.style.textShadow = `0 0 ${20 + p * 30}px rgba(148, 30, 254, ${0.2 + p * 0.45})`;
       };
