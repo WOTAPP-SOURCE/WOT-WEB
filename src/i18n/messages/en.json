@@ -113,25 +113,21 @@
   },
   "lessons": {
     "eyebrow": "Lessons",
-    "title": "Learn what actually moves your P&L.",
-    "subtitle": "Structured lessons across every concept that matters — from psychology to market structure.",
-    "items": [
-      "Price Action",
-      "Risk Management",
-      "Trading Psychology",
-      "ICT Concepts",
-      "Chart Patterns",
-      "Candlesticks",
-      "Support & Resistance",
-      "Fibonacci",
-      "Elliott Waves",
-      "Order Flow",
-      "Market Structure",
-      "Supply & Demand",
-      "Divergences",
-      "Volume Profile",
-      "Multi-Timeframe"
-    ]
+    "title": "Learn trading like a craft.",
+    "subtitle": "Structured lessons on every concept that matters — from market psychology to risk management, from technical analysis to market structure. A progression built to turn theory into real instincts.",
+    "cards": [
+      "Read market structure",
+      "Master tilt: trader psychology",
+      "Manage risk like a pro",
+      "Anatomy of a setup",
+      "Support, resistance & liquidity zones",
+      "Build a trading plan",
+      "Position sizing & money management",
+      "Read candlestick patterns",
+      "Trends, ranges & breakouts",
+      "Keep a trading journal"
+    ],
+    "more": "And much more…"
   },
   "rewards": {
     "eyebrow": "Gamified learning",

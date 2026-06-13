@@ -113,25 +113,21 @@
   },
   "lessons": {
     "eyebrow": "Lecciones",
-    "title": "Aprende lo que de verdad mueve tu P&L.",
-    "subtitle": "Lecciones estructuradas sobre cada concepto que importa — de la psicología a la estructura de mercado.",
-    "items": [
-      "Price Action",
-      "Gestión del riesgo",
-      "Psicología del trading",
-      "Conceptos ICT",
-      "Patrones de gráficos",
-      "Velas japonesas",
-      "Soporte y resistencia",
-      "Fibonacci",
-      "Ondas de Elliott",
-      "Order Flow",
-      "Estructura de mercado",
-      "Oferta y demanda",
-      "Divergencias",
-      "Volume Profile",
-      "Multitemporalidad"
-    ]
+    "title": "Aprende el trading como un oficio.",
+    "subtitle": "Lecciones estructuradas sobre cada concepto que cuenta — desde la psicología de mercado hasta la gestión del riesgo, del análisis técnico a la estructura del mercado. Una progresión pensada para convertir la teoría en reflejos concretos.",
+    "cards": [
+      "Leer la estructura del mercado",
+      "Dominar el tilt: psicología del trader",
+      "Gestionar el riesgo como un pro",
+      "Anatomía de un setup",
+      "Soportes, resistencias y zonas de liquidez",
+      "Crear un plan de trading",
+      "Tamaño de posición y money management",
+      "Leer las velas japonesas",
+      "Tendencias, rangos y rupturas",
+      "Llevar un diario de trading"
+    ],
+    "more": "Y mucho más…"
   },
   "rewards": {
     "eyebrow": "Aprendizaje gamificado",

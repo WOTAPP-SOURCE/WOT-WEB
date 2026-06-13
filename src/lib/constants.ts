@@ -69,25 +69,6 @@ export const GLOSSARY_SAMPLE = [
   { term: "Lot Size", slug: "lot-size", dot: "#3b82f6" },
 ] as const;
 
-/* Lessons tag-cloud sizing/emphasis, aligned by index with `lessons.items`. */
-export const LESSON_TOPICS = [
-  { size: "lg", highlight: true },
-  { size: "lg", highlight: true },
-  { size: "lg", highlight: true },
-  { size: "md", highlight: false },
-  { size: "md", highlight: true },
-  { size: "md", highlight: false },
-  { size: "md", highlight: false },
-  { size: "reg", highlight: false },
-  { size: "reg", highlight: false },
-  { size: "reg", highlight: true },
-  { size: "reg", highlight: false },
-  { size: "reg", highlight: false },
-  { size: "reg", highlight: false },
-  { size: "reg", highlight: false },
-  { size: "reg", highlight: false },
-] as const;
-
 /* Pricing plans. Prices are brand-fixed; names/periods/savings translated in
    the `pricing` namespace. The annual plan is visually highlighted. */
 export const PRICING_PLANS = [

@@ -113,25 +113,21 @@
   },
   "lessons": {
     "eyebrow": "Leçons",
-    "title": "Apprenez ce qui fait vraiment bouger votre P&L.",
-    "subtitle": "Des leçons structurées sur chaque concept qui compte — de la psychologie à la structure de marché.",
-    "items": [
-      "Price Action",
-      "Gestion du risque",
-      "Psychologie du trading",
-      "Concepts ICT",
-      "Figures chartistes",
-      "Chandeliers",
-      "Support & Résistance",
-      "Fibonacci",
-      "Vagues d'Elliott",
-      "Order Flow",
-      "Structure de marché",
-      "Offre & Demande",
-      "Divergences",
-      "Volume Profile",
-      "Multi-unités de temps"
-    ]
+    "title": "Apprenez le trading comme un métier.",
+    "subtitle": "Des leçons structurées sur chaque concept qui compte — de la psychologie de marché à la gestion du risque, de l'analyse technique à la structure de marché. Une progression pensée pour transformer la théorie en réflexes concrets.",
+    "cards": [
+      "Lire la structure de marché",
+      "Dominer le tilt : psychologie du trader",
+      "Gérer le risque comme un pro",
+      "Anatomie d'un setup",
+      "Support, résistance et zones de liquidité",
+      "Construire un plan de trading",
+      "Taille de position & money management",
+      "Lire les bougies japonaises",
+      "Tendances, ranges et cassures",
+      "Tenir un journal de trading"
+    ],
+    "more": "Et bien plus encore…"
   },
   "rewards": {
     "eyebrow": "Apprentissage gamifié",
