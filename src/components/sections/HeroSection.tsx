@@ -126,9 +126,12 @@ export const HeroSection = ({ count }: HeroSectionProps) => {
       >
         {/* Left — content */}
         <div className="text-center lg:text-left">
+          {/* Brand eyebrow — literal wordmark, identical across all locales (NOT
+              routed through next-intl). The `hero.badge` i18n key is intentionally
+              left in place but no longer rendered here. */}
           <div className="hero-badge border-primary/40 bg-primary/10 text-accent inline-flex items-center gap-2 rounded-full border px-4 py-1.5 font-mono text-[0.7rem] tracking-[0.14em] uppercase shadow-[0_0_24px_-6px_rgba(148,30,254,0.6)]">
             <SparklesIcon className="h-3.5 w-3.5" />
-            {t("badge")}
+            WAY OF TRADING
           </div>
 
           <h1
