@@ -16,7 +16,7 @@
     "line1": "Learn faster.",
     "line2": "Progress with confidence.",
     "line3": "Trade smarter.",
-    "subheadline": "WOT is the all-in-one AI trading education app. Learn the markets, decode your charts, and sharpen every decision with Rudy — your personal AI coach, always in your pocket.",
+    "subheadline": "WOT is the all-in-one AI trading education app. Learn the markets, decode your charts, and sharpen every decision with Rudy, your personal AI coach, always in your pocket.",
     "scrollHint": "Scroll to explore",
     "orbitCoachTitle": "Coach AI",
     "orbitCoachMeta1": "Online",
@@ -60,11 +60,11 @@
     "coachLabel": "COACH AI",
     "coachBadge": "AI Coaching",
     "coachTitle": "Your AI Trading Coach",
-    "coachDesc": "Ask Rudy anything about trading — from basic concepts to advanced strategies. Get personalized, judgement-free guidance available 24/7. Like having a professional mentor in your pocket.",
+    "coachDesc": "Ask Rudy anything about trading, from basic concepts to advanced strategies. Get personalized, judgement-free guidance available 24/7. Like having a professional mentor in your pocket.",
     "chartLabel": "CHART ANALYSIS",
     "chartBadge": "Smart Analysis",
     "chartTitle": "AI-Powered Chart Analysis",
-    "chartDesc": "Upload any chart screenshot and receive instant AI analysis. Identify key support and resistance levels, trend patterns, and potential entry and exit points — all in seconds.",
+    "chartDesc": "Upload any chart screenshot and receive instant AI analysis. Identify key support and resistance levels, trend patterns, and potential entry and exit points, all in seconds.",
     "tradeLabel": "TRADE HISTORY",
     "tradeBadge": "Performance Tracking",
     "tradeTitle": "Analyze Your Trading History",
@@ -72,14 +72,14 @@
     "toolsLabel": "PRO TOOLKIT",
     "toolsBadge": "Complete Toolkit",
     "toolsTitle": "6 Professional Trading Tools",
-    "toolsDesc": "Position size calculator, economic calendar, multilingual glossary with {count} terms, interactive quizzes with leaderboard — everything a serious trader needs, in one app."
+    "toolsDesc": "Position size calculator, economic calendar, multilingual glossary with {count} terms, interactive quizzes with leaderboard, everything a serious trader needs, in one app."
   },
   "aiSuite": {
     "eyebrow": "AI Suite",
     "titleLead": "Your trades deserve",
     "titleHighlight": "real intelligence.",
     "card1Title": "Coach Rudy",
-    "card1Desc": "Your 24/7 trading mentor. Ask anything — get answers backed by market data, not generic advice.",
+    "card1Desc": "Your 24/7 trading mentor. Ask anything. Get answers backed by market data, not generic advice.",
     "card2Title": "Chart Analyzer",
     "card2Desc": "Upload a screenshot. Get instant analysis: structure, key levels, entries, exits.",
     "card3Title": "Trade History",
@@ -89,7 +89,7 @@
     "eyebrow": "The glossary",
     "title": "{count} terms. 18 categories.",
     "titleAccent": "3 languages.",
-    "subtitle": "The largest multilingual trading glossary — clear definitions, real context, built for everyone.",
+    "subtitle": "The largest multilingual trading glossary, clear definitions, real context, built for everyone.",
     "statTermsLabel": "Terms",
     "statCategoriesLabel": "Categories",
     "statLanguagesLabel": "Languages",
@@ -102,11 +102,11 @@
       "Orders"
     ],
     "definitions": [
-      "The smallest standard price move in a forex pair — your unit for measuring gains and losses.",
+      "The smallest standard price move in a forex pair, your unit for measuring gains and losses.",
       "A momentum oscillator from 0 to 100 that flags overbought and oversold conditions.",
       "A resting order that closes a trade at a set price to cap your downside risk.",
       "Using borrowed capital to control a larger position than your account balance alone.",
-      "Institutional order flow that drives price toward liquidity — the core of ICT concepts.",
+      "Institutional order flow that drives price toward liquidity, the core of ICT concepts.",
       "The number of units in a single trade, defining how much each pip is worth."
     ],
     "exploreCta": "Explore all {count} terms"
@@ -114,7 +114,7 @@
   "lessons": {
     "eyebrow": "Lessons",
     "title": "Learn trading like a craft.",
-    "subtitle": "Structured lessons on every concept that matters — from market psychology to risk management, from technical analysis to market structure. A progression built to turn theory into real instincts.",
+    "subtitle": "Structured lessons on every concept that matters, from market psychology to risk management, from technical analysis to market structure. A progression built to turn theory into real instincts.",
     "cards": [
       "Read market structure",
       "Master tilt: trader psychology",
@@ -132,7 +132,7 @@
   "rewards": {
     "eyebrow": "Gamified learning",
     "title": "Learn. Test. Win.",
-    "description": "Every lesson and quiz moves you forward. WOT turns learning into a game with real stakes — so building your knowledge actually feels rewarding.",
+    "description": "Every lesson and quiz moves you forward. WOT turns learning into a game with real stakes, so building your knowledge actually feels rewarding.",
     "point1": "Earn WOT Coins on every quiz",
     "point2": "Climb the global leaderboard",
     "point3": "Real rewards for real knowledge",
@@ -142,19 +142,19 @@
   "pricing": {
     "eyebrow": "Pricing",
     "title": "One app. One price. Every tool.",
-    "subtitle": "Full access to all 8 tools and 3 AI models. Pick the plan that fits — cancel anytime.",
+    "subtitle": "Full access to all 8 tools and 3 AI models. Pick the plan that fits. Cancel anytime.",
     "monthlyName": "Monthly",
     "annualName": "Annual",
     "quarterlyName": "Quarterly",
     "annualBadge": "Best value",
-    "annualSave": "Save 42% — 2 months free",
+    "annualSave": "Save 42% (2 months free)",
     "quarterlySave": "Save 17%",
     "periodMonth": "/mo",
     "periodYear": "/yr",
     "periodQuarter": "/3mo",
     "features": [
       "All 8 pro tools",
-      "Full AI quota — Coach, Chart & History",
+      "Full AI quota (Coach, Chart & History)",
       "{count}-term multilingual glossary",
       "Cancel anytime"
     ],
@@ -194,7 +194,7 @@
     "trustNote": "Free to download · Available on iOS and Android"
   },
   "footer": {
-    "tagline": "The smarter way to learn trading — AI coaching, pro tools, and a multilingual glossary in one app.",
+    "tagline": "The smarter way to learn trading, AI coaching, pro tools, and a multilingual glossary in one app.",
     "productTitle": "Product",
     "companyTitle": "Company",
     "legalTitle": "Legal",
@@ -221,7 +221,7 @@
     "relatedTerms": "Related terms",
     "learnWithRudy": "Learn this in practice with Rudy, your AI coach",
     "metaTitle": "Trading Glossary",
-    "metaDescription": "Trading terms explained clearly, in three languages — the largest multilingual trading glossary.",
+    "metaDescription": "Trading terms explained clearly, in three languages. The largest multilingual trading glossary.",
     "seoSuffix": "Trading Glossary | WOT",
     "exploreAllCta": "Explore all +{count} terms",
     "noResults": "No terms match your search."
@@ -234,13 +234,13 @@
   },
   "metadata": {
     "siteName": "Way of Trading",
-    "homeTitle": "Way of Trading — Learn Trading with AI",
+    "homeTitle": "Way of Trading (Learn Trading with AI)",
     "homeDescription": "Master trading with Rudy, your AI coach. Download the Way of Trading app on iOS and Android."
   },
   "faqPage": {
     "eyebrow": "FAQ",
     "title": "FAQ",
-    "subtitle": "Everything you need to know about WOT — answered.",
+    "subtitle": "Everything you need to know about WOT, answered.",
     "allCategories": "All",
     "metaTitle": "FAQ",
     "metaDescription": "Answers to common questions about WOT: features, subscriptions, AI tools, privacy and more."

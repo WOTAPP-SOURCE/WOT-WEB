@@ -58,6 +58,21 @@
       }
     },
     {
+      "id": "does-wot-trade",
+      "category": "getting-started",
+      "featured": true,
+      "question": {
+        "fr": "WOT trade-t-il pour vous ?",
+        "en": "Does WOT trade for you?",
+        "es": "¿WOT opera por ti?"
+      },
+      "answer": {
+        "fr": "Non. WOT est un logiciel éducatif, pas un service de trading automatisé ni un fournisseur de signaux personnalisés.\n- WOT ne prend aucune décision à la place de votre compte.\n- WOT ne donne pas d'instructions d'achat ou de vente basées sur votre portefeuille ou votre solde.\n- Rudy, le coach IA, fournit une analyse structurée et pédagogique, pas des ordres à copier.\n- Nos outils expliquent et analysent ; ils ne commandent pas.\n- Les décisions finales vous appartiennent.\nSi vous décidez de trader ou d'investir de l'argent réel, la décision reste la vôtre et se prend en toute conscience, sur la plateforme de votre courtier. WOT sert à bâtir le jugement et les compétences derrière vos décisions, pas à les prendre à votre place.",
+        "en": "No. WOT is educational software, not an auto-trading service or a personalized signal provider.\n- WOT makes no decisions on your account's behalf.\n- WOT does not give buy or sell instructions based on your portfolio or balance.\n- Rudy, the AI coach, provides structured, educational analysis, not orders to copy.\n- Our tools explain and analyze; they do not command.\n- Final decisions belong to you.\nIf you decide to trade or invest real money, the decision stays yours and is made deliberately, on your own broker's platform. WOT exists to build the judgment and skills behind your decisions, not to make them for you.",
+        "es": "No. WOT es un software educativo, no un servicio de trading automatizado ni un proveedor de señales personalizadas.\n- WOT no toma ninguna decisión en nombre de tu cuenta.\n- WOT no da instrucciones de compra o venta basadas en tu cartera o tu saldo.\n- Rudy, el coach de IA, ofrece un análisis estructurado y pedagógico, no órdenes para copiar.\n- Nuestras herramientas explican y analizan; no ordenan.\n- Las decisiones finales te pertenecen.\nSi decides operar o invertir dinero real, la decisión sigue siendo tuya y se toma de forma consciente, en la plataforma de tu propio bróker. WOT sirve para construir el criterio y las competencias detrás de tus decisiones, no para tomarlas por ti."
+      }
+    },
+    {
       "id": "need-broker-account",
       "category": "getting-started",
       "featured": true,
@@ -112,9 +127,9 @@
         "es": "¿Necesito conocimientos previos de trading?"
       },
       "answer": {
-        "fr": "Non. WOT accompagne tous les profils, du débutant complet jusqu'au trader intermédiaire qui veut consolider ses bases et sa méthode.",
-        "en": "No. WOT is designed for all levels, from complete beginners to intermediate traders who want to build a solid, structured foundation.",
-        "es": "No. WOT está diseñado para todos los niveles, desde principiantes completos hasta traders intermedios que quieren consolidar sus bases y su método."
+        "fr": "Non. WOT accompagne tous les profils, du débutant complet jusqu'au trader confirmé qui veut consolider ses bases et sa méthode.",
+        "en": "No. WOT supports every profile, from the complete beginner to the experienced trader looking to consolidate their foundations and method.",
+        "es": "No. WOT acompaña a todos los perfiles, desde el principiante absoluto hasta el trader experimentado que quiere consolidar sus bases y su método."
       }
     },
     {
@@ -157,9 +172,9 @@
         "es": "¿Puedo cancelar en cualquier momento?"
       },
       "answer": {
-        "fr": "Oui. L'annulation se fait depuis ton compte Apple ID ou Google Play. L'accès reste actif jusqu'à la fin de la période payée.",
-        "en": "Yes. Cancel from your Apple ID or Google Play account. Access stays active until the end of the paid period.",
-        "es": "Sí. La cancelación se realiza desde tu cuenta Apple ID o Google Play. El acceso sigue activo hasta el final del período pagado."
+        "fr": "Oui. L'annulation se fait depuis votre compte. L'accès reste actif jusqu'à la fin de la période payée. Un problème ? Contactez notre support.",
+        "en": "Yes. You can cancel from your account. Access stays active until the end of the paid period. A problem? Contact our support.",
+        "es": "Sí. La cancelación se hace desde tu cuenta. El acceso permanece activo hasta el final del período pagado. ¿Algún problema? Contacta con nuestro soporte."
       }
     },
     {
@@ -238,51 +253,6 @@
       }
     },
     {
-      "id": "ai-limits",
-      "category": "ai-tools",
-      "featured": false,
-      "question": {
-        "fr": "Y a-t-il une limite d'utilisation des outils IA ?",
-        "en": "Are there limits on AI tool usage?",
-        "es": "¿Hay límites en el uso de las herramientas IA?"
-      },
-      "answer": {
-        "fr": "Chaque abonnement inclut par mois : 100 messages avec le Coach Rudy, 20 analyses AI Chart Analyzer, 20 analyses Trade Analyzer. Les cours et quiz ne consomment aucun quota. Le quota se réinitialise à chaque renouvellement d'abonnement.",
-        "en": "Each subscription includes per month: 100 messages with Coach Rudy, 20 AI Chart Analyzer analyses, 20 Trade Analyzer analyses. Courses and quizzes consume no quota. Quota resets at each subscription renewal.",
-        "es": "Cada suscripción incluye por mes: 100 mensajes con el Coach Rudy, 20 análisis con el AI Chart Analyzer, 20 análisis con el Trade Analyzer. Los cursos y quizzes no consumen cuota. La cuota se reinicia en cada renovación de suscripción."
-      }
-    },
-    {
-      "id": "quota-reached",
-      "category": "ai-tools",
-      "featured": false,
-      "question": {
-        "fr": "Que se passe-t-il quand j'atteins mon quota ?",
-        "en": "What happens when I reach my quota?",
-        "es": "¿Qué pasa cuando alcanzo mi cuota?"
-      },
-      "answer": {
-        "fr": "L'outil concerné est bloqué jusqu'au prochain renouvellement. Des packs de recharge sont disponibles pour continuer sans changer de plan.",
-        "en": "The tool is locked until your next renewal. Recharge packs are available to unlock additional usage without changing your plan.",
-        "es": "La herramienta se bloquea hasta el próximo período. Hay packs de recarga disponibles para continuar sin cambiar de plan."
-      }
-    },
-    {
-      "id": "recharge-packs",
-      "category": "ai-tools",
-      "featured": false,
-      "question": {
-        "fr": "Quels sont les packs de recharge ?",
-        "en": "What recharge packs are available?",
-        "es": "¿Qué packs de recarga hay disponibles?"
-      },
-      "answer": {
-        "fr": "Small : €6,99. Standard : €11,99. Large : €24,99.",
-        "en": "Small: €6.99. Standard: €11.99. Large: €24.99.",
-        "es": "Small: €6,99. Standard: €11,99. Large: €24,99."
-      }
-    },
-    {
       "id": "training-modules",
       "category": "content-tools",
       "featured": false,
@@ -328,36 +298,6 @@
       }
     },
     {
-      "id": "glossary-languages",
-      "category": "content-tools",
-      "featured": false,
-      "question": {
-        "fr": "Le glossaire est-il uniquement en français ?",
-        "en": "Is the glossary only in French?",
-        "es": "¿El glosario está solo en francés?"
-      },
-      "answer": {
-        "fr": "Non. Plus de 300 termes sont disponibles en français, anglais et espagnol, avec définitions précises rédigées par des professionnels du trading.",
-        "en": "No. Over 300 terms are available in French, English and Spanish, with precise definitions written by trading professionals.",
-        "es": "No. Más de 300 términos están disponibles en francés, inglés y español, con definiciones precisas redactadas por profesionales del trading."
-      }
-    },
-    {
-      "id": "offline",
-      "category": "content-tools",
-      "featured": false,
-      "question": {
-        "fr": "L'application fonctionne-t-elle sans connexion ?",
-        "en": "Does the app work offline?",
-        "es": "¿La app funciona sin conexión?"
-      },
-      "answer": {
-        "fr": "Certains cours sont accessibles offline après chargement. Les fonctionnalités IA (Coach, Chart Analyzer, Trade Analyzer) nécessitent une connexion.",
-        "en": "Some course content is available offline after loading. AI features (Coach, Chart Analyzer, Trade Analyzer) require an internet connection.",
-        "es": "Algunos cursos están disponibles offline tras cargarlos. Las funcionalidades IA (Coach, Chart Analyzer, Trade Analyzer) requieren conexión a internet."
-      }
-    },
-    {
       "id": "trading-data",
       "category": "data-privacy",
       "featured": false,
@@ -370,21 +310,6 @@
         "fr": "Les données importées via le Trade Analyzer sont utilisées uniquement pour générer ton analyse. WOT ne transmet aucune donnée à des tiers commerciaux.",
         "en": "Data imported through the Trade Analyzer is used only to generate your analysis. WOT does not share any data with commercial third parties.",
         "es": "Los datos importados a través del Trade Analyzer se utilizan únicamente para generar tu análisis. WOT no comparte ningún dato con terceros comerciales."
-      }
-    },
-    {
-      "id": "broker-affiliation",
-      "category": "data-privacy",
-      "featured": true,
-      "question": {
-        "fr": "WOT est-il affilié à un broker ?",
-        "en": "Is WOT affiliated with a broker?",
-        "es": "¿WOT está afiliado a un bróker?"
-      },
-      "answer": {
-        "fr": "Non. WOT est une application d'éducation indépendante. Les partenariats broker sont des accords commerciaux optionnels. Ils n'influencent en rien le contenu pédagogique.",
-        "en": "No. WOT is an independent education application. Broker partnerships are optional commercial arrangements. They have zero influence on the educational content.",
-        "es": "No. WOT es una aplicación de educación independiente. Las asociaciones con brókers son acuerdos comerciales opcionales. No influyen en absoluto en el contenido pedagógico."
       }
     }
   ]
