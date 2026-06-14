@@ -28,12 +28,17 @@ export const GlossaryPreviewSection = ({ count }: GlossaryPreviewSectionProps) =
   useGSAP(
     () => {
       gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+        // immediateRender:false keeps these visible until their trigger actually
+        // enters, so a trigger that never fires (code-split section + Lenis) can
+        // never leave them stuck at autoAlpha:0 — which previously left the
+        // invisible-but-space-occupying term cards as a large empty band.
         gsap.from(".glx-heading", {
           y: 30,
           autoAlpha: 0,
           duration: 0.7,
           ease: "power3.out",
-          scrollTrigger: { trigger: ".glx-heading", start: "top 85%" },
+          immediateRender: false,
+          scrollTrigger: { trigger: ".glx-heading", start: "top 85%", once: true },
         });
         gsap.from(".glx-stat", {
           y: 24,
@@ -41,7 +46,8 @@ export const GlossaryPreviewSection = ({ count }: GlossaryPreviewSectionProps) =
           duration: 0.55,
           ease: "power3.out",
           stagger: 0.12,
-          scrollTrigger: { trigger: ".glx-stats", start: "top 82%" },
+          immediateRender: false,
+          scrollTrigger: { trigger: ".glx-stats", start: "top 82%", once: true },
         });
         gsap.from(".glx-term", {
           y: 30,
@@ -49,7 +55,8 @@ export const GlossaryPreviewSection = ({ count }: GlossaryPreviewSectionProps) =
           duration: 0.5,
           ease: "power3.out",
           stagger: 0.08,
-          scrollTrigger: { trigger: ".glx-terms", start: "top 82%" },
+          immediateRender: false,
+          scrollTrigger: { trigger: ".glx-terms", start: "top 82%", once: true },
         });
       });
     },
@@ -111,7 +118,7 @@ export const GlossaryPreviewSection = ({ count }: GlossaryPreviewSectionProps) =
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-6 text-center">
           <Link
             href="/glossary"
             className="text-accent hover:text-primary inline-flex items-center gap-2 font-medium transition-colors duration-200"

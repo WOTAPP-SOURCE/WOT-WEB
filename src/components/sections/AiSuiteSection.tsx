@@ -25,12 +25,17 @@ export const AiSuiteSection = () => {
   useGSAP(
     () => {
       gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+        // immediateRender:false keeps these visible until their trigger actually
+        // enters, so a trigger that never fires (code-split section + Lenis) can
+        // never leave the 3 AI cards stuck at autoAlpha:0 — which previously left
+        // them invisible-but-space-occupying as a large empty band below the title.
         gsap.from(".ai-heading", {
           y: 30,
           autoAlpha: 0,
           duration: 0.7,
           ease: "power3.out",
-          scrollTrigger: { trigger: ".ai-heading", start: "top 85%" },
+          immediateRender: false,
+          scrollTrigger: { trigger: ".ai-heading", start: "top 85%", once: true },
         });
         gsap.from(".ai-card", {
           y: 40,
@@ -38,7 +43,8 @@ export const AiSuiteSection = () => {
           duration: 0.6,
           ease: "power3.out",
           stagger: 0.15,
-          scrollTrigger: { trigger: ".ai-grid", start: "top 80%" },
+          immediateRender: false,
+          scrollTrigger: { trigger: ".ai-grid", start: "top 80%", once: true },
         });
       });
     },

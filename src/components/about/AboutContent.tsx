@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
+import { DownloadCta } from "@/components/ui/DownloadCta";
 import type { AboutContentData } from "@/lib/about";
 
 interface AboutContentProps {
@@ -82,6 +83,9 @@ export const AboutContent = ({ data }: AboutContentProps) => {
           {data.closing}
         </p>
       </div>
+
+      {/* Download CTA — same dual app-store-badges + free-download tagline block as the homepage. */}
+      <DownloadCta className="mt-16 sm:mt-20" />
     </section>
   );
 };

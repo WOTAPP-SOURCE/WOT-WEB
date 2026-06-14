@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
-import { StoreButtons } from "@/components/ui/StoreButtons";
+import { DownloadCta } from "@/components/ui/DownloadCta";
 
 /*
  * Cinematic closing statement — no mascot, just type. Two oversized lines with
@@ -68,13 +68,7 @@ export const CTASection = () => {
           {t("subheadline")}
         </p>
 
-        <div className="cta-item mt-10 flex justify-center">
-          <StoreButtons />
-        </div>
-
-        <p className="cta-item text-text-muted mt-7 font-mono text-[0.62rem] tracking-[0.18em] uppercase">
-          {t("trustNote")}
-        </p>
+        <DownloadCta className="cta-item mt-10" />
       </div>
     </section>
   );
