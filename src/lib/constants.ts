@@ -58,16 +58,19 @@ export const HERO_ORBIT_CARDS = [
   { titleKey: "orbitGlossaryTitle", meta1Key: "orbitGlossaryMeta1", meta2Key: "orbitGlossaryMeta2", live: false, className: "right-[-6%] bottom-[10%]", delay: "3.8s" },
 ] as const;
 
-/* 6 sample glossary terms for the homepage preview. Term names are proper nouns
-   (kept across locales); category label + definition come from `glossaryPreview`
-   arrays aligned by index. `dot` is the category color swatch. */
+/* 6 sample glossary terms for the homepage preview. `term` is the short display
+   label (a proper noun, kept across locales). `enTerm` is the EXACT English term as
+   it appears in glossary.json; the card link is built by running it through the
+   shared slugify() — the same source generateStaticParams uses — so the href always
+   resolves to a generated /glossary/[slug] page (never a 404). Category label +
+   definition come from `glossaryPreview` arrays aligned by index. `dot` = swatch. */
 export const GLOSSARY_SAMPLE = [
-  { term: "Pip", slug: "pip", dot: "#2dd4bf" },
-  { term: "RSI", slug: "rsi", dot: "#ec4899" },
-  { term: "Stop Loss", slug: "stop-loss", dot: "#22c55e" },
-  { term: "Leverage", slug: "leverage", dot: "#f59e0b" },
-  { term: "Smart Money", slug: "smart-money", dot: "#b366ff" },
-  { term: "Lot Size", slug: "lot-size", dot: "#3b82f6" },
+  { term: "Pip", enTerm: "Pip", dot: "#2dd4bf" },
+  { term: "RSI", enTerm: "RSI (Relative Strength Index)", dot: "#ec4899" },
+  { term: "Stop Loss", enTerm: "Stop-Loss", dot: "#22c55e" },
+  { term: "Leverage", enTerm: "Leverage", dot: "#f59e0b" },
+  { term: "Smart Money", enTerm: "Smart Money", dot: "#b366ff" },
+  { term: "Lot Size", enTerm: "Lot", dot: "#3b82f6" },
 ] as const;
 
 /* Pricing plans. Prices are brand-fixed; names/periods/savings translated in

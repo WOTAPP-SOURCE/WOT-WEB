@@ -7,6 +7,7 @@ import { gsap } from "@/lib/gsap";
 import { Link } from "@/i18n/navigation";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 import { GLOSSARY_SAMPLE } from "@/lib/constants";
+import { slugify } from "@/lib/slugify";
 
 interface GlossaryPreviewSectionProps {
   /** Live glossary term count from glossary.json. */
@@ -99,8 +100,8 @@ export const GlossaryPreviewSection = ({ count }: GlossaryPreviewSectionProps) =
         <div className="glx-terms mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {GLOSSARY_SAMPLE.map((sample, i) => (
             <Link
-              key={sample.slug}
-              href={`/glossary/${sample.slug}`}
+              key={sample.enTerm}
+              href={`/glossary/${slugify(sample.enTerm)}`}
               className="glx-term group border-border hover:border-primary/50 hover:shadow-glow block rounded-2xl border bg-surface/60 p-6 transition-all duration-300 hover:-translate-y-1.5"
             >
               <span className="border-border text-text-muted inline-flex items-center gap-2 rounded-full border px-3 py-1 font-mono text-[0.6rem] tracking-[0.12em] uppercase">
