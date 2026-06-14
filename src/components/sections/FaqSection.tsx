@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { Link } from "@/i18n/navigation";
 import { AccordionItem } from "@/components/ui/AccordionItem";
+import { FaqAnswerText } from "@/components/faq/FaqAnswerText";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 import type { FaqQuestion } from "@/lib/faq";
 
@@ -60,7 +61,7 @@ export const FaqSection = ({ questions }: FaqSectionProps) => {
               key={q.id}
               className="faq-item"
               title={q.question}
-              body={q.answer}
+              body={<FaqAnswerText answer={q.answer} />}
               isOpen={openId === q.id}
               onToggle={() => setOpenId(openId === q.id ? null : q.id)}
             />

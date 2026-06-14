@@ -2,10 +2,11 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { InstagramIcon, LinkedInIcon, XIcon, YouTubeIcon } from "@/components/ui/Icons";
 import { FooterVideo } from "@/components/layout/FooterVideo";
+import { ScrollNavLink } from "@/components/layout/ScrollNavLink";
 
 interface FooterColumn {
   titleKey: string;
-  links: { key: string; href: string }[];
+  links: { key: string; href: string; scrollTo?: string }[];
 }
 
 const FOOTER_COLUMNS: FooterColumn[] = [
@@ -13,7 +14,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
     titleKey: "productTitle",
     links: [
       { key: "features", href: "/features" },
-      { key: "pricing", href: "/pricing" },
+      { key: "pricing", href: "/", scrollTo: "pricing" },
       { key: "glossary", href: "/glossary" },
       { key: "faq", href: "/faq" },
     ],
@@ -80,16 +81,23 @@ export const Footer = () => {
             <div key={column.titleKey} className="md:col-span-2">
               <h3 className={columnHeader}>{t(column.titleKey)}</h3>
               <ul className="mt-4 flex flex-col gap-3">
-                {column.links.map((link) => (
-                  <li key={link.key}>
-                    <Link
-                      href={link.href}
-                      className="text-text-muted hover:text-text text-sm transition-colors duration-200"
-                    >
-                      {t(link.key)}
-                    </Link>
-                  </li>
-                ))}
+                {column.links.map((link) => {
+                  const linkClass =
+                    "text-text-muted hover:text-text text-sm transition-colors duration-200";
+                  return (
+                    <li key={link.key}>
+                      {link.scrollTo ? (
+                        <ScrollNavLink hash={link.scrollTo} className={linkClass}>
+                          {t(link.key)}
+                        </ScrollNavLink>
+                      ) : (
+                        <Link href={link.href} className={linkClass}>
+                          {t(link.key)}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

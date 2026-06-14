@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { AccordionItem } from "@/components/ui/AccordionItem";
+import { FaqAnswerText } from "@/components/faq/FaqAnswerText";
 import { cn } from "@/lib/utils";
 
 interface FaqCategory {
@@ -120,7 +121,7 @@ export const FaqPageContent = ({ categories, questions }: FaqPageContentProps) =
               key={q.id}
               className="faq-q"
               title={q.question}
-              body={q.answer}
+              body={<FaqAnswerText answer={q.answer} />}
               isOpen={openId === q.id}
               onToggle={() => setOpenId(openId === q.id ? null : q.id)}
             />

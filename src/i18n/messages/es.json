@@ -78,6 +78,7 @@
     "eyebrow": "Suite de IA",
     "titleLead": "Tus trades merecen",
     "titleHighlight": "inteligencia de verdad.",
+    "titleKicker": "WAY OF TRADING CONSTRUYE TUS COMPETENCIAS",
     "card1Title": "Coach Rudy",
     "card1Desc": "Tu mentor de trading 24/7. Pregunta lo que sea. Recibe respuestas respaldadas por datos de mercado, no consejos genéricos.",
     "card2Title": "Analizador de gráficos",
@@ -142,7 +143,7 @@
   "pricing": {
     "eyebrow": "Precios",
     "title": "Una app. Un precio. Todas las herramientas.",
-    "subtitle": "Acceso completo a las 8 herramientas y 3 modelos de IA. Elige el plan que encaje. Cancela cuando quieras.",
+    "subtitle": "Acceso completo a las 6 herramientas y 3 modelos de IA, además de las lecciones estructuradas, los quiz y las noticias de los mercados. Elige el plan que más te convenga.",
     "monthlyName": "Mensual",
     "annualName": "Anual",
     "quarterlyName": "Trimestral",
@@ -153,13 +154,13 @@
     "periodYear": "/año",
     "periodQuarter": "/3 meses",
     "features": [
-      "Las 8 herramientas pro",
+      "Las 6 herramientas pro",
       "Cuota de IA completa (Coach, Gráfico e Historial)",
       "Glosario multilingüe de {count} términos",
       "Cancela cuando quieras"
     ],
     "ctaLabel": "Obtener la app",
-    "footnote": "Cancela cuando quieras desde tu cuenta de Apple ID / Google Play."
+    "footnote": "Cancela cuando quieras desde tu cuenta."
   },
   "faq": {
     "eyebrow": "Preguntas frecuentes",

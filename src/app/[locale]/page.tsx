@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { setRequestLocale } from "next-intl/server";
 import { Background } from "@/components/layout/Background";
 import { BackgroundEffects } from "@/components/ui/BackgroundEffects";
+import { HashScroll } from "@/components/layout/HashScroll";
 import { Header } from "@/components/layout/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { MarqueeTicker } from "@/components/sections/MarqueeTicker";
@@ -57,12 +58,17 @@ export default async function HomePage({ params }: HomePageProps) {
   // Single source of truth for the glossary count — derived from glossary.json
   // and threaded into every section that displays it (no hardcoded "288").
   const count = getTermCount();
-  const featuredFaq = getFeaturedFaqQuestions(locale as Locale);
+  // Homepage FAQ preview: drop the "pricing" entry — the full pricing section sits
+  // directly above it, so "Quels sont les tarifs ?" is redundant here. It stays on
+  // the dedicated /faq page (which uses getFaqQuestions, untouched), and the
+  // `featured` flag is left intact to avoid affecting /faq ordering.
+  const featuredFaq = getFeaturedFaqQuestions(locale as Locale).filter((q) => q.id !== "pricing");
 
   return (
     <>
       <Background />
       <BackgroundEffects />
+      <HashScroll />
       <Header />
       <main>
         <HeroSection count={count} />

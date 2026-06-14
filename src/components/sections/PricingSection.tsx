@@ -45,7 +45,7 @@ export const PricingSection = ({ count }: PricingSectionProps) => {
   );
 
   return (
-    <section ref={sectionRef} className="relative py-20 sm:py-24">
+    <section id="pricing" ref={sectionRef} className="relative scroll-mt-24 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="pr-heading mx-auto max-w-3xl text-center">
           <span className="text-accent font-mono text-xs tracking-[0.3em] uppercase">

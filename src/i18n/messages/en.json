@@ -78,6 +78,7 @@
     "eyebrow": "AI Suite",
     "titleLead": "Your trades deserve",
     "titleHighlight": "real intelligence.",
+    "titleKicker": "WAY OF TRADING BUILDS YOUR SKILLS",
     "card1Title": "Coach Rudy",
     "card1Desc": "Your 24/7 trading mentor. Ask anything. Get answers backed by market data, not generic advice.",
     "card2Title": "Chart Analyzer",
@@ -142,7 +143,7 @@
   "pricing": {
     "eyebrow": "Pricing",
     "title": "One app. One price. Every tool.",
-    "subtitle": "Full access to all 8 tools and 3 AI models. Pick the plan that fits. Cancel anytime.",
+    "subtitle": "Full access to all 6 tools and 3 AI models, plus structured lessons, quizzes and market news. Choose the plan that fits you.",
     "monthlyName": "Monthly",
     "annualName": "Annual",
     "quarterlyName": "Quarterly",
@@ -153,13 +154,13 @@
     "periodYear": "/yr",
     "periodQuarter": "/3mo",
     "features": [
-      "All 8 pro tools",
+      "All 6 pro tools",
       "Full AI quota (Coach, Chart & History)",
       "{count}-term multilingual glossary",
       "Cancel anytime"
     ],
     "ctaLabel": "Get the app",
-    "footnote": "Cancel anytime from your Apple ID / Google Play account."
+    "footnote": "Cancel anytime from your account."
   },
   "faq": {
     "eyebrow": "FAQ",

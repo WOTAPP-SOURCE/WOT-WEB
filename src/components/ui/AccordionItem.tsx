@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 interface AccordionItemProps {
   /** Header text (question / term name). */
   title: string;
-  /** Body text (answer / definition). */
-  body: string;
+  /** Body content (answer / definition) — plain text or rich nodes. */
+  body: React.ReactNode;
   isOpen: boolean;
   onToggle: () => void;
   /** Optional node rendered next to the title (e.g. a category badge). */

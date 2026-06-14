@@ -8,11 +8,12 @@ export const GOOGLE_PLAY_URL = "https://play.google.com"; // TBD
 export const LOCALES = ["fr", "en", "es"] as const;
 export const DEFAULT_LOCALE = "fr" as const;
 
-/* Primary navigation: `key` maps to the `nav` i18n namespace, `href` is locale-relative. */
+/* Primary navigation: `key` maps to the `nav` i18n namespace, `href` is locale-relative.
+   `scrollTo` marks an in-page section on the home route (smooth-scrolled, not a page). */
 export const NAV_LINKS = [
   { key: "features", href: "/features" },
   { key: "glossary", href: "/glossary" },
-  { key: "pricing", href: "/pricing" },
+  { key: "pricing", href: "/", scrollTo: "pricing" },
   { key: "faq", href: "/faq" },
   { key: "about", href: "/about" },
 ] as const;

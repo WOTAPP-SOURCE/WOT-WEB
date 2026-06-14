@@ -43,7 +43,7 @@ export default async function FaqPage({ params }: FaqPageProps) {
     mainEntity: questions.map((q) => ({
       "@type": "Question",
       name: q.question,
-      acceptedAnswer: { "@type": "Answer", text: q.answer },
+      acceptedAnswer: { "@type": "Answer", text: q.answer.replace(/\*\*/g, "") },
     })),
   };
 

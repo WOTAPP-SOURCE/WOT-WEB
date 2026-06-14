@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { ScrollNavLink } from "@/components/layout/ScrollNavLink";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -24,9 +25,15 @@ export const Navigation = ({ className, onNavigate, variant = "desktop" }: Navig
       <ul className={cn(variant === "desktop" ? "flex items-center gap-8" : "flex flex-col gap-1")}>
         {NAV_LINKS.map((link) => (
           <li key={link.key}>
-            <Link href={link.href} onClick={onNavigate} className={linkStyles}>
-              {t(link.key)}
-            </Link>
+            {"scrollTo" in link ? (
+              <ScrollNavLink hash={link.scrollTo} onClick={onNavigate} className={linkStyles}>
+                {t(link.key)}
+              </ScrollNavLink>
+            ) : (
+              <Link href={link.href} onClick={onNavigate} className={linkStyles}>
+                {t(link.key)}
+              </Link>
+            )}
           </li>
         ))}
       </ul>

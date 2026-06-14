@@ -55,6 +55,9 @@ export const AiSuiteSection = () => {
           <h2 className="text-text mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             {t("titleLead")} <span className="text-shimmer">{t("titleHighlight")}</span>
           </h2>
+          <p className="text-primary mt-5 font-mono text-xs tracking-[0.22em] uppercase sm:text-sm">
+            {t("titleKicker")}
+          </p>
         </div>
 
         <div className="ai-grid mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">

@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { MobileMenu } from "@/components/layout/MobileMenu";
+import { ScrollNavLink } from "@/components/layout/ScrollNavLink";
 import { Button } from "@/components/ui/Button";
 import { MenuIcon } from "@/components/ui/Icons";
 import { NAV_LINKS } from "@/lib/constants";
@@ -51,16 +52,27 @@ export const Header = () => {
           <nav aria-label="Primary" className="hidden md:block">
             <ul className="flex items-center gap-9">
               {NAV_LINKS.map((link) => {
+                const linkClass = cn(
+                  "nav-underline text-sm font-medium transition-colors duration-200 hover:text-accent hover:[text-shadow:0_0_14px_rgba(184,107,255,0.5)]"
+                );
+
+                if ("scrollTo" in link) {
+                  return (
+                    <li key={link.key}>
+                      <ScrollNavLink hash={link.scrollTo} className={cn(linkClass, "text-text-muted")}>
+                        {t(link.key)}
+                      </ScrollNavLink>
+                    </li>
+                  );
+                }
+
                 const isActive = pathname === link.href;
                 return (
                   <li key={link.key}>
                     <Link
                       href={link.href}
                       data-active={isActive}
-                      className={cn(
-                        "nav-underline text-sm font-medium transition-colors duration-200 hover:text-accent hover:[text-shadow:0_0_14px_rgba(184,107,255,0.5)]",
-                        isActive ? "text-text" : "text-text-muted"
-                      )}
+                      className={cn(linkClass, isActive ? "text-text" : "text-text-muted")}
                     >
                       {t(link.key)}
                     </Link>
