@@ -53,7 +53,9 @@ export default async function ContactPage({ params }: ContactPageProps) {
             </p>
           </div>
 
-          <div className="border-border bg-surface/40 mt-12 rounded-2xl border p-6 backdrop-blur-sm sm:p-8">
+          {/* Card surface lives inside ContactForm so the whole card can flip
+              to its success face on a confirmed send. */}
+          <div className="mt-12">
             <ContactForm />
           </div>
 

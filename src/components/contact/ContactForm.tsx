@@ -2,7 +2,9 @@
 
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
+import { ContactSuccess } from "@/components/contact/ContactSuccess";
 import { CONTACT_EMAIL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -12,17 +14,29 @@ const fieldBase =
   "w-full rounded-xl border border-border bg-surface/60 px-4 py-3 text-text placeholder:text-text-muted/60 transition-colors duration-200 focus-visible:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40";
 const labelBase = "text-sm font-medium text-text";
 
+// Shared card surface — applied to BOTH flip faces so they are pixel-identical
+// in size/style and the flip stays perfectly within bounds.
+const cardSurface = "border-border bg-surface/40 rounded-2xl border p-6 backdrop-blur-sm sm:p-8";
+const backfaceHidden = { backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" } as const;
+
 /*
  * Contact form with zero external config required.
  *  - If NEXT_PUBLIC_CONTACT_WEBHOOK_URL is set, the payload is POSTed there.
  *  - Otherwise it falls back to a prefilled mailto: so the page is never dead.
  * A hidden honeypot field ("company") traps bots: if filled, we no-op as success.
- * Success/error states are surfaced via an aria-live region.
+ *
+ * SUCCESS ANIMATION (see `sent`): the celebratory 3D flip to <ContactSuccess/>
+ * fires ONLY on a genuine webhook 2xx response. The mailto fallback and the
+ * honeypot path deliberately do NOT set `sent` — opening a mail client (or a bot
+ * trap) is not a confirmed delivery, so they keep the plain inline text only.
+ * Under prefers-reduced-motion the flip is replaced by a simple cross-fade.
  */
 export const ContactForm = () => {
   const t = useTranslations("contactPage");
+  const reduce = useReducedMotion();
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState<string>("");
+  const [sent, setSent] = useState(false); // true ONLY after a confirmed webhook send
 
   const webhookUrl = process.env.NEXT_PUBLIC_CONTACT_WEBHOOK_URL;
 
@@ -32,6 +46,7 @@ export const ContactForm = () => {
     const data = new FormData(form);
 
     // Honeypot: real users never see/fill this. Pretend success, send nothing.
+    // No `sent` flip — nothing was actually delivered.
     if ((data.get("company") as string)?.trim()) {
       setStatus("success");
       setFeedback(t("success"));
@@ -46,7 +61,8 @@ export const ContactForm = () => {
       message: (data.get("message") as string)?.trim() ?? "",
     };
 
-    // No webhook configured → graceful mailto: fallback.
+    // No webhook configured → graceful mailto: fallback. NOT a confirmed send,
+    // so we keep the plain inline notice and do NOT trigger the success flip.
     if (!webhookUrl) {
       const body = `${payload.message}\n\n— ${payload.name} (${payload.email})`;
       const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
@@ -71,9 +87,11 @@ export const ContactForm = () => {
 
       if (!res.ok) throw new Error(`Request failed: ${res.status}`);
 
-      setStatus("success");
-      setFeedback(t("success"));
+      // Genuine delivery confirmed (HTTP 2xx) → play the success animation.
       form.reset();
+      setFeedback("");
+      setStatus("success");
+      setSent(true);
     } catch {
       setStatus("error");
       setFeedback(t("error"));
@@ -82,7 +100,9 @@ export const ContactForm = () => {
 
   const isSubmitting = status === "submitting";
 
-  return (
+  // Front face — the form itself. Extracted so it can be reused by both the
+  // flip layout and the reduced-motion cross-fade layout.
+  const formContent = (
     <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-2">
@@ -171,5 +191,55 @@ export const ContactForm = () => {
         {feedback}
       </p>
     </form>
+  );
+
+  // Reduced motion: skip the 3D flip/rocket — just cross-fade to the checkmark
+  // + message (the check renders statically inside <ContactSuccess/>).
+  if (reduce) {
+    return (
+      <div className={cardSurface}>
+        <AnimatePresence mode="wait" initial={false}>
+          {sent ? (
+            <motion.div key="success" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <ContactSuccess message={t("successCardMessage")} />
+            </motion.div>
+          ) : (
+            <motion.div key="form" exit={{ opacity: 0 }}>
+              {formContent}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  }
+
+  // Default: 3D flip. The flipping element is `relative` so the front face
+  // (in normal flow) defines the height; the back face is `absolute inset-0`,
+  // guaranteeing both faces share the exact same box. rotateY foreshortens the
+  // card horizontally mid-flip (never wider), so it can't cause overflow.
+  return (
+    <div style={{ perspective: 1200 }}>
+      <motion.div
+        className="relative"
+        style={{ transformStyle: "preserve-3d" }}
+        animate={{ rotateY: sent ? 180 : 0 }}
+        transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+      >
+        {/* FRONT — form */}
+        <div className={cardSurface} style={backfaceHidden} aria-hidden={sent}>
+          {formContent}
+        </div>
+
+        {/* BACK — success state (mounted only when sent, so its animation
+            begins as the flip reveals it). */}
+        <div
+          className={cn(cardSurface, "absolute inset-0 flex items-center justify-center")}
+          style={{ ...backfaceHidden, transform: "rotateY(180deg)" }}
+          aria-hidden={!sent}
+        >
+          {sent && <ContactSuccess message={t("successCardMessage")} />}
+        </div>
+      </motion.div>
+    </div>
   );
 };

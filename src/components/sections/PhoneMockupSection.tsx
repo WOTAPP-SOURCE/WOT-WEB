@@ -79,7 +79,11 @@ export const PhoneMockupSection = ({ count }: PhoneMockupSectionProps) => {
           <span className="text-accent text-xs font-semibold tracking-[0.3em] uppercase">
             {t("eyebrow")}
           </span>
-          <h2 className="text-shimmer mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          {/* leading-[1.2] + pb-2: the gradient uses background-clip:text, whose
+              paint box is the padding box — with line-height:1 the descenders
+              (g, p, q, y) fall below it and get clipped. The extra line-height
+              and bottom padding extend the paint box so they stay fully visible. */}
+          <h2 className="text-shimmer mt-4 pb-2 text-4xl font-bold leading-[1.2] tracking-tight sm:text-5xl lg:text-6xl">
             {t("title")}
           </h2>
           <p className="text-text-muted mx-auto mt-5 max-w-2xl text-base leading-relaxed sm:text-lg">

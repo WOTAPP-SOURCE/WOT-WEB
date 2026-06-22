@@ -60,12 +60,13 @@ export const HERO_STATS = [
   { value: "18", labelKey: "statCategories" },
 ] as const;
 
-/* Hero orbiting glassmorphism info cards. Labels translated in `hero`. */
+/* Hero orbiting glassmorphism info cards. Each card shows an eyebrow + two
+   feature names (no quota/usage lines). Labels translated in `hero`. */
 export const HERO_ORBIT_CARDS = [
-  { titleKey: "orbitCoachTitle", meta1Key: "orbitCoachMeta1", meta2Key: "orbitCoachMeta2", live: true, className: "left-[-6%] top-[10%]", delay: "0s" },
-  { titleKey: "orbitChartTitle", meta1Key: "orbitChartMeta1", meta2Key: "orbitChartMeta2", live: false, className: "right-[-8%] top-[6%]", delay: "1.4s" },
-  { titleKey: "orbitHistoryTitle", meta1Key: "orbitHistoryMeta1", meta2Key: "orbitHistoryMeta2", live: false, className: "left-[-4%] bottom-[14%]", delay: "2.6s" },
-  { titleKey: "orbitGlossaryTitle", meta1Key: "orbitGlossaryMeta1", meta2Key: "orbitGlossaryMeta2", live: false, className: "right-[-6%] bottom-[10%]", delay: "3.8s" },
+  { titleKey: "orbitCoachTitle", feature1Key: "orbitCoachFeature1", feature2Key: "orbitCoachFeature2", live: true, className: "left-[-6%] top-[10%]", delay: "0s" },
+  { titleKey: "orbitAnalysisTitle", feature1Key: "orbitAnalysisFeature1", feature2Key: "orbitAnalysisFeature2", live: false, className: "right-[-8%] top-[6%]", delay: "1.4s" },
+  { titleKey: "orbitLearnTitle", feature1Key: "orbitLearnFeature1", feature2Key: "orbitLearnFeature2", live: false, className: "left-[-4%] bottom-[14%]", delay: "2.6s" },
+  { titleKey: "orbitMarketsTitle", feature1Key: "orbitMarketsFeature1", feature2Key: "orbitMarketsFeature2", live: false, className: "right-[-6%] bottom-[10%]", delay: "3.8s" },
 ] as const;
 
 /* 6 sample glossary terms for the homepage preview. `term` is the short display

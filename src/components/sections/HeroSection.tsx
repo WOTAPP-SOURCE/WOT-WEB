@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { StoreButtons } from "@/components/ui/StoreButtons";
+import { TickerAmbience } from "@/components/sections/TickerAmbience";
 import { ChevronDownIcon, SparklesIcon } from "@/components/ui/Icons";
 import { HERO_ORBIT_CARDS, HERO_STATS } from "@/lib/constants";
 
@@ -164,7 +165,11 @@ export const HeroSection = ({ count }: HeroSectionProps) => {
                 <dd className="text-gradient-purple text-2xl font-bold tracking-tight">
                   {stat.labelKey === "statTerms" ? `+${count}` : stat.value}
                 </dd>
-                <dt className="text-text-muted mt-1 font-mono text-[0.6rem] tracking-[0.12em] uppercase">
+                {/* text-[0.55rem] + tighter tracking keeps long single-word
+                    labels (e.g. FONCTIONNALITÉS / FUNCIONALIDADES) on one line in
+                    the narrow 4-col card; break-words + leading-tight is a tidy
+                    wrap fallback so nothing can overflow at any width. */}
+                <dt className="text-text-muted mt-1 font-mono text-[0.55rem] leading-tight tracking-[0.08em] break-words uppercase">
                   {t(stat.labelKey)}
                 </dt>
               </div>
@@ -209,6 +214,10 @@ export const HeroSection = ({ count }: HeroSectionProps) => {
           {/* Pulsing purple aura behind the mascot */}
           <div className="hero-aura glow-radial pointer-events-none absolute inset-[12%] rounded-full opacity-[0.18] blur-3xl" />
 
+          {/* Ambient ephemeral ticker pills (behind robot + cards).
+              Self-contained & additive — remove this line + its import to drop it. */}
+          <TickerAmbience />
+
           {/* Mascot — tilt wrapper (cursor) wraps float wrapper (idle) */}
           <div
             ref={mascotTiltRef}
@@ -227,7 +236,7 @@ export const HeroSection = ({ count }: HeroSectionProps) => {
             </div>
           </div>
 
-          {/* Orbiting glassmorphism info cards */}
+          {/* Orbiting glassmorphism info cards — eyebrow + two feature names */}
           {HERO_ORBIT_CARDS.map((card) => (
             <div
               key={card.titleKey}
@@ -245,10 +254,12 @@ export const HeroSection = ({ count }: HeroSectionProps) => {
                   {t(card.titleKey)}
                 </span>
               </div>
-              <p className="text-accent mt-1.5 text-sm font-semibold">
-                {t(card.meta1Key, { count })}
+              <p className="text-accent mt-1.5 text-[0.7rem] leading-snug font-medium">
+                {t(card.feature1Key)}
               </p>
-              <p className="text-text-muted text-[0.7rem]">{t(card.meta2Key)}</p>
+              <p className="text-text-muted mt-0.5 text-[0.66rem] leading-snug">
+                {t(card.feature2Key)}
+              </p>
             </div>
           ))}
         </div>
