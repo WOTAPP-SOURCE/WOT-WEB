@@ -21,15 +21,16 @@ export const LessonsCloudSection = () => {
           ease: "power3.out",
           scrollTrigger: { trigger: ".lc-heading", start: "top 85%" },
         });
-        // immediateRender:false keeps the cards at their natural (visible) state
+        // immediateRender:false keeps the steps at their natural (visible) state
         // until the trigger actually enters — so a trigger that never fires can
         // never leave them stuck at autoAlpha:0. The entrance only enhances.
+        // A staggered top-down slide reinforces the roadmap's sequence.
         gsap.from(".lc-card, .lc-more", {
-          scale: 0.8,
+          y: 20,
           autoAlpha: 0,
-          duration: 0.45,
-          ease: "back.out(1.6)",
-          stagger: 0.05,
+          duration: 0.5,
+          ease: "power3.out",
+          stagger: 0.07,
           immediateRender: false,
           scrollTrigger: { trigger: ".lc-grid", start: "top 85%", once: true },
         });

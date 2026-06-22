@@ -79,12 +79,12 @@
     "titleLead": "Your trades deserve",
     "titleHighlight": "real intelligence.",
     "titleKicker": "WAY OF TRADING BUILDS YOUR SKILLS",
-    "card1Title": "Coach Rudy",
-    "card1Desc": "Your 24/7 trading mentor. Ask anything. Get answers backed by market data, not generic advice.",
-    "card2Title": "Chart Analyzer",
-    "card2Desc": "Upload a screenshot. Get instant analysis: structure, key levels, entries, exits.",
-    "card3Title": "Trade History",
-    "card3Desc": "Import MT4/MT5. AI scans for patterns, biases, and recurring mistakes."
+    "card1Title": "Educational",
+    "card1Desc": "Rudy teaches step by step, in plain words, like a patient mentor. To grasp a concept from scratch.",
+    "card2Title": "Analytical",
+    "card2Desc": "Rudy breaks things down in depth: market structure, key levels, the logic of a setup. To understand the why behind every trade.",
+    "card3Title": "Challenger",
+    "card3Desc": "Rudy challenges your decisions and makes you defend them, to break your biases before the market does."
   },
   "glossaryPreview": {
     "eyebrow": "The glossary",
@@ -114,7 +114,7 @@
   },
   "lessons": {
     "eyebrow": "Lessons",
-    "title": "Learn trading like a craft.",
+    "title": "Learn trading, not promises.",
     "subtitle": "Structured lessons on every concept that matters, from market psychology to risk management, from technical analysis to market structure. A progression built to turn theory into real instincts.",
     "cards": [
       "Read market structure",
@@ -191,7 +191,7 @@
     "badge": "Ready when you are",
     "line1": "Open the app.",
     "line2": "The desk is on.",
-    "subheadline": "Join thousands of traders learning smarter with Rudy. Download WOT and turn market confusion into confident decisions.",
+    "subheadline": "Join the community of traders learning smarter with Way of Trading. Download WOT and turn market confusion into confident decisions.",
     "trustNote": "Free to download · Available on iOS and Android"
   },
   "footer": {
@@ -206,7 +206,6 @@
     "faq": "FAQ",
     "about": "About",
     "contact": "Contact",
-    "blog": "Blog",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "cookies": "Cookie Policy",
@@ -249,5 +248,41 @@
   "aboutPage": {
     "metaTitle": "About",
     "metaDescription": "The story behind WOT: built by traders and brokerage professionals to rebuild trading education from scratch."
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "Let's talk.",
+    "subtitle": "A question, a suggestion or a partnership? Drop us a line and we'll get back to you quickly.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What's this about?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Your message…",
+    "submit": "Send message",
+    "submitting": "Sending…",
+    "success": "Thanks! Your message has been sent.",
+    "mailtoSuccess": "Your email client will open to finish sending.",
+    "error": "Something went wrong. Please try again or email us directly.",
+    "directEmailPrefix": "You can also email us at",
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with the Way of Trading team: questions, suggestions and partnerships."
+  },
+  "launch": {
+    "eyebrow": "Official launch",
+    "title": "The app is coming.",
+    "subtitle": "Way of Trading will soon be available on iOS and Android. The countdown has started: get ready to learn trading for real.",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "date_label": "August 15, 2026",
+    "back": "Back to home",
+    "live": "It's live!",
+    "livePlaceholder": "Download links are coming very soon. Check back in a moment.",
+    "metaTitle": "Launch",
+    "metaDescription": "Way of Trading is coming to iOS and Android. Follow the countdown to the official launch."
   }
 }

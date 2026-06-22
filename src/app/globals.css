@@ -187,6 +187,14 @@
   html {
     color-scheme: dark;
     scroll-behavior: smooth;
+    /* Guardrail against horizontal scroll. `overflow-x: clip` must live on the
+       ROOT element to reliably propagate to the viewport — the same property on
+       <body> alone does NOT propagate in Chromium (unlike `overflow: hidden`),
+       which let intentionally-bleeding decorations create a draggable x-scroll.
+       `clip` (vs `hidden`) avoids creating a scroll container, so it never
+       breaks the GSAP-pinned phone panels or smooth scroll; overflow-y stays
+       visible because the cross-axis of `clip` is preserved (not forced to auto). */
+    overflow-x: clip;
   }
 
   /* Lenis smooth-scroll required styles. When Lenis is active it manages the

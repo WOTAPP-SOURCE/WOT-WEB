@@ -53,7 +53,7 @@ export const AboutContent = ({ data }: AboutContentProps) => {
   return (
     <section ref={rootRef} className="relative px-5 pt-36 pb-28 sm:px-8 sm:pt-44">
       <div className="mx-auto max-w-[800px]">
-        <h1 className="about-tagline text-primary text-center text-[28px] font-bold leading-tight tracking-tight sm:text-[40px] lg:text-[48px]">
+        <h1 className="about-tagline text-shimmer max-w-full text-center text-[clamp(2rem,9vw,3.5rem)] font-bold leading-tight tracking-tight break-words">
           {data.tagline}
         </h1>
       </div>

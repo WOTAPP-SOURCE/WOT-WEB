@@ -9,7 +9,7 @@ import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ScrollNavLink } from "@/components/layout/ScrollNavLink";
 import { Button } from "@/components/ui/Button";
 import { MenuIcon } from "@/components/ui/Icons";
-import { NAV_LINKS } from "@/lib/constants";
+import { LAUNCH_PATH, NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export const Header = () => {
@@ -86,7 +86,7 @@ export const Header = () => {
             <LanguageSwitcher />
 
             <div className="hidden sm:block">
-              <Button href="#download" size="sm">
+              <Button href={LAUNCH_PATH} size="sm">
                 {t("downloadApp")}
               </Button>
             </div>

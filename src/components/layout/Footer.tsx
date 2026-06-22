@@ -13,7 +13,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
   {
     titleKey: "productTitle",
     links: [
-      { key: "features", href: "/features" },
+      { key: "features", href: "/", scrollTo: "fonctionnalites" },
       { key: "pricing", href: "/", scrollTo: "pricing" },
       { key: "glossary", href: "/glossary" },
       { key: "faq", href: "/faq" },
@@ -23,7 +23,6 @@ const FOOTER_COLUMNS: FooterColumn[] = [
     titleKey: "companyTitle",
     links: [
       { key: "about", href: "/about" },
-      { key: "blog", href: "/blog" },
       { key: "contact", href: "/contact" },
     ],
   },

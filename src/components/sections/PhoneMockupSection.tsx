@@ -12,6 +12,8 @@ interface FeatureConfig {
   descKey: string;
   image: string;
   video?: string;
+  /** In-page anchor id — smooth-scroll target for the AI suite pills. */
+  anchorId?: string;
 }
 
 const FEATURES: FeatureConfig[] = [
@@ -20,6 +22,7 @@ const FEATURES: FeatureConfig[] = [
     titleKey: "coachTitle",
     descKey: "coachDesc",
     image: "/images/screenshots/coach-rudy.png",
+    anchorId: "fonctionnalites",
   },
   {
     labelKey: "chartLabel",
@@ -27,12 +30,14 @@ const FEATURES: FeatureConfig[] = [
     descKey: "chartDesc",
     image: "/images/screenshots/graph-analyzer.png",
     video: "/videos/fr/chart-analyzer.mp4",
+    anchorId: "chart-analyzer",
   },
   {
     labelKey: "tradeLabel",
     titleKey: "tradeTitle",
     descKey: "tradeDesc",
     image: "/images/screenshots/trade-analyzer.png",
+    anchorId: "trade-history",
   },
   {
     labelKey: "toolsLabel",
@@ -74,7 +79,7 @@ export const PhoneMockupSection = ({ count }: PhoneMockupSectionProps) => {
           <span className="text-accent text-xs font-semibold tracking-[0.3em] uppercase">
             {t("eyebrow")}
           </span>
-          <h2 className="text-text mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <h2 className="text-shimmer mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             {t("title")}
           </h2>
           <p className="text-text-muted mx-auto mt-5 max-w-2xl text-base leading-relaxed sm:text-lg">
@@ -96,6 +101,7 @@ export const PhoneMockupSection = ({ count }: PhoneMockupSectionProps) => {
           reversed={index % 2 === 1}
           priority={index === 0}
           count={count}
+          anchorId={feature.anchorId}
         />
       ))}
     </section>

@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
-import { APP_STORE_URL, GOOGLE_PLAY_URL } from "@/lib/constants";
+import { LAUNCH_PATH } from "@/lib/constants";
 import { AppleIcon, GooglePlayIcon } from "@/components/ui/Icons";
 
 interface StoreButtonsProps {
@@ -15,8 +16,8 @@ export const StoreButtons = ({ className }: StoreButtonsProps) => {
 
   return (
     <div className={cn("flex flex-col gap-3 sm:flex-row", className)}>
-      <a
-        href={APP_STORE_URL}
+      <Link
+        href={LAUNCH_PATH}
         aria-label={`${t("appStoreLine1")} ${t("appStoreLine2")}`}
         className={buttonBase}
       >
@@ -27,10 +28,10 @@ export const StoreButtons = ({ className }: StoreButtonsProps) => {
           </span>
           <span className="text-base font-semibold text-text">{t("appStoreLine2")}</span>
         </span>
-      </a>
+      </Link>
 
-      <a
-        href={GOOGLE_PLAY_URL}
+      <Link
+        href={LAUNCH_PATH}
         aria-label={`${t("googlePlayLine1")} ${t("googlePlayLine2")}`}
         className={buttonBase}
       >
@@ -41,7 +42,7 @@ export const StoreButtons = ({ className }: StoreButtonsProps) => {
           </span>
           <span className="text-base font-semibold text-text">{t("googlePlayLine2")}</span>
         </span>
-      </a>
+      </Link>
     </div>
   );
 };

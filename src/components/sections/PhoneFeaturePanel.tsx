@@ -18,6 +18,8 @@ interface PhoneFeaturePanelProps {
   priority?: boolean;
   /** Live glossary term count — substituted into descriptions that reference it. */
   count: number;
+  /** Optional in-page anchor id, used as a smooth-scroll target (e.g. from the AI suite pills). */
+  anchorId?: string;
 }
 
 /*
@@ -38,6 +40,7 @@ export const PhoneFeaturePanel = ({
   reversed = false,
   priority = false,
   count,
+  anchorId,
 }: PhoneFeaturePanelProps) => {
   const t = useTranslations("phone");
 
@@ -120,7 +123,11 @@ export const PhoneFeaturePanel = ({
   );
 
   return (
-    <section ref={trackRef} className="relative">
+    <section
+      ref={trackRef}
+      id={anchorId}
+      className={cn("relative", anchorId && "scroll-mt-28")}
+    >
       <div ref={pinRef} className="flex min-h-screen items-center overflow-hidden">
         {/* Per-panel ambient glow shifts to the phone's side for depth */}
         <div

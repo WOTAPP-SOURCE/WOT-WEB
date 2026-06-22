@@ -2,8 +2,18 @@ export const SITE_NAME = "Way of Trading";
 export const SITE_DOMAIN = "wayoftrading.com";
 export const SITE_URL = `https://${SITE_DOMAIN}`;
 
+/* Contact inbox used by the mailto: fallback on the contact form (when no
+   NEXT_PUBLIC_CONTACT_WEBHOOK_URL is configured). Dev: change to your real
+   inbox if it differs. */
+export const CONTACT_EMAIL = "contact@wayoftrading.com";
+
 export const APP_STORE_URL = "https://apps.apple.com"; // TBD
 export const GOOGLE_PLAY_URL = "https://play.google.com"; // TBD
+
+/* Until the app ships, every "download" CTA routes to the launch / countdown page
+   instead of the (not-yet-live) store listings. Locale-relative — pair with the
+   next-intl Link so the active locale prefix is preserved. */
+export const LAUNCH_PATH = "/lancement";
 
 export const LOCALES = ["fr", "en", "es"] as const;
 export const DEFAULT_LOCALE = "fr" as const;
@@ -11,7 +21,7 @@ export const DEFAULT_LOCALE = "fr" as const;
 /* Primary navigation: `key` maps to the `nav` i18n namespace, `href` is locale-relative.
    `scrollTo` marks an in-page section on the home route (smooth-scrolled, not a page). */
 export const NAV_LINKS = [
-  { key: "features", href: "/features" },
+  { key: "features", href: "/", scrollTo: "fonctionnalites" },
   { key: "glossary", href: "/glossary" },
   { key: "pricing", href: "/", scrollTo: "pricing" },
   { key: "faq", href: "/faq" },

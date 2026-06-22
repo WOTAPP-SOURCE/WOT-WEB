@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
-import { PRICING_PLANS } from "@/lib/constants";
+import { LAUNCH_PATH, PRICING_PLANS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 interface PricingSectionProps {
@@ -100,7 +100,7 @@ export const PricingSection = ({ count }: PricingSectionProps) => {
 
                 <div className="mt-8 pt-2">
                   <Button
-                    href="#download"
+                    href={LAUNCH_PATH}
                     variant={plan.highlighted ? "primary" : "secondary"}
                     size="lg"
                     className="w-full"

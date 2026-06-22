@@ -79,12 +79,12 @@
     "titleLead": "Tus trades merecen",
     "titleHighlight": "inteligencia de verdad.",
     "titleKicker": "WAY OF TRADING CONSTRUYE TUS COMPETENCIAS",
-    "card1Title": "Coach Rudy",
-    "card1Desc": "Tu mentor de trading 24/7. Pregunta lo que sea. Recibe respuestas respaldadas por datos de mercado, no consejos genéricos.",
-    "card2Title": "Analizador de gráficos",
-    "card2Desc": "Sube una captura. Obtén un análisis instantáneo: estructura, niveles clave, entradas y salidas.",
-    "card3Title": "Historial de trades",
-    "card3Desc": "Importa MT4/MT5. La IA detecta patrones, sesgos y errores recurrentes."
+    "card1Title": "Pedagógico",
+    "card1Desc": "Rudy enseña paso a paso, con palabras simples, como un mentor paciente. Para entender un concepto desde cero.",
+    "card2Title": "Analítico",
+    "card2Desc": "Rudy analiza en profundidad: estructura de mercado, niveles clave, la lógica de un setup. Para entender el porqué de cada trade.",
+    "card3Title": "Retador",
+    "card3Desc": "Rudy cuestiona tus decisiones y te obliga a defenderlas, para romper tus sesgos antes de que lo haga el mercado."
   },
   "glossaryPreview": {
     "eyebrow": "El glosario",
@@ -114,7 +114,7 @@
   },
   "lessons": {
     "eyebrow": "Lecciones",
-    "title": "Aprende el trading como un oficio.",
+    "title": "Aprende trading, sin promesas.",
     "subtitle": "Lecciones estructuradas sobre cada concepto que cuenta, desde la psicología de mercado hasta la gestión del riesgo, del análisis técnico a la estructura del mercado. Una progresión pensada para convertir la teoría en reflejos concretos.",
     "cards": [
       "Leer la estructura del mercado",
@@ -191,7 +191,7 @@
     "badge": "Listo cuando tú lo estés",
     "line1": "Abre la app.",
     "line2": "La sesión está abierta.",
-    "subheadline": "Únete a miles de traders que aprenden de forma más inteligente con Rudy. Descarga WOT y convierte la confusión del mercado en decisiones seguras.",
+    "subheadline": "Únete a la comunidad de traders que aprenden de forma más inteligente con Way of Trading. Descarga WOT y convierte la confusión del mercado en decisiones seguras.",
     "trustNote": "Descarga gratuita · Disponible en iOS y Android"
   },
   "footer": {
@@ -206,7 +206,6 @@
     "faq": "Preguntas frecuentes",
     "about": "Acerca de",
     "contact": "Contacto",
-    "blog": "Blog",
     "privacyPolicy": "Política de privacidad",
     "termsOfService": "Términos de servicio",
     "cookies": "Política de cookies",
@@ -249,5 +248,41 @@
   "aboutPage": {
     "metaTitle": "Acerca de",
     "metaDescription": "La historia detrás de WOT: creado por traders y profesionales del brokerage para reinventar la educación en trading."
+  },
+  "contactPage": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos.",
+    "subtitle": "¿Una pregunta, una sugerencia o una colaboración? Escríbenos y te responderemos rápidamente.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "subjectLabel": "Asunto",
+    "subjectPlaceholder": "¿De qué se trata?",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Tu mensaje…",
+    "submit": "Enviar mensaje",
+    "submitting": "Enviando…",
+    "success": "¡Gracias! Tu mensaje ha sido enviado.",
+    "mailtoSuccess": "Tu cliente de correo se abrirá para completar el envío.",
+    "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente.",
+    "directEmailPrefix": "También puedes escribirnos a",
+    "metaTitle": "Contacto",
+    "metaDescription": "Ponte en contacto con el equipo de Way of Trading: preguntas, sugerencias y colaboraciones."
+  },
+  "launch": {
+    "eyebrow": "Lanzamiento oficial",
+    "title": "La app está por llegar.",
+    "subtitle": "Way of Trading estará pronto disponible en iOS y Android. La cuenta atrás ha comenzado: prepárate para aprender trading de verdad.",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "date_label": "15 de agosto de 2026",
+    "back": "Volver al inicio",
+    "live": "¡Ya disponible!",
+    "livePlaceholder": "Los enlaces de descarga llegan muy pronto. Vuelve en un momento.",
+    "metaTitle": "Lanzamiento",
+    "metaDescription": "Way of Trading llega a iOS y Android. Sigue la cuenta atrás hasta el lanzamiento oficial."
   }
 }

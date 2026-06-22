@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
@@ -11,6 +12,10 @@ interface ButtonProps {
   size?: ButtonSize;
   className?: string;
   ariaLabel?: string;
+  /** Native button type — only applies when no `href` is provided. */
+  type?: "button" | "submit" | "reset";
+  /** Disables the rendered <button> (e.g. while a form is submitting). */
+  disabled?: boolean;
 }
 
 const baseStyles =
@@ -37,10 +42,30 @@ export const Button = ({
   size = "md",
   className,
   ariaLabel,
+  type = "button",
+  disabled = false,
 }: ButtonProps) => {
-  const classes = cn(baseStyles, variantStyles[variant], sizeStyles[size], className);
+  const classes = cn(
+    baseStyles,
+    variantStyles[variant],
+    sizeStyles[size],
+    disabled && "pointer-events-none opacity-60",
+    className
+  );
 
   if (href) {
+    // Internal app paths route through the locale-aware Link so the active locale
+    // prefix is preserved; hash anchors and external URLs use a plain anchor.
+    const isInternal = href.startsWith("/");
+
+    if (isInternal) {
+      return (
+        <Link href={href} aria-label={ariaLabel} className={classes}>
+          {children}
+        </Link>
+      );
+    }
+
     return (
       <a href={href} aria-label={ariaLabel} className={classes}>
         {children}
@@ -49,7 +74,7 @@ export const Button = ({
   }
 
   return (
-    <button type="button" aria-label={ariaLabel} className={classes}>
+    <button type={type} disabled={disabled} aria-label={ariaLabel} className={classes}>
       {children}
     </button>
   );
