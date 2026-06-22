@@ -300,6 +300,158 @@ export const PlusIcon = ({ className }: IconProps) => (
   </svg>
 );
 
+/* --- Thematic lesson icons (Lucide-style) — used by the LEÇONS roadmap --- */
+
+export const CandlestickChartIcon = ({ className }: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M9 5v4" />
+    <rect width="4" height="6" x="7" y="9" rx="1" />
+    <path d="M9 15v2" />
+    <path d="M17 3v2" />
+    <rect width="4" height="8" x="15" y="5" rx="1" />
+    <path d="M17 13v3" />
+    <path d="M3 3v18h18" />
+  </svg>
+);
+
+export const BrainIcon = ({ className }: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+    <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+  </svg>
+);
+
+export const ShieldCheckIcon = ({ className }: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z" />
+    <path d="m9 12 2 2 4-4" />
+  </svg>
+);
+
+export const CrosshairIcon = ({ className }: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <line x1="22" y1="12" x2="18" y2="12" />
+    <line x1="6" y1="12" x2="2" y2="12" />
+    <line x1="12" y1="6" x2="12" y2="2" />
+    <line x1="12" y1="22" x2="12" y2="18" />
+  </svg>
+);
+
+export const WavesIcon = ({ className }: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+  </svg>
+);
+
+export const ClipboardListIcon = ({ className }: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+    <path d="M12 11h4" />
+    <path d="M12 16h4" />
+    <path d="M8 11h.01" />
+    <path d="M8 16h.01" />
+  </svg>
+);
+
+export const CalculatorIcon = ({ className }: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <rect width="16" height="20" x="4" y="2" rx="2" />
+    <line x1="8" y1="6" x2="16" y2="6" />
+    <line x1="16" y1="14" x2="16" y2="18" />
+    <path d="M16 10h.01" />
+    <path d="M12 10h.01" />
+    <path d="M8 10h.01" />
+    <path d="M12 14h.01" />
+    <path d="M8 14h.01" />
+    <path d="M12 18h.01" />
+    <path d="M8 18h.01" />
+  </svg>
+);
+
+export const BookOpenIcon = ({ className }: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z" />
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z" />
+  </svg>
+);
+
 export const AppleIcon = ({ className }: IconProps) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
     <path d="M17.05 12.04c-.02-2.06 1.68-3.05 1.76-3.1-0.96-1.4-2.45-1.6-2.98-1.62-1.27-.13-2.48.74-3.12.74-.64 0-1.64-.72-2.7-.7-1.39.02-2.67.8-3.38 2.04-1.44 2.5-.37 6.2 1.04 8.23.69.99 1.51 2.1 2.58 2.06 1.03-.04 1.42-.67 2.67-.67 1.24 0 1.6.67 2.69.65 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.27 1.12-2.33-.02-.01-2.15-.83-2.17-3.29ZM15.0 6.21c.57-.69.95-1.65.85-2.61-.82.03-1.81.55-2.4 1.24-.53.61-.99 1.59-.87 2.53.91.07 1.85-.47 2.42-1.16Z" />

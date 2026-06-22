@@ -67,9 +67,9 @@
         "es": "¿WOT opera por ti?"
       },
       "answer": {
-        "fr": "Non. WOT est un logiciel éducatif, pas un service de trading automatisé ni un fournisseur de signaux personnalisés.\n- WOT ne prend aucune décision à la place de votre compte.\n- WOT ne donne pas d'instructions d'achat ou de vente basées sur votre portefeuille ou votre solde.\n- Rudy, le coach IA, fournit une analyse structurée et pédagogique, pas des ordres à copier.\n- Nos outils expliquent et analysent ; ils ne commandent pas.\n- Les décisions finales vous appartiennent.\nSi vous décidez de trader ou d'investir de l'argent réel, la décision reste la vôtre et se prend en toute conscience, sur la plateforme de votre courtier. WOT sert à bâtir le jugement et les compétences derrière vos décisions, pas à les prendre à votre place.",
-        "en": "No. WOT is educational software, not an auto-trading service or a personalized signal provider.\n- WOT makes no decisions on your account's behalf.\n- WOT does not give buy or sell instructions based on your portfolio or balance.\n- Rudy, the AI coach, provides structured, educational analysis, not orders to copy.\n- Our tools explain and analyze; they do not command.\n- Final decisions belong to you.\nIf you decide to trade or invest real money, the decision stays yours and is made deliberately, on your own broker's platform. WOT exists to build the judgment and skills behind your decisions, not to make them for you.",
-        "es": "No. WOT es un software educativo, no un servicio de trading automatizado ni un proveedor de señales personalizadas.\n- WOT no toma ninguna decisión en nombre de tu cuenta.\n- WOT no da instrucciones de compra o venta basadas en tu cartera o tu saldo.\n- Rudy, el coach de IA, ofrece un análisis estructurado y pedagógico, no órdenes para copiar.\n- Nuestras herramientas explican y analizan; no ordenan.\n- Las decisiones finales te pertenecen.\nSi decides operar o invertir dinero real, la decisión sigue siendo tuya y se toma de forma consciente, en la plataforma de tu propio bróker. WOT sirve para construir el criterio y las competencias detrás de tus decisiones, no para tomarlas por ti."
+        "fr": "Non. WOT est une plateforme éducative, pas un service de trading automatisé ni un fournisseur de signaux personnalisés. WOT ne prend aucune décision à la place de votre compte et ne donne pas d'instructions d'achat ou de vente basées sur votre portefeuille ou votre solde. Rudy, le coach IA, fournit du contenu structuré et pédagogique, pas des ordres à copier ni des conseils en investissement. Nos outils expliquent et analysent ; ils ne commandent pas. Les décisions finales vous appartiennent. Si vous décidez de trader ou d'investir de l'argent réel, la décision reste la vôtre et se prend en toute conscience, sur la plateforme de votre courtier. WOT sert à bâtir le jugement et les compétences derrière vos décisions, pas à les prendre à votre place.",
+        "en": "No. WOT is an educational platform, not an automated trading service or a personalized signal provider. WOT makes no decisions on behalf of your account and gives no buy or sell instructions based on your portfolio or balance. Rudy, the AI coach, provides structured, educational content, not orders to copy or investment advice. Our tools explain and analyze; they do not command. The final decisions are yours. If you choose to trade or invest real money, that decision remains yours and is made knowingly, on your broker's platform. WOT exists to build the judgment and skills behind your decisions, not to make them for you.",
+        "es": "No. WOT es una plataforma educativa, no un servicio de trading automatizado ni un proveedor de señales personalizadas. WOT no toma ninguna decisión en nombre de tu cuenta y no da instrucciones de compra o venta basadas en tu cartera o tu saldo. Rudy, el coach IA, ofrece contenido estructurado y pedagógico, no órdenes para copiar ni consejos de inversión. Nuestras herramientas explican y analizan; no ordenan. Las decisiones finales son tuyas. Si decides operar o invertir dinero real, esa decisión sigue siendo tuya y se toma de forma consciente, en la plataforma de tu bróker. WOT sirve para construir el criterio y las competencias detrás de tus decisiones, no para tomarlas por ti."
       }
     },
     {
@@ -127,9 +127,9 @@
         "es": "¿Necesito conocimientos previos de trading?"
       },
       "answer": {
-        "fr": "Non. WOT accompagne tous les profils, du débutant complet jusqu'au trader confirmé qui veut consolider ses bases et sa méthode.",
-        "en": "No. WOT supports every profile, from the complete beginner to the experienced trader looking to consolidate their foundations and method.",
-        "es": "No. WOT acompaña a todos los perfiles, desde el principiante absoluto hasta el trader experimentado que quiere consolidar sus bases y su método."
+        "fr": "Non. WOT accompagne tous les profils, du débutant complet jusqu'au trader confirmé qui veut consolider ses bases ou apprendre de nouvelles stratégies.",
+        "en": "No. WOT supports every profile, from the complete beginner to the experienced trader looking to consolidate their fundamentals or learn new strategies.",
+        "es": "No. WOT acompaña a todos los perfiles, desde el principiante absoluto hasta el trader experimentado que quiere consolidar sus bases o aprender nuevas estrategias."
       }
     },
     {
@@ -292,9 +292,9 @@
         "es": "¿Para qué sirve la calculadora de posición?"
       },
       "answer": {
-        "fr": "Il calcule la taille de position adaptée à ton capital et ton risque cible, pour tous les types d'instruments : forex, indices, crypto, matières premières. Les contrats et marges sont corrects par classe d'actif (pas un calcul forex appliqué à tout).",
-        "en": "It calculates the right position size for your capital and target risk, across all asset classes: forex, indices, crypto, commodities. Correct contracts and margins per asset class (not a generic forex formula applied everywhere).",
-        "es": "Calcula el tamaño de posición adecuado a tu capital y riesgo objetivo, para todas las clases de activos: forex, índices, cripto, materias primas. Contratos y márgenes correctos por clase de activo (no una fórmula forex aplicada a todo)."
+        "fr": "Il calcule la taille de position adaptée à ton capital et ton risque cible, pour plusieurs types d'instruments : forex, indices, crypto, matières premières.",
+        "en": "It calculates the position size matched to your capital and target risk, across several instrument types: forex, indices, crypto, commodities.",
+        "es": "Calcula el tamaño de posición adaptado a tu capital y tu riesgo objetivo, para varios tipos de instrumentos: forex, índices, cripto, materias primas."
       }
     },
     {
@@ -307,9 +307,9 @@
         "es": "¿WOT recopila mis datos de trading?"
       },
       "answer": {
-        "fr": "Les données importées via le Trade Analyzer sont utilisées uniquement pour générer ton analyse. WOT ne transmet aucune donnée à des tiers commerciaux.",
-        "en": "Data imported through the Trade Analyzer is used only to generate your analysis. WOT does not share any data with commercial third parties.",
-        "es": "Los datos importados a través del Trade Analyzer se utilizan únicamente para generar tu análisis. WOT no comparte ningún dato con terceros comerciales."
+        "fr": "Les données importées via les analyseurs de trades ou de graphiques sont utilisées uniquement pour générer ton analyse. WOT ne transmet aucune donnée à des tiers commerciaux.",
+        "en": "Data imported through the trade or chart analyzers is used solely to generate your analysis. WOT does not share any data with commercial third parties.",
+        "es": "Los datos importados mediante los analizadores de trades o de gráficos se utilizan únicamente para generar tu análisis. WOT no comparte ningún dato con terceros comerciales."
       }
     }
   ]
