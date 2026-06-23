@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { InstagramIcon, LinkedInIcon, XIcon, YouTubeIcon } from "@/components/ui/Icons";
 import { FooterVideo } from "@/components/layout/FooterVideo";
 import { ScrollNavLink } from "@/components/layout/ScrollNavLink";
+import { CookieSettingsButton } from "@/components/layout/CookieSettingsButton";
 
 interface FooterColumn {
   titleKey: string;
@@ -122,6 +123,12 @@ export const Footer = () => {
                 </Link>
               </li>
             ))}
+            <li className="flex items-center">
+              <span aria-hidden="true" className="text-text-muted/40 mx-3">
+                ·
+              </span>
+              <CookieSettingsButton className="text-text-muted hover:text-text cursor-pointer transition-colors duration-200" />
+            </li>
           </ul>
         </div>
       </div>

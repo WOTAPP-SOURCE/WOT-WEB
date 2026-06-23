@@ -7,6 +7,7 @@ import "../globals.css";
 import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import type { Locale } from "@/types";
 
 /*
@@ -90,6 +91,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <NextIntlClientProvider messages={messages}>
           <SmoothScroll>{children}</SmoothScroll>
           <ScrollToTop />
+          <CookieConsent gaId={process.env.NEXT_PUBLIC_GA_ID} />
         </NextIntlClientProvider>
       </body>
     </html>

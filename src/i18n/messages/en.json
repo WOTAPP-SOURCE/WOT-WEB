@@ -287,5 +287,13 @@
     "livePlaceholder": "Download links are coming very soon. Check back in a moment.",
     "metaTitle": "Launch",
     "metaDescription": "Way of Trading is coming to iOS and Android. Follow the countdown to the official launch."
+  },
+  "cookieConsent": {
+    "ariaLabel": "Cookie consent",
+    "text": "We use analytics cookies (Google Analytics) to understand how the site is used. You can accept or decline.",
+    "learnMore": "Learn more in our privacy policy.",
+    "accept": "Accept",
+    "refuse": "Decline",
+    "manage": "Cookies"
   }
 }
