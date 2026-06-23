@@ -7,6 +7,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { ContactSuccess } from "@/components/contact/ContactSuccess";
 import { CONTACT_EMAIL } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -143,6 +144,8 @@ export const ContactForm = () => {
       setFeedback("");
       setStatus("success");
       setSent(true);
+      // Track only confirmed webhook deliveries — not the mailto/honeypot paths.
+      trackEvent("contact_submit");
     } catch {
       setStatus("error");
       setFeedback(t("error"));

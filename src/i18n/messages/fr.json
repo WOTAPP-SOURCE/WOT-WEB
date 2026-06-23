@@ -207,12 +207,41 @@
     "faq": "FAQ",
     "about": "À propos",
     "contact": "Contact",
+    "legalDisclaimer": "Avertissement",
     "privacyPolicy": "Politique de confidentialité",
-    "termsOfService": "Conditions d'utilisation",
-    "cookies": "Politique des cookies",
+    "cookies": "Politique relative aux cookies",
+    "legalNotice": "Mentions légales",
     "followUs": "Suivez-nous",
     "copyright": "© 2026 Way of Trading · Tous droits réservés",
     "disclaimer": "Le trading comporte des risques · les performances passées ≠ résultats futurs"
+  },
+  "legal": {
+    "centerTitle": "Centre juridique",
+    "lastUpdated": "Dernière mise à jour",
+    "nav": {
+      "avertissement": "Avertissement",
+      "confidentialite": "Politique de confidentialité",
+      "cookies": "Politique relative aux cookies",
+      "mentions-legales": "Mentions légales"
+    },
+    "meta": {
+      "avertissement": {
+        "title": "Avertissement",
+        "description": "Avertissement Way of Trading : contenu exclusivement éducatif, aucun conseil en investissement, et risques du trading et des produits à effet de levier."
+      },
+      "confidentialite": {
+        "title": "Politique de confidentialité",
+        "description": "Comment Way of Trading collecte, utilise et protège vos données personnelles, vos droits RGPD et nos sous-traitants."
+      },
+      "cookies": {
+        "title": "Politique relative aux cookies",
+        "description": "Les cookies utilisés par Way of Trading, le cookie Google Analytics soumis à consentement et la gestion de vos choix."
+      },
+      "mentions-legales": {
+        "title": "Mentions légales",
+        "description": "Informations légales sur Way of Trading : éditeur du site, hébergement, propriété intellectuelle et contact."
+      }
+    }
   },
   "glossary": {
     "title": "Glossaire du trading",
@@ -286,12 +315,22 @@
     "live": "C'est disponible !",
     "livePlaceholder": "Les liens de téléchargement arrivent très bientôt. Revenez dans un instant.",
     "metaTitle": "Lancement",
-    "metaDescription": "Way of Trading arrive sur iOS et Android. Découvrez le compte à rebours jusqu'au lancement officiel."
+    "metaDescription": "Way of Trading arrive sur iOS et Android. Découvrez le compte à rebours jusqu'au lancement officiel.",
+    "waitlist": {
+      "headline": "Soyez prévenu en avant-première",
+      "subtext": "Laissez votre email et recevez, au lancement : 1000 coins WOT crédités sur votre compte et -20% sur votre premier abonnement (mensuel, trimestriel ou annuel).",
+      "emailPlaceholder": "votre@email.com",
+      "consent": "J'accepte de recevoir des nouvelles de Way of Trading par email.",
+      "button": "Je veux mon avantage",
+      "submitting": "Envoi…",
+      "success": "C'est noté ! Vous serez parmi les premiers prévenus au lancement.",
+      "error": "Une erreur s'est produite. Réessayez."
+    }
   },
   "cookieConsent": {
     "ariaLabel": "Consentement aux cookies",
     "text": "Nous utilisons des cookies de mesure d'audience (Google Analytics) pour comprendre comment le site est utilisé. Vous pouvez accepter ou refuser.",
-    "learnMore": "En savoir plus dans notre politique de confidentialité.",
+    "learnMore": "En savoir plus dans notre politique relative aux cookies.",
     "accept": "Accepter",
     "refuse": "Refuser",
     "manage": "Cookies"

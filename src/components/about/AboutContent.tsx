@@ -85,7 +85,7 @@ export const AboutContent = ({ data }: AboutContentProps) => {
       </div>
 
       {/* Download CTA — same dual app-store-badges + free-download tagline block as the homepage. */}
-      <DownloadCta className="mt-16 sm:mt-20" />
+      <DownloadCta location="about" className="mt-16 sm:mt-20" />
     </section>
   );
 };

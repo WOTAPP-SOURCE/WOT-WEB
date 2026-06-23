@@ -77,7 +77,7 @@ export const CTASection = () => {
           {t("subheadline")}
         </p>
 
-        <DownloadCta className="cta-item mt-10" />
+        <DownloadCta location="cta_bottom" className="cta-item mt-10" />
       </div>
     </section>
   );

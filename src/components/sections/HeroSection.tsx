@@ -152,7 +152,7 @@ export const HeroSection = ({ count }: HeroSectionProps) => {
             id="download"
             className="hero-cta mt-9 flex scroll-mt-28 justify-center lg:justify-start"
           >
-            <StoreButtons />
+            <StoreButtons location="hero" />
           </div>
 
           {/* Hero stats strip */}

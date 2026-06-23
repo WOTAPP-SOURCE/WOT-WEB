@@ -13,6 +13,7 @@ import { getAllSlugs } from "@/lib/glossary";
 export default function sitemap(): MetadataRoute.Sitemap {
   const { locales } = routing;
   const staticPaths = ["", "/glossary", "/faq", "/about"];
+  const legalPaths = ["/avertissement", "/confidentialite", "/cookies", "/mentions-legales"];
   const slugs = getAllSlugs();
 
   const altLanguages = (path: string) =>
@@ -27,6 +28,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: "weekly",
         priority: path === "" ? 1 : 0.8,
+        alternates: { languages: altLanguages(path) },
+      });
+    }
+
+    for (const path of legalPaths) {
+      entries.push({
+        url: `${SITE_URL}/${locale}${path}`,
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.3,
         alternates: { languages: altLanguages(path) },
       });
     }

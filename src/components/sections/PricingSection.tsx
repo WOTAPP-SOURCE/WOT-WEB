@@ -7,6 +7,7 @@ import { gsap } from "@/lib/gsap";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
 import { LAUNCH_PATH, PRICING_PLANS } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 interface PricingSectionProps {
@@ -104,6 +105,11 @@ export const PricingSection = ({ count }: PricingSectionProps) => {
                     variant={plan.highlighted ? "primary" : "secondary"}
                     size="lg"
                     className="w-full"
+                    onClick={() =>
+                      trackEvent("download_cta", {
+                        location: `pricing_${plan.nameKey.replace("Name", "")}`,
+                      })
+                    }
                   >
                     {t("ctaLabel")}
                   </Button>

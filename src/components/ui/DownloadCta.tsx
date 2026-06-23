@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 
 interface DownloadCtaProps {
   className?: string;
+  /** Placement label forwarded to the store buttons for analytics. */
+  location: string;
 }
 
 /*
@@ -13,12 +15,12 @@ interface DownloadCtaProps {
  * Rendered by the homepage closing CTA (CTASection) and at the bottom of the About
  * page, so both show the identical block from a single source (no duplicated markup).
  */
-export const DownloadCta = ({ className }: DownloadCtaProps) => {
+export const DownloadCta = ({ className, location }: DownloadCtaProps) => {
   const t = useTranslations("cta");
 
   return (
     <div className={cn("flex flex-col items-center", className)}>
-      <StoreButtons />
+      <StoreButtons location={location} />
       <p className="text-text-muted mt-7 font-mono text-[0.62rem] tracking-[0.18em] uppercase">
         {t("trustNote")}
       </p>

@@ -30,9 +30,10 @@ const FOOTER_COLUMNS: FooterColumn[] = [
 ];
 
 const LEGAL_LINKS: { key: string; href: string }[] = [
-  { key: "privacyPolicy", href: "/privacy" },
-  { key: "termsOfService", href: "/terms" },
+  { key: "legalDisclaimer", href: "/avertissement" },
+  { key: "privacyPolicy", href: "/confidentialite" },
   { key: "cookies", href: "/cookies" },
+  { key: "legalNotice", href: "/mentions-legales" },
 ];
 
 const SOCIAL_ICONS = [

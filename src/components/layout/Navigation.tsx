@@ -3,7 +3,8 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ScrollNavLink } from "@/components/layout/ScrollNavLink";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_ANALYTICS_ITEM, NAV_LINKS } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 interface NavigationProps {
@@ -23,19 +24,26 @@ export const Navigation = ({ className, onNavigate, variant = "desktop" }: Navig
   return (
     <nav className={className} aria-label="Primary">
       <ul className={cn(variant === "desktop" ? "flex items-center gap-8" : "flex flex-col gap-1")}>
-        {NAV_LINKS.map((link) => (
-          <li key={link.key}>
-            {"scrollTo" in link ? (
-              <ScrollNavLink hash={link.scrollTo} onClick={onNavigate} className={linkStyles}>
-                {t(link.key)}
-              </ScrollNavLink>
-            ) : (
-              <Link href={link.href} onClick={onNavigate} className={linkStyles}>
-                {t(link.key)}
-              </Link>
-            )}
-          </li>
-        ))}
+        {NAV_LINKS.map((link) => {
+          const handleClick = () => {
+            trackEvent("nav_click", { item: NAV_ANALYTICS_ITEM[link.key] });
+            onNavigate?.();
+          };
+
+          return (
+            <li key={link.key}>
+              {"scrollTo" in link ? (
+                <ScrollNavLink hash={link.scrollTo} onClick={handleClick} className={linkStyles}>
+                  {t(link.key)}
+                </ScrollNavLink>
+              ) : (
+                <Link href={link.href} onClick={handleClick} className={linkStyles}>
+                  {t(link.key)}
+                </Link>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

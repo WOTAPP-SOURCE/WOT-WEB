@@ -9,7 +9,8 @@ import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ScrollNavLink } from "@/components/layout/ScrollNavLink";
 import { Button } from "@/components/ui/Button";
 import { MenuIcon } from "@/components/ui/Icons";
-import { LAUNCH_PATH, NAV_LINKS } from "@/lib/constants";
+import { LAUNCH_PATH, NAV_ANALYTICS_ITEM, NAV_LINKS } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 export const Header = () => {
@@ -56,10 +57,17 @@ export const Header = () => {
                   "nav-underline text-sm font-medium transition-colors duration-200 hover:text-accent hover:[text-shadow:0_0_14px_rgba(184,107,255,0.5)]"
                 );
 
+                const trackNav = () =>
+                  trackEvent("nav_click", { item: NAV_ANALYTICS_ITEM[link.key] });
+
                 if ("scrollTo" in link) {
                   return (
                     <li key={link.key}>
-                      <ScrollNavLink hash={link.scrollTo} className={cn(linkClass, "text-text-muted")}>
+                      <ScrollNavLink
+                        hash={link.scrollTo}
+                        onClick={trackNav}
+                        className={cn(linkClass, "text-text-muted")}
+                      >
                         {t(link.key)}
                       </ScrollNavLink>
                     </li>
@@ -72,6 +80,7 @@ export const Header = () => {
                     <Link
                       href={link.href}
                       data-active={isActive}
+                      onClick={trackNav}
                       className={cn(linkClass, isActive ? "text-text" : "text-text-muted")}
                     >
                       {t(link.key)}
@@ -86,7 +95,11 @@ export const Header = () => {
             <LanguageSwitcher />
 
             <div className="hidden sm:block">
-              <Button href={LAUNCH_PATH} size="sm">
+              <Button
+                href={LAUNCH_PATH}
+                size="sm"
+                onClick={() => trackEvent("download_cta", { location: "header" })}
+              >
                 {t("downloadApp")}
               </Button>
             </div>

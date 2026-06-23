@@ -1,12 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { COOKIE_CONSENT_KEY } from "@/lib/constants";
 
 interface CookieSettingsButtonProps {
   className?: string;
 }
 
-const CONSENT_KEY = "wot-cookie-consent";
 const REOPEN_EVENT = "wot:open-cookie-consent";
 
 /*
@@ -19,7 +19,7 @@ export const CookieSettingsButton = ({ className }: CookieSettingsButtonProps) =
 
   const reopen = () => {
     if (typeof window === "undefined") return;
-    window.localStorage.removeItem(CONSENT_KEY);
+    window.localStorage.removeItem(COOKIE_CONSENT_KEY);
     window.dispatchEvent(new Event(REOPEN_EVENT));
   };
 

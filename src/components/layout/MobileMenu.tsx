@@ -67,7 +67,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             <Navigation variant="mobile" onNavigate={onClose} />
 
             <div className="mt-auto">
-              <StoreButtons />
+              <StoreButtons location="mobile_menu" />
             </div>
           </motion.div>
         </motion.div>

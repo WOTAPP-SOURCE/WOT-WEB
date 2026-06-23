@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Background } from "@/components/layout/Background";
 import { BackgroundEffects } from "@/components/ui/BackgroundEffects";
 import { LaunchCountdown } from "@/components/sections/LaunchCountdown";
+import { WaitlistForm } from "@/components/sections/WaitlistForm";
 import { ArrowLeftIcon } from "@/components/ui/Icons";
 import { routing } from "@/i18n/routing";
 
@@ -62,6 +63,8 @@ export default async function LaunchPage({ params }: LaunchPageProps) {
             {t("date_label")}
           </p>
         </div>
+
+        <WaitlistForm />
 
         <Link
           href="/"

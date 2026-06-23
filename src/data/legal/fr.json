@@ -1,0 +1,286 @@
+{
+  "avertissement": {
+    "slug": "avertissement",
+    "title": "Avertissement",
+    "intro": "En utilisant ce site web ou en vous inscrivant pour utiliser nos services, vous acceptez expressément l'ensemble des dispositions suivantes.",
+    "sections": [
+      {
+        "heading": "Aucune garantie",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "[COMPANY NAME], qui exploite le site web et l'application Way of Trading (« WOT », « nous », « la Société »), ainsi que ses dirigeants, employés, successeurs et ayants droit, ne garantit pas l'exactitude, l'exhaustivité ou la fiabilité du site web, de son contenu ou des services fournis, y compris toute information provenant de sources tierces. En accédant à nos services, vous dégagez la Société de toute responsabilité, dommage ou préjudice découlant des informations qui y figurent. Vous reconnaissez être seul responsable de toute conséquence financière résultant de vos décisions, et vous vous engagez à mener vos propres recherches."
+          }
+        ]
+      },
+      {
+        "heading": "Statut réglementaire",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "La Société n'est ni enregistrée ni agréée par un quelconque organisme de réglementation, dans quelque juridiction que ce soit, pour fournir des conseils en investissement ou des recommandations. Nous ne sommes pas enregistrés en tant que courtier-négociant en valeurs mobilières, courtier, conseiller en investissement ou représentant d'un conseiller en investissement auprès d'une autorité de réglementation des valeurs mobilières ou d'une organisation d'autorégulation. Nos services ont une finalité exclusivement éducative et informative. Il est essentiel que vous meniez vos propres recherches et que vous consultiez un professionnel agréé avant de prendre toute décision d'investissement."
+          }
+        ]
+      },
+      {
+        "heading": "Contenu éducatif",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Le contenu et les services fournis via WOT (leçons, glossaire, quiz, calculateurs, calendrier économique, analyseurs, coach IA) sont destinés exclusivement à des fins éducatives et informatives. Ils ne constituent pas un conseil en investissement personnalisé. Nous ne pouvons évaluer, vérifier ou garantir l'adéquation ou la rentabilité d'un instrument, d'une stratégie ou d'une décision. Nos services ne fournissent pas de conseils ou de recommandations adaptés à votre situation financière personnelle. La Société décline toute responsabilité pour les pertes découlant d'actions entreprises sur la base de ses services."
+          }
+        ]
+      },
+      {
+        "heading": "Risques liés au trading et à l'investissement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tout investissement et toute opération de trading comportent un risque important, y compris la perte totale du capital engagé. Les CFD, le Forex et les produits à effet de levier sont particulièrement risqués : une proportion importante des comptes de clients particuliers perd de l'argent. Vous pouvez perdre une partie, la totalité, voire plus que votre capital. Vous êtes seul responsable de vos propres recherches et décisions. Nos informations ne constituent qu'un point de départ pour vos propres recherches indépendantes. Il est fortement déconseillé de trader avec de l'argent que vous ne pouvez pas vous permettre de perdre. Nous vous recommandons de demander conseil à un professionnel agréé et de vous former en profondeur avant de prendre toute décision."
+          }
+        ]
+      },
+      {
+        "heading": "Performances passées et résultats futurs",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Toute référence à des performances passées n'indique ni ne garantit les résultats futurs. Les projections, exemples chiffrés ou scénarios présentés sont de nature hypothétique et éducative ; ils ne prédisent pas les résultats réels et ne doivent pas être considérés comme des indicateurs de performances futures. Vos résultats réels peuvent différer sensiblement de tout exemple présenté."
+          }
+        ]
+      },
+      {
+        "heading": "Intelligence artificielle (Coach Rudy et outils d'analyse)",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nos services comprennent des outils d'intelligence artificielle, en particulier le coach IA « Rudy », un analyseur de graphiques et un analyseur de trades. Vous reconnaissez et acceptez que : (a) ces outils fonctionnent uniquement comme des logiciels à des fins éducatives et n'exercent aucun pouvoir de décision sur un quelconque compte de trading ; (b) WOT ne se connecte à aucun compte de courtage, ne passe, ne modifie ni n'annule aucun ordre, et n'exécute aucune opération en votre nom ; (c) tout contenu, analyse, signal éducatif ou paramètre est de nature générale, fourni sur la même base à tous les utilisateurs, et n'est pas adapté à votre situation, à vos positions ou à vos objectifs personnels ; (d) les résultats de l'intelligence artificielle sont probabilistes, peuvent être inexacts ou incomplets et peuvent ne pas tenir compte d'événements de marché soudains ; (e) vous êtes seul responsable de l'usage que vous faites de ces analyses et de toute décision qui en découle. La Société ne garantit pas la performance, la disponibilité ou le fonctionnement ininterrompu de ces outils, et décline toute responsabilité pour les pertes découlant de leur utilisation ou de leur dysfonctionnement."
+          }
+        ]
+      },
+      {
+        "heading": "Courtiers partenaires (liens d'affiliation)",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "WOT peut présenter ou mentionner des courtiers partenaires (notamment RaiseFX, IronFX, VT Markets, Vantage) et peut percevoir une rémunération d'affiliation lorsque vous ouvrez un compte ou effectuez un dépôt auprès de ces partenaires via nos liens. Cette rémunération n'entraîne aucun coût supplémentaire pour vous. La présence d'un courtier sur WOT ne constitue ni une recommandation, ni une garantie, ni un conseil d'ouvrir un compte auprès de lui. Votre relation avec un courtier, l'ouverture d'un compte, les dépôts et l'exécution des ordres sont régis uniquement par les conditions propres à ce courtier. La Société n'est pas responsable des actes, omissions ou de la disponibilité d'un quelconque courtier tiers, ni des fonds que vous leur confiez."
+          }
+        ]
+      },
+      {
+        "heading": "Acceptation",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "En continuant à utiliser le site web et l'application WOT, vous reconnaissez avoir lu, compris et accepté le présent avertissement dans son intégralité."
+          }
+        ]
+      }
+    ]
+  },
+  "confidentialite": {
+    "slug": "confidentialite",
+    "title": "Politique de confidentialité",
+    "sections": [
+      {
+        "heading": "1. Responsable du traitement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Le responsable des données collectées via le site web et l'application Way of Trading est [COMPANY NAME], [LEGAL FORM], dont le siège social est situé [ADDRESS], [COUNTRY]. Pour toute question relative à vos données, vous pouvez nous contacter à l'adresse : support@wayoftrading.com."
+          }
+        ]
+      },
+      {
+        "heading": "2. Données que nous collectons",
+        "blocks": [
+          { "type": "p", "text": "Nous collectons les données suivantes :" },
+          {
+            "type": "list",
+            "items": [
+              "**Données que vous fournissez directement.** Lorsque vous utilisez le formulaire de contact : votre nom, votre adresse e-mail et le contenu de votre message. Lorsque vous rejoignez la liste d'attente de lancement : votre adresse e-mail et la langue que vous avez choisie.",
+              "**Données collectées automatiquement (avec votre consentement).** Lorsque vous acceptez les cookies analytiques, nous collectons des données d'utilisation via Google Analytics : pages consultées, durée de visite, type d'appareil, source de trafic, localisation approximative (pays/région). Ces données sont collectées sous forme agrégée et ne vous identifient pas nominativement.",
+              "**Données de compte (application).** Lorsque l'application sera disponible et que vous créerez un compte, nous traiterons les données nécessaires à la fourniture du service (identifiants de connexion, progression d'apprentissage, préférences). [TO BE COMPLETED at application launch.]"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "3. Finalités du traitement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nous utilisons vos données pour : répondre à vos demandes via le formulaire de contact ; vous informer du lancement de l'application et vous faire bénéficier des avantages promis lors de votre inscription anticipée ; mesurer et améliorer l'audience et l'expérience du site web ; assurer la sécurité du site et prévenir les abus."
+          }
+        ]
+      },
+      {
+        "heading": "4. Base légale",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Le traitement repose sur votre **consentement** (donné en soumettant un formulaire ou en acceptant les cookies) et sur notre **intérêt légitime** à sécuriser et améliorer nos services. Vous pouvez retirer votre consentement à tout moment."
+          }
+        ]
+      },
+      {
+        "heading": "5. Destinataires et sous-traitants",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Vos données peuvent être traitées par les prestataires techniques suivants agissant en qualité de sous-traitants : Google (Google Analytics, mesure d'audience), [HOSTING: Vercel Inc.], notre prestataire d'automatisation et d'e-mail (n8n auto-hébergé / prestataire d'e-mail). **Nous ne vendons ni ne louons vos données à des tiers commerciaux.**"
+          }
+        ]
+      },
+      {
+        "heading": "6. Conservation des données",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nous conservons vos données aussi longtemps que nécessaire aux finalités décrites : les messages de contact aussi longtemps que nécessaire pour traiter votre demande ; les e-mails de la liste d'attente jusqu'au lancement et à la remise de l'avantage, puis [RETENTION PERIOD TO BE DEFINED] sauf opposition de votre part ; les données analytiques selon la durée de conservation configurée dans Google Analytics."
+          }
+        ]
+      },
+      {
+        "heading": "7. Transferts hors de l'Union européenne",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Certains de nos prestataires (notamment Google) peuvent traiter des données en dehors de l'Union européenne. De tels transferts sont encadrés par les garanties appropriées exigées par la législation applicable (clauses contractuelles types, etc.). [TO BE COMPLETED according to the chosen entity and jurisdiction.]"
+          }
+        ]
+      },
+      {
+        "heading": "8. Vos droits",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Conformément à la législation applicable en matière de protection des données (le RGPD pour les résidents de l'Union européenne), vous disposez des droits suivants : accès, rectification, effacement, limitation, opposition et portabilité des données. Pour exercer ces droits, contactez-nous à l'adresse support@wayoftrading.com. Vous avez également le droit d'introduire une réclamation auprès de l'autorité de contrôle compétente."
+          }
+        ]
+      },
+      {
+        "heading": "9. Cookies",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "L'utilisation des cookies sur ce site est détaillée dans notre [Politique relative aux cookies](/cookies)."
+          }
+        ]
+      },
+      {
+        "heading": "10. Modifications",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nous pouvons mettre à jour la présente politique. Toute modification sera publiée sur cette page avec une date actualisée."
+          }
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "slug": "cookies",
+    "title": "Politique relative aux cookies",
+    "sections": [
+      {
+        "heading": "Qu'est-ce qu'un cookie ?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Un cookie est un petit fichier texte stocké sur votre appareil lorsque vous visitez un site web. Il permet au site de fonctionner correctement et, dans certains cas, de mesurer son audience."
+          }
+        ]
+      },
+      {
+        "heading": "Cookies utilisés sur ce site",
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "**Cookies strictement nécessaires.** Indispensables au fonctionnement du site (enregistrement de vos préférences, y compris votre choix en matière de cookies). Ils ne nécessitent pas votre consentement et ne peuvent pas être désactivés.",
+              "**Cookie analytique (Google Analytics).** Nous utilisons Google Analytics pour comprendre comment le site est utilisé (pages consultées, durée de visite). Le cookie correspondant (_ga et cookies associés) n'est déposé **qu'après votre consentement explicite** via la bannière de cookies. Si vous refusez, aucun cookie analytique n'est déposé."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Ce que nous ne faisons pas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "À ce jour, ce site ne dépose **aucun cookie publicitaire, de remarketing ou de ciblage marketing**. Nous ne partageons pas vos données de navigation avec des réseaux publicitaires."
+          }
+        ]
+      },
+      {
+        "heading": "Gérer votre consentement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Vous pouvez accepter ou refuser les cookies analytiques à tout moment. Pour modifier votre choix, utilisez le lien « Cookies » dans le pied de page, qui réaffiche la bannière de consentement. Vous pouvez également supprimer les cookies depuis les paramètres de votre navigateur."
+          }
+        ]
+      },
+      {
+        "heading": "Plus d'informations",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pour en savoir plus sur la manière dont nous traitons vos données, consultez notre [Politique de confidentialité](/confidentialite)."
+          }
+        ]
+      }
+    ]
+  },
+  "mentions-legales": {
+    "slug": "mentions-legales",
+    "title": "Mentions légales",
+    "sections": [
+      {
+        "heading": "Éditeur du site",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Le site web et l'application Way of Trading sont édités par [COMPANY NAME], [LEGAL FORM with share capital of [AMOUNT]], immatriculée sous le numéro [REGISTRATION NUMBER], dont le siège social est situé [ADDRESS], [COUNTRY]."
+          },
+          { "type": "p", "text": "Directeur de la publication : [NAME]." },
+          { "type": "p", "text": "Contact : support@wayoftrading.com." }
+        ]
+      },
+      {
+        "heading": "Hébergement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Le site web est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Le nom de domaine est géré via Hostinger."
+          }
+        ]
+      },
+      {
+        "heading": "Propriété intellectuelle",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tous les éléments du site web et de l'application Way of Trading (la marque « Way of Trading » / « WOT », le logo, la mascotte Rudy, les textes, le contenu éducatif, le glossaire, l'interface, les éléments graphiques) sont protégés par le droit de la propriété intellectuelle et demeurent la propriété exclusive de [COMPANY NAME] ou de ses concédants de licence. Toute reproduction, représentation ou utilisation non autorisée est interdite."
+          }
+        ]
+      },
+      {
+        "heading": "Nature du service",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Way of Trading est une plateforme d'éducation au trading. WOT ne fournit pas de conseil en investissement, n'exécute aucune transaction et ne gère aucun compte de trading. Consultez notre [Avertissement](/avertissement) pour plus de détails."
+          }
+        ]
+      },
+      {
+        "heading": "Contact",
+        "blocks": [
+          { "type": "p", "text": "Pour toute question : support@wayoftrading.com." }
+        ]
+      }
+    ]
+  }
+}

@@ -1,17 +1,24 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LAUNCH_PATH } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { AppleIcon, GooglePlayIcon } from "@/components/ui/Icons";
 
 interface StoreButtonsProps {
   className?: string;
+  /** Where on the site this pair renders — sent as the `location` param so we
+   *  can compare which placement drives the most store clicks (e.g. "hero",
+   *  "cta_bottom", "mobile_menu", "about"). */
+  location: string;
 }
 
 const buttonBase =
   "group flex items-center gap-3 rounded-2xl border border-white/15 bg-white/[0.04] px-5 py-3 text-left backdrop-blur-sm transition-all duration-200 hover:border-primary/60 hover:bg-white/[0.07] hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer";
 
-export const StoreButtons = ({ className }: StoreButtonsProps) => {
+export const StoreButtons = ({ className, location }: StoreButtonsProps) => {
   const t = useTranslations("store");
 
   return (
@@ -20,6 +27,7 @@ export const StoreButtons = ({ className }: StoreButtonsProps) => {
         href={LAUNCH_PATH}
         aria-label={`${t("appStoreLine1")} ${t("appStoreLine2")}`}
         className={buttonBase}
+        onClick={() => trackEvent("download_appstore", { location })}
       >
         <AppleIcon className="h-7 w-7 shrink-0 text-text" />
         <span className="flex flex-col leading-tight">
@@ -34,6 +42,7 @@ export const StoreButtons = ({ className }: StoreButtonsProps) => {
         href={LAUNCH_PATH}
         aria-label={`${t("googlePlayLine1")} ${t("googlePlayLine2")}`}
         className={buttonBase}
+        onClick={() => trackEvent("download_googleplay", { location })}
       >
         <GooglePlayIcon className="h-7 w-7 shrink-0" />
         <span className="flex flex-col leading-tight">

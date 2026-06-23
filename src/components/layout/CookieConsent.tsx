@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { GoogleAnalytics } from "@/components/layout/GoogleAnalytics";
+import { COOKIE_CONSENT_KEY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 type ConsentChoice = "accepted" | "rejected";
@@ -18,14 +19,13 @@ interface CookieConsentProps {
   gaId?: string;
 }
 
-/** localStorage key + the custom event the footer link uses to re-open the banner. */
-const CONSENT_KEY = "wot-cookie-consent";
+/** The custom event the footer link uses to re-open the banner. */
 const REOPEN_EVENT = "wot:open-cookie-consent";
 
 const readConsent = (): ConsentChoice | null => {
   if (typeof window === "undefined") return null;
 
-  const raw = window.localStorage.getItem(CONSENT_KEY);
+  const raw = window.localStorage.getItem(COOKIE_CONSENT_KEY);
   if (!raw) return null;
 
   try {
@@ -72,7 +72,7 @@ export const CookieConsent = ({ gaId }: CookieConsentProps) => {
   const persist = (value: ConsentChoice) => {
     if (typeof window !== "undefined") {
       const payload: StoredConsent = { value, timestamp: new Date().toISOString() };
-      window.localStorage.setItem(CONSENT_KEY, JSON.stringify(payload));
+      window.localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(payload));
     }
     setConsent(value);
     setShowBanner(false);
@@ -93,7 +93,7 @@ export const CookieConsent = ({ gaId }: CookieConsentProps) => {
             <p className="text-text-muted text-sm leading-relaxed">
               {t("text")}{" "}
               <Link
-                href="/confidentialite"
+                href="/cookies"
                 className="text-primary hover:text-accent underline underline-offset-2 transition-colors duration-200"
               >
                 {t("learnMore")}

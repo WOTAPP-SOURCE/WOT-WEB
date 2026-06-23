@@ -207,12 +207,41 @@
     "faq": "FAQ",
     "about": "About",
     "contact": "Contact",
+    "legalDisclaimer": "Disclaimer",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
     "cookies": "Cookie Policy",
+    "legalNotice": "Legal Notice",
     "followUs": "Follow us",
     "copyright": "© 2026 Way of Trading · All rights reserved",
     "disclaimer": "Trading carries risk · past performance ≠ future results"
+  },
+  "legal": {
+    "centerTitle": "Legal Center",
+    "lastUpdated": "Last updated",
+    "nav": {
+      "avertissement": "Disclaimer",
+      "confidentialite": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "mentions-legales": "Legal Notice"
+    },
+    "meta": {
+      "avertissement": {
+        "title": "Disclaimer",
+        "description": "Way of Trading disclaimer: educational content only, no investment advice, and the risks of trading and leveraged products."
+      },
+      "confidentialite": {
+        "title": "Privacy Policy",
+        "description": "How Way of Trading collects, uses and protects your personal data, your GDPR rights, and our processors."
+      },
+      "cookies": {
+        "title": "Cookie Policy",
+        "description": "Which cookies Way of Trading uses, the consent-gated Google Analytics cookie, and how to manage your choices."
+      },
+      "mentions-legales": {
+        "title": "Legal Notice",
+        "description": "Legal information about Way of Trading: site publisher, hosting, intellectual property and contact."
+      }
+    }
   },
   "glossary": {
     "title": "Trading Glossary",
@@ -286,12 +315,22 @@
     "live": "It's live!",
     "livePlaceholder": "Download links are coming very soon. Check back in a moment.",
     "metaTitle": "Launch",
-    "metaDescription": "Way of Trading is coming to iOS and Android. Follow the countdown to the official launch."
+    "metaDescription": "Way of Trading is coming to iOS and Android. Follow the countdown to the official launch.",
+    "waitlist": {
+      "headline": "Be the first to know",
+      "subtext": "Leave your email and get, at launch: 1000 WOT coins credited to your account and -20% on your first subscription (monthly, quarterly or annual).",
+      "emailPlaceholder": "your@email.com",
+      "consent": "I agree to receive news from Way of Trading by email.",
+      "button": "Claim my perk",
+      "submitting": "Sending…",
+      "success": "You're in! You'll be among the first notified at launch.",
+      "error": "Something went wrong. Please try again."
+    }
   },
   "cookieConsent": {
     "ariaLabel": "Cookie consent",
     "text": "We use analytics cookies (Google Analytics) to understand how the site is used. You can accept or decline.",
-    "learnMore": "Learn more in our privacy policy.",
+    "learnMore": "Learn more in our cookie policy.",
     "accept": "Accept",
     "refuse": "Decline",
     "manage": "Cookies"

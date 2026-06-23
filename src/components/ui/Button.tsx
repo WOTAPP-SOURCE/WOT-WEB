@@ -16,6 +16,8 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   /** Disables the rendered <button> (e.g. while a form is submitting). */
   disabled?: boolean;
+  /** Click handler — fires on the link/anchor/button (e.g. analytics tracking). */
+  onClick?: () => void;
 }
 
 const baseStyles =
@@ -44,6 +46,7 @@ export const Button = ({
   ariaLabel,
   type = "button",
   disabled = false,
+  onClick,
 }: ButtonProps) => {
   const classes = cn(
     baseStyles,
@@ -60,21 +63,27 @@ export const Button = ({
 
     if (isInternal) {
       return (
-        <Link href={href} aria-label={ariaLabel} className={classes}>
+        <Link href={href} aria-label={ariaLabel} className={classes} onClick={onClick}>
           {children}
         </Link>
       );
     }
 
     return (
-      <a href={href} aria-label={ariaLabel} className={classes}>
+      <a href={href} aria-label={ariaLabel} className={classes} onClick={onClick}>
         {children}
       </a>
     );
   }
 
   return (
-    <button type={type} disabled={disabled} aria-label={ariaLabel} className={classes}>
+    <button
+      type={type}
+      disabled={disabled}
+      aria-label={ariaLabel}
+      className={classes}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

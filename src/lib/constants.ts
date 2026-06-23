@@ -10,6 +10,12 @@ export const CONTACT_EMAIL = "contact@wayoftrading.com";
 export const APP_STORE_URL = "https://apps.apple.com"; // TBD
 export const GOOGLE_PLAY_URL = "https://play.google.com"; // TBD
 
+/* localStorage key holding the visitor's analytics-cookie choice, stored as
+   { value: "accepted" | "rejected", timestamp }. Shared by the consent banner
+   (CookieConsent), the re-open link (CookieSettingsButton), and the analytics
+   helper (lib/analytics) so GA events never fire without explicit consent. */
+export const COOKIE_CONSENT_KEY = "wot-cookie-consent";
+
 /* Until the app ships, every "download" CTA routes to the launch / countdown page
    instead of the (not-yet-live) store listings. Locale-relative — pair with the
    next-intl Link so the active locale prefix is preserved. */
@@ -27,6 +33,16 @@ export const NAV_LINKS = [
   { key: "faq", href: "/faq" },
   { key: "about", href: "/about" },
 ] as const;
+
+/* Maps a NAV_LINKS `key` to the snake_case `item` value sent with nav_click
+   analytics events, so header + mobile-menu clicks report a consistent label. */
+export const NAV_ANALYTICS_ITEM: Record<string, string> = {
+  features: "fonctionnalites",
+  glossary: "glossaire",
+  pricing: "tarifs",
+  faq: "faq",
+  about: "about",
+};
 
 /* Locale display labels for the language switcher. */
 export const LOCALE_LABELS: Record<string, string> = {
