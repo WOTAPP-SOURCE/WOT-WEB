@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
+import Script from "next/script";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
@@ -25,6 +26,14 @@ const backfaceHidden = { backfaceVisibility: "hidden", WebkitBackfaceVisibility:
  *  - Otherwise it falls back to a prefilled mailto: so the page is never dead.
  * A hidden honeypot field ("company") traps bots: if filled, we no-op as success.
  *
+ * SPAM PROTECTION (defense in depth): in addition to the honeypot, a Cloudflare
+ * Turnstile (managed/invisible) challenge gates the webhook path. When a site key
+ * is configured (NEXT_PUBLIC_TURNSTILE_SITE_KEY) the submit button stays locked
+ * ("verifying" state) until Turnstile issues a token; that token rides along in
+ * the payload as `turnstileToken` and is validated SERVER-SIDE in the n8n webhook
+ * (the secret key never touches the client). The widget is reset after every send
+ * so each submission requires a fresh token.
+ *
  * SUCCESS ANIMATION (see `sent`): the celebratory 3D flip to <ContactSuccess/>
  * fires ONLY on a genuine webhook 2xx response. The mailto fallback and the
  * honeypot path deliberately do NOT set `sent` — opening a mail client (or a bot
@@ -39,6 +48,43 @@ export const ContactForm = () => {
   const [sent, setSent] = useState(false); // true ONLY after a confirmed webhook send
 
   const webhookUrl = process.env.NEXT_PUBLIC_CONTACT_WEBHOOK_URL;
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+  // Turnstile token + widget handle. When a site key is set, submission is gated
+  // on `turnstileToken` being non-empty (the widget calls back once it solves).
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetIdRef = useRef<string | null>(null);
+
+  // Render the widget exactly once. Safe to call repeatedly: it no-ops if the
+  // script isn't ready, the container isn't mounted, or a widget already exists.
+  const renderTurnstile = useCallback(() => {
+    if (!turnstileSiteKey || turnstileWidgetIdRef.current) return;
+    const container = turnstileContainerRef.current;
+    if (!window.turnstile || !container) return;
+
+    turnstileWidgetIdRef.current = window.turnstile.render(container, {
+      sitekey: turnstileSiteKey,
+      theme: "dark",
+      callback: (token) => setTurnstileToken(token),
+      "expired-callback": () => setTurnstileToken(""),
+      "error-callback": () => setTurnstileToken(""),
+    });
+  }, [turnstileSiteKey]);
+
+  // Covers the case where the script is already cached/loaded on (re)mount, so
+  // the <Script> onLoad won't fire again.
+  useEffect(() => {
+    renderTurnstile();
+  }, [renderTurnstile]);
+
+  // Force a fresh challenge for the next attempt and clear the stale token.
+  const resetTurnstile = useCallback(() => {
+    setTurnstileToken("");
+    if (window.turnstile && turnstileWidgetIdRef.current) {
+      window.turnstile.reset(turnstileWidgetIdRef.current);
+    }
+  }, []);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -54,11 +100,16 @@ export const ContactForm = () => {
       return;
     }
 
+    // Turnstile gate: with a site key configured the button is disabled until a
+    // token exists, but guard here too in case a submit slips through.
+    if (turnstileSiteKey && !turnstileToken) return;
+
     const payload = {
       name: (data.get("name") as string)?.trim() ?? "",
       email: (data.get("email") as string)?.trim() ?? "",
       subject: (data.get("subject") as string)?.trim() ?? "",
       message: (data.get("message") as string)?.trim() ?? "",
+      turnstileToken,
     };
 
     // No webhook configured → graceful mailto: fallback. NOT a confirmed send,
@@ -95,10 +146,16 @@ export const ContactForm = () => {
     } catch {
       setStatus("error");
       setFeedback(t("error"));
+    } finally {
+      // Whether it succeeded or failed, the token is single-use → reset so the
+      // next attempt must solve a fresh challenge.
+      resetTurnstile();
     }
   };
 
   const isSubmitting = status === "submitting";
+  // Awaiting a Turnstile token (only when a site key is configured).
+  const isVerifying = Boolean(turnstileSiteKey) && !turnstileToken;
 
   // Front face — the form itself. Extracted so it can be reused by both the
   // flip layout and the reduced-motion cross-fade layout.
@@ -170,13 +227,27 @@ export const ContactForm = () => {
         <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
+      {/* Cloudflare Turnstile (managed/invisible). Renders only when a site key
+          is configured; the widget container is sized via min-height to avoid
+          layout shift while it mounts. The secret key lives server-side only. */}
+      {turnstileSiteKey && (
+        <>
+          <Script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+            strategy="lazyOnload"
+            onLoad={renderTurnstile}
+          />
+          <div ref={turnstileContainerRef} className="min-h-[65px]" />
+        </>
+      )}
+
       <Button
         type="submit"
         size="lg"
-        disabled={isSubmitting}
+        disabled={isSubmitting || isVerifying}
         className="mt-1 w-full sm:w-auto sm:self-start"
       >
-        {isSubmitting ? t("submitting") : t("submit")}
+        {isSubmitting ? t("submitting") : isVerifying ? t("verifying") : t("submit")}
       </Button>
 
       <p

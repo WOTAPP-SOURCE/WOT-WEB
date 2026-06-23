@@ -125,7 +125,9 @@
       "Crear un plan de trading",
       "Tamaño de posición y money management",
       "Tendencias, rangos y rupturas",
-      "Llevar un diario de trading"
+      "Llevar un diario de trading",
+      "Integrar la IA en tu trading",
+      "Dominar el SMC / ICT"
     ],
     "more": "Y mucho más…"
   },
@@ -262,6 +264,7 @@
     "messagePlaceholder": "Tu mensaje…",
     "submit": "Enviar mensaje",
     "submitting": "Enviando…",
+    "verifying": "Verificando…",
     "success": "¡Gracias! Tu mensaje ha sido enviado.",
     "mailtoSuccess": "Tu cliente de correo se abrirá para completar el envío.",
     "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente.",

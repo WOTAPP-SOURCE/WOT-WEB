@@ -125,7 +125,9 @@
       "Build a trading plan",
       "Position sizing & money management",
       "Trends, ranges & breakouts",
-      "Keep a trading journal"
+      "Keep a trading journal",
+      "Integrating AI into your trading",
+      "Mastering SMC / ICT"
     ],
     "more": "And much more…"
   },
@@ -262,6 +264,7 @@
     "messagePlaceholder": "Your message…",
     "submit": "Send message",
     "submitting": "Sending…",
+    "verifying": "Verifying…",
     "success": "Thanks! Your message has been sent.",
     "mailtoSuccess": "Your email client will open to finish sending.",
     "error": "Something went wrong. Please try again or email us directly.",

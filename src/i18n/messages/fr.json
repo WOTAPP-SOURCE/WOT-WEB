@@ -125,7 +125,9 @@
       "Construire un plan de trading",
       "Taille de position & money management",
       "Tendances, ranges et cassures",
-      "Tenir un journal de trading"
+      "Tenir un journal de trading",
+      "Intégrer l'IA à votre trading",
+      "Maîtriser le SMC / ICT"
     ],
     "more": "Et bien plus encore…"
   },
@@ -262,6 +264,7 @@
     "messagePlaceholder": "Votre message…",
     "submit": "Envoyer le message",
     "submitting": "Envoi en cours…",
+    "verifying": "Vérification en cours…",
     "success": "Merci ! Votre message a bien été envoyé.",
     "mailtoSuccess": "Votre messagerie va s'ouvrir pour finaliser l'envoi.",
     "error": "Une erreur est survenue. Veuillez réessayer ou nous écrire directement.",

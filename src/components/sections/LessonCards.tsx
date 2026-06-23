@@ -9,6 +9,8 @@ import {
   CalculatorIcon,
   TrendingUpIcon,
   BookOpenIcon,
+  BotIcon,
+  TargetIcon,
   PlusIcon,
   SparklesIcon,
 } from "@/components/ui/Icons";
@@ -41,6 +43,8 @@ const LESSON_ICONS: IconComponent[] = [
   CalculatorIcon, // 6 — position sizing & money management
   TrendingUpIcon, // 7 — trends, ranges & breakouts
   BookOpenIcon, // 8 — trading journal
+  BotIcon, // 9 — integrating AI into your trading
+  TargetIcon, // 10 — mastering SMC / ICT
 ];
 
 /* Lessons roadmap (LEÇONS). Each lesson sits in a rounded purple badge with a
