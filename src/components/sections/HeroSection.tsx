@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { StoreButtons } from "@/components/ui/StoreButtons";
 import { TickerAmbience } from "@/components/sections/TickerAmbience";
-import { ChevronDownIcon, SparklesIcon } from "@/components/ui/Icons";
+import { ChevronDownIcon } from "@/components/ui/Icons";
 import { HERO_ORBIT_CARDS, HERO_STATS } from "@/lib/constants";
 
 // Concentric rings: diameter, spin duration, reverse direction.
@@ -38,8 +38,7 @@ export const HeroSection = ({ count }: HeroSectionProps) => {
         // 1. Intro timeline — runs once on load.
         const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
         intro
-          .from(".hero-badge", { y: 20, opacity: 0, duration: 0.6 }, 0.1)
-          .from(".hero-sub", { y: 24, opacity: 0, duration: 0.7 }, "-=0.4")
+          .from(".hero-sub", { y: 24, opacity: 0, duration: 0.7 }, 0.1)
           .from(
             ".hero-cta",
             { scale: 0.85, opacity: 0, duration: 0.8, ease: "elastic.out(1, 0.65)" },
@@ -127,16 +126,8 @@ export const HeroSection = ({ count }: HeroSectionProps) => {
       >
         {/* Left — content */}
         <div className="text-center lg:text-left">
-          {/* Brand eyebrow — literal wordmark, identical across all locales (NOT
-              routed through next-intl). The `hero.badge` i18n key is intentionally
-              left in place but no longer rendered here. */}
-          <div className="hero-badge border-primary/40 bg-primary/10 text-accent inline-flex items-center gap-2 rounded-full border px-4 py-1.5 font-mono text-[0.7rem] tracking-[0.14em] uppercase shadow-[0_0_24px_-6px_rgba(148,30,254,0.6)]">
-            <SparklesIcon className="h-3.5 w-3.5" />
-            WAY OF TRADING
-          </div>
-
           <h1
-            className="mt-7 font-extrabold tracking-tight text-[clamp(42px,5.5vw,80px)] leading-[1.05]"
+            className="font-extrabold tracking-tight text-[clamp(42px,5.5vw,80px)] leading-[1.05]"
             style={{ opacity: 1, filter: "none" }}
           >
             <span className="text-gradient block">{t("line1")}</span>

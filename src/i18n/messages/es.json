@@ -68,7 +68,7 @@
     "tradeLabel": "HISTORIAL DE TRADES",
     "tradeBadge": "Seguimiento del rendimiento",
     "tradeTitle": "Analiza tu historial de trades",
-    "tradeDesc": "Importa tu historial de operaciones de MT4 o MT5 y deja que la IA encuentre patrones en tu trading. Descubre tus fortalezas, identifica errores recurrentes y obtén recomendaciones prácticas para mejorar.",
+    "tradeDesc": "Importa tu historial de operaciones de cTrader o MT5 y deja que la IA encuentre patrones en tu trading. Descubre tus fortalezas, identifica errores recurrentes y obtén recomendaciones prácticas para mejorar.",
     "toolsLabel": "KIT PRO",
     "toolsBadge": "Kit completo",
     "toolsTitle": "6 herramientas de trading profesionales",

@@ -47,14 +47,6 @@ export const CTASection = () => {
       <div className="cta-glow pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_50%,rgba(148,30,254,0.18),transparent_70%)]" />
 
       <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 text-center sm:px-8">
-        <span className="cta-item border-success/30 bg-success/10 text-text inline-flex items-center gap-2 rounded-full border px-4 py-1.5 font-mono text-[0.7rem] tracking-[0.14em] uppercase">
-          <span
-            className="bg-success h-2 w-2 rounded-full"
-            style={{ animation: "live-pulse 2s ease-in-out infinite" }}
-          />
-          {t("badge")}
-        </span>
-
         {/* Mobile + landscape/tablet keep a fully-fitted size (clamp ≤ 4rem, wrapping).
             From the desktop breakpoint (min-1100px — safely above phone-landscape and
             below a real 1280px window) the headline scales up to its large treatment as
@@ -64,7 +56,7 @@ export const CTASection = () => {
             is bold and oversized but never clipped or bled off-screen. The section's
             `overflow-hidden` + the html-level `overflow-x: clip` guard keep horizontal
             page scroll impossible regardless. */}
-        <h2 className="cta-item mt-8 max-w-full font-extrabold leading-[0.95] tracking-tight text-[clamp(32px,7vw,80px)] sm:text-[clamp(48px,8vw,4rem)] min-[1100px]:text-[clamp(64px,8.3vw,140px)]">
+        <h2 className="cta-item mt-8 max-w-full font-extrabold leading-[0.95] tracking-tight text-[clamp(48px,10.5vw,120px)] sm:text-[clamp(72px,12vw,6rem)] min-[1100px]:text-[clamp(96px,12.45vw,210px)]">
           <span className="text-gradient block break-words whitespace-normal min-[1100px]:whitespace-nowrap">
             {t("line1")}
           </span>
